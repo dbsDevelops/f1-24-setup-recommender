@@ -6,12 +6,13 @@ import datetime
 
 PORT = 20776
 string = ""
+date = datetime.datetime.now()
 
 socket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
 socket.bind(('', PORT))
 socket.setblocking(False)
 
-PATH = "datas2.txt"
+PATH = f"data_{date}.pickle"
 
 if os.path.isfile(PATH):
     print(f"WARNING : The file {PATH} already exists, it will be overwritten if you continue.")
@@ -51,7 +52,3 @@ t1=threading.Thread(target=main)
 t2=threading.Thread(target=inp)
 t1.start()
 t2.start()
-
-
-
-
