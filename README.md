@@ -41,7 +41,7 @@ The goal of this project is to make the most important data from the in-game EA 
 ```bash
 pip install -r requirements.txt
 ```
-⚠️ If you have any issues in macOS systems importing the tkinter library, you will have to use the brew :
+⚠️ If you have any issues in macOS systems importing the tkinter library, you will have to use the [brew package manager](https://brew.sh) to install the following packet:
 ```bash
 brew install python-tk
 ```
