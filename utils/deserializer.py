@@ -106,7 +106,7 @@ def save_to_csv(packets, csv_file):
             writer.writerow(packet)
 
 # Example usage with raw binary data
-with open("./data/raw/data_2025-01-26 16:43:19.450016.pickle", "rb") as raw_file:
+with open("./data/raw/data_2025-01-26 19:51:52.729769.pickle", "rb") as raw_file:
     raw_data = raw_file.read()
     packets = deserialize_packets(raw_data)
     
@@ -114,5 +114,5 @@ with open("./data/raw/data_2025-01-26 16:43:19.450016.pickle", "rb") as raw_file
     #     pp.pprint(packet)
     #     print("\n")
     
-    save_to_csv(packets, "./data/processed/packets_2025-01-26 16:43:19.450016.csv")
+    save_to_csv(packets, "./data/processed/packets_2025-01-26 19:51:52.729769.csv")
     
