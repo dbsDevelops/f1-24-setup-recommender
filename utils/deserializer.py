@@ -1,13 +1,17 @@
 import sys
 import os
 import ctypes
-from parser2024 import PacketHeader, HEADER_FIELD_TO_PACKET_TYPE
-import pprint
-
-pp = pprint.PrettyPrinter()
 
 # Add the parent directory to the path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from parser2024 import PacketHeader, HEADER_FIELD_TO_PACKET_TYPE
+import pprint
+import csv
+
+pp = pprint.PrettyPrinter()
+
+
 
 # Helper function to convert ctypes to a readable dictionary
 def ctypes_to_dict(ctypes_obj):
@@ -79,9 +83,36 @@ def deserialize_packets(data):
 
     return packets
 
-# Example usage with raw binary data
-with open("data_2024-11-23 23:21:57.450170.pickle", "rb") as f:
-    raw_data = f.read()
-    packets = deserialize_packets(raw_data)
+def save_to_csv(packets, csv_file):
+    """
+    Save the deserialized packets to a CSV file.
+    Each row corresponds to a packet.
+    """
+    if not packets:
+        print("No packets to save.")
+        return
+
+    # Get all unique keys across packets
+    keys = set()
     for packet in packets:
-        pp.pprint(packet)
+        keys.update(packet.keys())
+    keys = sorted(keys)
+
+    # Write packets to the CSV file
+    with open(csv_file, "w", newline="") as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=keys)
+        writer.writeheader()
+        for packet in packets:
+            writer.writerow(packet)
+
+# Example usage with raw binary data
+with open("./data/data_2025-01-26 16:43:19.450016.pickle", "rb") as raw_file:
+    raw_data = raw_file.read()
+    packets = deserialize_packets(raw_data)
+    
+    # for packet in packets:
+    #     pp.pprint(packet)
+    #     print("\n")
+    
+    save_to_csv(packets, "./data/packets.csv")
+    
