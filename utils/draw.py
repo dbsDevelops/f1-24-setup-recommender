@@ -1,5 +1,5 @@
 from parser2023 import Listener
-track = "portimao"
+track = "losail"
 
 PORT=20777
 file=open(f"../tracks/{track}_2020_racingline.txt", "a")
@@ -43,8 +43,3 @@ while True:
             lap_packet, motion_packet, tel_packet = None, None, None
 
 listener.close()
-
-
-
-
-
