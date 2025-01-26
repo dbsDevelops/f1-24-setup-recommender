@@ -5,8 +5,9 @@
 - [Overview](#overview)
 - [Features](#features)
 - [Usage](#usage)
-  - [Step 1: Run the application](#step1)
-  - [Step 2: Send data to the application](#step2)
+  - [Step 1: Configure your Virtual Python Environment](#step1)
+  - [Step 2: Run the application](#step2)
+  - [Step 3: Send data to the application](#step3)
 - [Project Structure](#project-structure)
 - [To-do List](#to-do-list)
 
@@ -34,22 +35,33 @@ The goal of this project is to make the most important data from the in-game EA 
 
 
 ## 🔧 Usage <a id="usage"></a>
-### <ins>Step 1 : Run the application</ins><a id="step1"></a>
-1. Make sure all the required python packages are installed :
-
+### <ins>Step 1 : Configure your Virtual Python Enviroment</ins><a id="step2"></a>
+1. [Install pip](https://pip.pypa.io/en/stable/installation/) in your Linux, macOS or Windows system if you don't have it already.
+2. Install the required libraries.
 ```bash
-pip install tkinter ttkbootstrap PIL
-``` 
-2. Run *Telemetry.py*
+pip install -r requirements.txt
+```
+⚠️ If you have any issues in macOS systems importing the tkinter library, you will have to use the brew :
+```bash
+brew install python-tk
+```
+Here is the reference for the issue I was having: https://stackoverflow.com/questions/5459444/tkinter-python-may-not-be-configured-for-tk
 
-### <ins>Step 2 : Send datas to the application </ins> <a id="step2"></a>
+### <ins>Step 2 : Run the application</ins><a id="step2"></a>
+
+Run *Telemetry.py*
+```bash
+python3 Telemetry.py
+``` 
+
+### <ins>Step 3 : Send data to the application </ins> <a id="step3"></a>
 Open the F1 Game :
 - ➡️ Go to Settings 
 - ➡️ Telemetry Settings
 - ➡️ Make sure the port in-game matches the port used by the application (20777 by default)
 - ➡️ **If your game is connected to the same network as your computer running this application**, the easiest way is to enable the <u>UDP Broadcast</u> setting.
 **If not**, you have to enter your public IP address in the <u>IP Address</u> setting.
-- ✅ You are then good to go !
+- ✅ You are then good to go!
 
 
 ## 📘 Project structure <a id="project-structure"></a>
