@@ -89,5 +89,3 @@ class Weather_Forecast_Frame(Custom_Frame):
                 frame, label = self.liste_frame[i]
                 label.config(text="")
         except: pass
-        
-
