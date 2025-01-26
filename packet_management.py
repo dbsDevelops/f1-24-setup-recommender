@@ -326,14 +326,3 @@ def update_frame(LISTE_FRAMES : list[Custom_Frame], LISTE_JOUEURS, session):
 
 def update_frame6():
     LISTE_FRAMES[6].update(session)
-    
-
-
-
-
-
-
-
-
-
-
