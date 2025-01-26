@@ -110,24 +110,21 @@ class Packet(ctypes.LittleEndianStructure, PacketMixin):
         return pp.pformat(self.to_dict())
 
 
-class PacketHeader(Packet):
+class PacketHeader(ctypes.LittleEndianStructure):
+    _pack_ = 1  # Prevent padding/alignment issues
     _fields_ = [
-        ("m_packet_format", ctypes.c_uint16),  # 2021
-        ("m_game_year", ctypes.c_uint8), #23
-        ("m_game_major_version", ctypes.c_uint8),  # Game major version - "X.00"
-        ("m_game_minor_version", ctypes.c_uint8),  # Game minor version - "1.XX"
-        ("m_packet_version", ctypes.c_uint8),
-        # Version of this packet type, all start from 1
-        ("m_packet_id", ctypes.c_uint8),  # Identifier for the packet type, see below
-        ("m_session_uid", ctypes.c_uint64),  # Unique identifier for the session
-        ("m_session_time", ctypes.c_float),  # Session timestamp
-        ("m_frame_identifier", ctypes.c_uint32),
-        ("m_overall_frame_identifier", ctypes.c_uint32),
-        # Identifier for the frame the data was retrieved on
-        ("m_player_car_index", ctypes.c_uint8),  # Index of player's car in the array
-        ("m_secondary_player_car_index", ctypes.c_uint8),
-        # Index of secondary player's car in the array (splitscreen)
-        # 255 if no second player
+        ("m_packet_format", ctypes.c_uint16),       # 2024
+        ("m_game_year", ctypes.c_uint8),           # Game year (24)
+        ("m_game_major_version", ctypes.c_uint8),  # Major version
+        ("m_game_minor_version", ctypes.c_uint8),  # Minor version
+        ("m_packet_version", ctypes.c_uint8),      # Packet version
+        ("m_packet_id", ctypes.c_uint8),           # Packet type identifier
+        ("m_session_uid", ctypes.c_uint64),        # Session UID
+        ("m_session_time", ctypes.c_float),        # Session time
+        ("m_frame_identifier", ctypes.c_uint32),   # Frame identifier
+        ("m_overall_frame_identifier", ctypes.c_uint32),  # Overall frame identifier
+        ("m_player_car_index", ctypes.c_uint8),    # Player car index
+        ("m_secondary_player_car_index", ctypes.c_uint8),  # Secondary player car index
     ]
 
 
