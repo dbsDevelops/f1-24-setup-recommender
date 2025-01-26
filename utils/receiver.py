@@ -12,7 +12,7 @@ socket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
 socket.bind(('', PORT))
 socket.setblocking(False)
 
-PATH = f"data_{date}.pickle"
+PATH = f"./data/raw/data_{date}.pickle"
 
 if os.path.isfile(PATH):
     print(f"WARNING : The file {PATH} already exists, it will be overwritten if you continue.")
