@@ -5,3 +5,6 @@ test.txt
 utils/datas*
 utils/calculateur.py
 pitstoploss.png
+
+# Ignore Python Virtual Environment
+venv/
