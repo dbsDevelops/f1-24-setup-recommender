@@ -8,3 +8,6 @@ pitstoploss.png
 
 # Ignore Python Virtual Environment
 venv/
+
+# Ignore data files
+data/
