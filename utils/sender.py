@@ -8,8 +8,8 @@ PORT = 20777
 if len(sys.argv)>1:
     PORT = int(sys.argv[1])
 
-with open('datas.txt', 'rb') as file:
-    b = pickle.load(file)
+with open('data.pickle', 'ab') as file:
+    b = pickle.dumps(file)
 i=0
 
 while True:
