@@ -1,6 +1,7 @@
 import sys
 import os
 import ctypes
+import pickle
 
 # Add the parent directory to the path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -10,8 +11,6 @@ import pprint
 import csv
 
 pp = pprint.PrettyPrinter()
-
-
 
 # Helper function to convert ctypes to a readable dictionary
 def ctypes_to_dict(ctypes_obj):
@@ -106,13 +105,19 @@ def save_to_csv(packets, csv_file):
             writer.writerow(packet)
 
 # Example usage with raw binary data
-with open("./data/data_2025-01-26 16:43:19.450016.pickle", "rb") as raw_file:
+with open("./data/raw/data_2025-01-26 16:43:19.450016.pickle", "rb") as raw_file:
     raw_data = raw_file.read()
     packets = deserialize_packets(raw_data)
     
-    # for packet in packets:
-    #     pp.pprint(packet)
-    #     print("\n")
-    
-    save_to_csv(packets, "./data/packets.csv")
+# Save the deserialized packets to a new .pickle file
+with open("./data/processed/deserialized_packets.pickle", "wb") as output_file:
+    pickle.dump(packets, output_file)
+
+# Load the saved .pickle file to confirm
+with open("./data/processed/deserialized_packets.pickle", "rb") as input_file:
+    reloaded_packets = pickle.load(input_file)
+
+# Check the contents
+print(f"Number of packets saved: {len(reloaded_packets)}")
+print(f"First packet: {reloaded_packets[0]}")
     
