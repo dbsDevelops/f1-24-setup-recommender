@@ -1,54 +1,94 @@
 import socket
-import pickle
 import threading
 import os
 import datetime
+import pandas as pd
+from deserializer import ctypes_to_dict
+from parser2024 import PacketHeader, HEADER_FIELD_TO_PACKET_TYPE
+import ctypes
 
 PORT = 20776
-string = ""
-date = datetime.datetime.now()
+STOP_COMMAND = "stop"
+DATA_DIRECTORY = "./data/raw"
 
-socket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
-socket.bind(('', PORT))
-socket.setblocking(False)
+def initialize_socket():
+    """Creates and configures the UDP socket."""
+    udp_socket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
+    udp_socket.bind(('', PORT))
+    udp_socket.setblocking(False)
+    return udp_socket
 
-PATH = f"data_{date}.pickle"
+def generate_file_path():
+    """Generates a timestamped file path for storing recorded data."""
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    return f"{DATA_DIRECTORY}/data_{timestamp}.csv"
 
-if os.path.isfile(PATH):
-    print(f"WARNING : The file {PATH} already exists, it will be overwritten if you continue.")
-    chaine = input("Continue ? [y|N]")
-    if chaine in ["y", "Y"]:
-        print(f"The file {PATH} will be overwritten.")
-    else:
-        print(f"Please change the PATH variable if you don't want the {PATH} file to be overwritten, and re-run the program.")
-        socket.close()
-        exit(0)
+def confirm_overwrite(file_path):
+    """Asks the user for confirmation before overwriting an existing file."""
+    if os.path.isfile(file_path):
+        print(f"WARNING: The file {file_path} already exists and will be overwritten if you continue.")
+        user_choice = input("Continue? [y|N]: ")
+        if user_choice.lower() != "y":
+            print("Change the file path to prevent overwriting and restart the program.")
+            exit(0)
 
-file = open(PATH, 'wb')
-file.close()
+def parse_packet(data):
+    """Deserializes a UDP packet and converts it to a dictionary."""
+    try:
+        header = PacketHeader.from_buffer_copy(data)
+        packet_type = HEADER_FIELD_TO_PACKET_TYPE.get(header.m_packetId)
+        if packet_type:
+            packet = packet_type.from_buffer_copy(data)
+            return ctypes_to_dict(packet)
+    except Exception as e:
+        print(f"Error parsing packet: {e}")
+    return None
 
-def main():
-    L=[]
-    while string!="stop":
+def receive_packets(udp_socket, file_path):
+    """Receives and processes UDP packets, storing them in a DataFrame."""
+    columns = []
+    all_data = []
+    global STOP_COMMAND
+    print("Receiving UDP packets. Type 'stop' to end recording.")
+    
+    while STOP_COMMAND != "stop":
         try:
-            L.append(socket.recv(2048))
+            data, _ = udp_socket.recvfrom(2048)
+            parsed_data = parse_packet(data)
+            if parsed_data:
+                if not columns:
+                    columns = list(parsed_data.keys())
+                all_data.append(parsed_data)
         except BlockingIOError:
             pass
-    print(f"\nRecording finished : Storing {len(L)} packets in {PATH}, this may take a few time, please wait")
-    file = open(PATH, 'wb')
-    pickle.dump(L, file)
-    file.close()
-    print(f"\nDatas stored in {PATH} with success !")
-    socket.close()
+    
+    save_data_to_csv(all_data, columns, file_path)
+    udp_socket.close()
     exit(0)
 
+def save_data_to_csv(data, columns, file_path):
+    """Saves the collected data to a CSV file."""
+    df = pd.DataFrame(data, columns=columns)
+    df.to_csv(file_path, index=False)
+    print(f"\nRecording finished: {len(df)} records stored in {file_path}")
 
-def inp():
-    global string
-    while string!="stop":
-        string = input("Enter 'stop' to stop the data recording")
+def listen_for_stop_command():
+    """Monitors user input for a stop command."""
+    global STOP_COMMAND
+    while STOP_COMMAND != "stop":
+        STOP_COMMAND = input("Enter 'stop' to stop data recording: ")
 
-t1=threading.Thread(target=main)
-t2=threading.Thread(target=inp)
-t1.start()
-t2.start()
+def main():
+    """Main execution function."""
+    file_path = generate_file_path()
+    confirm_overwrite(file_path)
+    udp_socket = initialize_socket()
+    
+    receiver_thread = threading.Thread(target=receive_packets, args=(udp_socket, file_path))
+    input_thread = threading.Thread(target=listen_for_stop_command)
+    
+    receiver_thread.start()
+    input_thread.start()
+
+if __name__ == "__main__":
+    main()

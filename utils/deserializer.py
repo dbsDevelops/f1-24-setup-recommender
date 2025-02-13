@@ -12,8 +12,6 @@ import csv
 
 pp = pprint.PrettyPrinter()
 
-
-
 # Helper function to convert ctypes to a readable dictionary
 def ctypes_to_dict(ctypes_obj):
     if isinstance(ctypes_obj, ctypes.Array):
