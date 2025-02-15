@@ -2,8 +2,6 @@ from Session import Session
 from Player import Player
 from dictionnaries import *
 import json
-from parser2023 import Listener
-import math
 import time
 from ttkbootstrap import Toplevel, LEFT, Entry, IntVar, Label
 from tkinter import Message, Checkbutton, Button
