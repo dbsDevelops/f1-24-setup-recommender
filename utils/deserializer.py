@@ -6,7 +6,7 @@ import pickle
 # Add the parent directory to the path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from parser2024 import PacketHeader, HEADER_FIELD_TO_PACKET_TYPE
+from packet_parser.parser2024 import PacketHeader, HEADER_FIELD_TO_PACKET_TYPE
 import pprint
 import csv
 

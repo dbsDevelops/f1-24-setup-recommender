@@ -1,4 +1,4 @@
-from dictionnaries import session_dictionary, conversion, track_dictionary, weather_dictionary, color_flag_dict
+from dictionnaries import session_types, conversion, track_dictionary, weather_types, flag_colours
 
 
 class WeatherForecastSample:
@@ -11,11 +11,11 @@ class WeatherForecastSample:
         self.weatherForecastAccuracy = -1
 
     def __repr__(self):
-        return f"{self.time}m : {weather_dictionary[self.weather]}, Track : {self.trackTemp}°C, " \
+        return f"{self.time}m : {weather_types[self.weather]}, Track : {self.trackTemp}°C, " \
                f"Air : {self.airTemp}°C, Humidity : {self.rainPercentage}% "
 
     def __str__(self):
-        return f"{self.time}m : {weather_dictionary[self.weather]}, Track : {self.trackTemp}°C, " \
+        return f"{self.time}m : {weather_types[self.weather]}, Track : {self.trackTemp}°C, " \
                f"Air : {self.airTemp}°C, Humidity : {self.rainPercentage}% "
 
 class Session:
@@ -58,7 +58,7 @@ class Session:
         if self.Seance == 18:
             string = f"Time Trial : {track_dictionary[self.track][0]}"
         elif self.Seance in [15,16,17]:
-            string = f"Session : {session_dictionary[self.Seance]}, Lap : {self.currentLap}/{self.nbLaps}, " \
+            string = f"Session : {session_types[self.Seance]}, Lap : {self.currentLap}/{self.nbLaps}, " \
                         f"Air : {self.airTemperature}°C / Track : {self.trackTemperature}°C"
         elif self.Seance in [5,6,7,8,9]:
             string = f" Qualy : {conversion(self.time_left, 1)}"
@@ -68,7 +68,7 @@ class Session:
 
     def update_marshal_zones(self, map_canvas):
         for i in range(len(self.segments)):
-            map_canvas.itemconfig(self.segments[i], fill=color_flag_dict[self.marshalZones[i].m_zone_flag])
+            map_canvas.itemconfig(self.segments[i], fill=flag_colours[self.marshalZones[i].m_zone_flag])
 
 
 

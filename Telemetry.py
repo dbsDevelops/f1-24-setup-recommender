@@ -25,26 +25,26 @@ def init_window():
     notebook = Notebook(main_frame)
     notebook.pack(expand=True, fill="both")
 
-    pm.LISTE_FRAMES.append(Players_Frame(notebook, "Main Menu", 0))
-    pm.LISTE_FRAMES.append(Players_Frame(notebook, "Damage", 1))
-    pm.LISTE_FRAMES.append(Players_Frame(notebook, "Temperatures", 2))
-    pm.LISTE_FRAMES.append(Players_Frame(notebook, "Laps", 3))
-    pm.LISTE_FRAMES.append(Players_Frame(notebook, "ERS & Fuel", 4))
+    pm.frames.append(Players_Frame(notebook, "Main Menu", 0))
+    pm.frames.append(Players_Frame(notebook, "Damage", 1))
+    pm.frames.append(Players_Frame(notebook, "Temperatures", 2))
+    pm.frames.append(Players_Frame(notebook, "Laps", 3))
+    pm.frames.append(Players_Frame(notebook, "ERS & Fuel", 4))
 
     map = Frame(notebook)
-    pm.LISTE_FRAMES.append(map)
+    pm.frames.append(map)
     map.pack(expand=True, fill="both")
     map_canvas = Canvas(map)
     map_canvas.pack(expand=True, fill='both')
 
-    pm.LISTE_FRAMES.append(Weather_Forecast_Frame(notebook, "Weather Forecast", 6, 20))
-    pm.LISTE_FRAMES.append(Packet_Reception_Frame(notebook, "Packet Reception", 7))
+    pm.frames.append(Weather_Forecast_Frame(notebook, "Weather Forecast", 6, 20))
+    pm.frames.append(Packet_Reception_Frame(notebook, "Packet Reception", 7))
 
     for i in range(8):
         if i != 5:
-            notebook.add(pm.LISTE_FRAMES[i], text=pm.LISTE_FRAMES[i].name)
+            notebook.add(pm.frames[i], text=pm.frames[i].name)
         else:
-            notebook.add(pm.LISTE_FRAMES[5], text="Map")
+            notebook.add(pm.frames[5], text="Map")
 
     top_label1.place(relx=0.0, rely=0.5, anchor='w')
     top_label2.place(relx=1, rely=0.5, anchor='e', relheight=1)
@@ -92,7 +92,7 @@ running = True
 PORT = [int(dictionnary_settings["port"])]
 listener = parser.Listener(port=PORT[0],
                     redirect=dictionnary_settings["redirect_active"],
-                    adress=dictionnary_settings["ip_adress"],
+                    address=dictionnary_settings["ip_adress"],
                     redirect_port=int(dictionnary_settings["redirect_port"]))
 
 function_hashmap = { #PacketId : (fonction, arguments)
@@ -123,7 +123,7 @@ while running:
         func(packet, *args)
     if time.time() > last_update+1:
         last_update = time.time()
-        pm.LISTE_FRAMES[7].update(packet_received) #Packet Received tab
+        pm.frames[7].update(packet_received) #Packet Received tab
         pm.session.packet_received = packet_received[:]
         packet_received = [0]*15
     screen.update()

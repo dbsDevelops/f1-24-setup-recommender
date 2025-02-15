@@ -6,27 +6,26 @@ pp = pprint.PrettyPrinter()
 
 
 class Listener:
-    def __init__(self, port=20777, adress="127.0.0.1", redirect=0, redirect_port=20777):
+    def __init__(self, port=20777, address="127.0.0.1", redirect=0, redirect_port=20777):
         self.port = port
         self.socket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
         self.socket.bind(('', port))
-        self.socket.setblocking(0)
-        self.address = adress
+        self.socket.setblocking(False)
+        self.address = address
         self.redirect = redirect
         self.redirect_port = redirect_port
 
     def reset(self):
         self.socket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
         self.socket.bind(('', self.port))
-        self.socket.setblocking(0)
+        self.socket.setblocking(False)
 
     def get(self, packet=None):
         if packet is None:
             try:
                 packet = self.socket.recv(2048)
-                if self.redirect == 1:
-                    self.socket.sendto(packet, (self.address, self.redirect_port))
-            except ConnectionResetError: #Thrown when redirecting on a localhost port that is not ready to read the datas
+                if self.redirect: self.socket.sendto(packet, (self.address, self.redirect_port))
+            except ConnectionResetError: #Thrown when redirecting on a localhost port that is not ready to read the data
                 return None
             except:
                 return None

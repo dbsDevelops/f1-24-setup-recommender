@@ -1,4 +1,4 @@
-from parser2023 import Listener
+from packet_parser.parser2024 import Listener
 track = "losail"
 
 PORT=20777
