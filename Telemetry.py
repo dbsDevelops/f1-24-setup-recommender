@@ -3,11 +3,11 @@ import sys
 
 screen = Window(themename="darkly")
 
-from packet_management import *
 import json
 import time
 from dictionnaries import *
-from parser2024 import Listener
+import packet_parser.packet_management as pm
+import packet_parser.parser2024 as parser
 from Custom_Frame import Players_Frame, Packet_Reception_Frame, Weather_Forecast_Frame
 
 
@@ -25,26 +25,26 @@ def init_window():
     notebook = Notebook(main_frame)
     notebook.pack(expand=True, fill="both")
 
-    LISTE_FRAMES.append(Players_Frame(notebook, "Main Menu", 0))
-    LISTE_FRAMES.append(Players_Frame(notebook, "Damage", 1))
-    LISTE_FRAMES.append(Players_Frame(notebook, "Temperatures", 2))
-    LISTE_FRAMES.append(Players_Frame(notebook, "Laps", 3))
-    LISTE_FRAMES.append(Players_Frame(notebook, "ERS & Fuel", 4))
+    pm.LISTE_FRAMES.append(Players_Frame(notebook, "Main Menu", 0))
+    pm.LISTE_FRAMES.append(Players_Frame(notebook, "Damage", 1))
+    pm.LISTE_FRAMES.append(Players_Frame(notebook, "Temperatures", 2))
+    pm.LISTE_FRAMES.append(Players_Frame(notebook, "Laps", 3))
+    pm.LISTE_FRAMES.append(Players_Frame(notebook, "ERS & Fuel", 4))
 
     map = Frame(notebook)
-    LISTE_FRAMES.append(map)
+    pm.LISTE_FRAMES.append(map)
     map.pack(expand=True, fill="both")
     map_canvas = Canvas(map)
     map_canvas.pack(expand=True, fill='both')
 
-    LISTE_FRAMES.append(Weather_Forecast_Frame(notebook, "Weather Forecast", 6, 20))
-    LISTE_FRAMES.append(Packet_Reception_Frame(notebook, "Packet Reception", 7))
+    pm.LISTE_FRAMES.append(Weather_Forecast_Frame(notebook, "Weather Forecast", 6, 20))
+    pm.LISTE_FRAMES.append(Packet_Reception_Frame(notebook, "Packet Reception", 7))
 
     for i in range(8):
         if i != 5:
-            notebook.add(LISTE_FRAMES[i], text=LISTE_FRAMES[i].name)
+            notebook.add(pm.LISTE_FRAMES[i], text=pm.LISTE_FRAMES[i].name)
         else:
-            notebook.add(LISTE_FRAMES[5], text="Map")
+            notebook.add(pm.LISTE_FRAMES[5], text="Map")
 
     top_label1.place(relx=0.0, rely=0.5, anchor='w')
     top_label2.place(relx=1, rely=0.5, anchor='e', relheight=1)
@@ -55,8 +55,8 @@ def init_window():
 
     menubar = Menu(screen)
     filemenu = Menu(menubar, tearoff=0)
-    filemenu.add_command(label="PORT Selection", command=lambda : port_selection(dictionnary_settings, listener, PORT))
-    filemenu.add_command(label="UDP Redirect", command=lambda : UDP_Redirect(dictionnary_settings, listener, PORT))
+    filemenu.add_command(label="PORT Selection", command=lambda : pm.port_selection(dictionnary_settings, listener, PORT))
+    filemenu.add_command(label="UDP Redirect", command=lambda : pm.UDP_Redirect(dictionnary_settings, listener, PORT))
     menubar.add_cascade(label="Settings", menu=filemenu)
     screen.config(menu=menubar)
 
@@ -86,31 +86,31 @@ top_label1 = Label(top_frame, text="Course ", font=("Arial", 24))
 top_label2 = Label(top_frame, text="", font=("Arial", 24), width=10)
 
 init_window()
-init_20_players()
+pm.init_20_players()
 
 running = True
 PORT = [int(dictionnary_settings["port"])]
-listener = Listener(port=PORT[0],
+listener = parser.Listener(port=PORT[0],
                     redirect=dictionnary_settings["redirect_active"],
                     adress=dictionnary_settings["ip_adress"],
                     redirect_port=int(dictionnary_settings["redirect_port"]))
 
 function_hashmap = { #PacketId : (fonction, arguments)
-    0: (update_motion, (map_canvas, None)),
-    1: (update_session, (top_label1, top_label2, screen, map_canvas)),
-    2: (update_lap_data, ()),
-    3: (warnings, ()),
-    4: (update_participants, ()),
-    5: (update_car_setups, ()),
-    6: (update_car_telemetry, ()),
-    7: (update_car_status, ()),
-    8: (nothing, ()),
-    9: (delete_map, ()),
-    10: (update_car_damage, ()),
-    11: (nothing, ()),
-    12: (nothing, ()),
-    13: (nothing, ()),
-    14: (nothing, ())
+    0: (pm.update_motion, (map_canvas, None)),
+    1: (pm.update_session, (top_label1, top_label2, screen, map_canvas)),
+    2: (pm.update_lap_data, ()),
+    3: (pm.warnings, ()),
+    4: (pm.update_participants, ()),
+    5: (pm.update_car_setups, ()),
+    6: (pm.update_car_telemetry, ()),
+    7: (pm.update_car_status, ()),
+    8: (pm.nothing, ()),
+    9: (pm.delete_map, ()),
+    10: (pm.update_car_damage, ()),
+    11: (pm.nothing, ()),
+    12: (pm.nothing, ()),
+    13: (pm.nothing, ()),
+    14: (pm.nothing, ())
 
 }
 
@@ -123,8 +123,8 @@ while running:
         func(packet, *args)
     if time.time() > last_update+1:
         last_update = time.time()
-        LISTE_FRAMES[7].update(packet_received) #Packet Received tab
-        session.packet_received = packet_received[:]
+        pm.LISTE_FRAMES[7].update(packet_received) #Packet Received tab
+        pm.session.packet_received = packet_received[:]
         packet_received = [0]*15
     screen.update()
     screen.update_idletasks()
