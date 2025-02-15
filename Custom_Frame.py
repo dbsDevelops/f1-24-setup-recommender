@@ -1,6 +1,6 @@
 from ttkbootstrap import Frame, Label
 from Player import Player
-from dictionnaries import teams_color_dictionary, packetDictionnary, tyres_dictionnary, tyres_color_dictionnary, grey
+from dictionnaries import teams_color_dictionary, packets, actual_tyre_compound, tyres_color_dictionnary, grey
 from Session import Session
 
 
@@ -39,7 +39,7 @@ class Players_Frame(Custom_Frame):
                 joueur = LISTE_JOUEURS[i]
                 frame, label = self.liste_frame[joueur.position-1]
                 label.config(text=joueur.printing(self.id, LISTE_JOUEURS, session.Seance), foreground=teams_color_dictionary[joueur.teamId])
-                self.label_tyres[joueur.position-1].config(text=tyres_dictionnary[joueur.tyres], foreground=tyres_color_dictionnary[joueur.tyres])
+                self.label_tyres[joueur.position-1].config(text=actual_tyre_compound[joueur.tyres], foreground=tyres_color_dictionnary[joueur.tyres])
             for i in range(session.nb_players, self.n_lines):
                 label.config(text="")
                 self.label_tyres[i].config(text="")
@@ -50,15 +50,15 @@ class Players_Frame(Custom_Frame):
 
             frame, label = self.liste_frame[0]
             label.config(text=joueur.printing(self.id, LISTE_JOUEURS, session.Seance), foreground=teams_color_dictionary[joueur.teamId])
-            self.label_tyres[0].config(text=tyres_dictionnary[joueur.tyres], foreground=tyres_color_dictionnary[joueur.tyres])
+            self.label_tyres[0].config(text=actual_tyre_compound[joueur.tyres], foreground=tyres_color_dictionnary[joueur.tyres])
 
             frame, label = self.liste_frame[1]
             label.config(text=record.printing(self.id, LISTE_JOUEURS, session.Seance), foreground=teams_color_dictionary[record.teamId])
-            self.label_tyres[1].config(text=tyres_dictionnary[record.tyres], foreground=tyres_color_dictionnary[record.tyres])
+            self.label_tyres[1].config(text=actual_tyre_compound[record.tyres], foreground=tyres_color_dictionnary[record.tyres])
 
             frame, label = self.liste_frame[2]
             label.config(text=rival.printing(self.id, LISTE_JOUEURS, session.Seance), foreground=teams_color_dictionary[rival.teamId])
-            self.label_tyres[2].config(text=tyres_dictionnary[rival.tyres], foreground=tyres_color_dictionnary[rival.tyres])
+            self.label_tyres[2].config(text=actual_tyre_compound[rival.tyres], foreground=tyres_color_dictionnary[rival.tyres])
 
             for i in range(3, self.n_lines):
                 frame, label = self.liste_frame[i]
@@ -73,7 +73,7 @@ class Packet_Reception_Frame(Custom_Frame):
     def update(self, packet_received):
         for i in range(self.n_lines):
             frame, label = self.liste_frame[i]
-            label.config(text=f"{packetDictionnary[i]} : {packet_received[i]}/s")
+            label.config(text=f"{packets[i]} : {packet_received[i]}/s")
 
 
 class Weather_Forecast_Frame(Custom_Frame):

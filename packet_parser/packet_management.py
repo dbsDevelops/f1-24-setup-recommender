@@ -8,21 +8,21 @@ from tkinter import Message, Checkbutton, Button
 from Custom_Frame import Custom_Frame
 import traceback
 
-LISTE_JOUEURS: list[Player] = []
+drivers: list[Player] = []
 session: Session = Session()
 created_map = False
-WIDTH_POINTS = 6
-LISTE_FRAMES = []
-liste_button: list = ["Main Menu", "Damage", "Temperatures", "Laps", "Map", "ERS & Fuel", "Weather Forecast",
+width_points = 6
+frames = []
+menu_buttons: list = ["Main Menu", "Damage", "Temperatures", "Laps", "Map", "ERS & Fuel", "Weather Forecast",
                               "Packet Reception"]
 
 def update_motion(packet, map_canvas, *args):  # Packet 0
     for i in range(session.nb_players):
-        if LISTE_JOUEURS[i].worldPositionX != 0:
-            LISTE_JOUEURS[i].Xmove = packet.m_car_motion_data[i].m_world_position_x - LISTE_JOUEURS[i].worldPositionX
-            LISTE_JOUEURS[i].Zmove = packet.m_car_motion_data[i].m_world_position_z - LISTE_JOUEURS[i].worldPositionZ
-        LISTE_JOUEURS[i].worldPositionX = packet.m_car_motion_data[i].m_world_position_x
-        LISTE_JOUEURS[i].worldPositionZ = packet.m_car_motion_data[i].m_world_position_z
+        if drivers[i].worldPositionX != 0:
+            drivers[i].Xmove = packet.m_car_motion_data[i].m_world_position_x - drivers[i].worldPositionX
+            drivers[i].Zmove = packet.m_car_motion_data[i].m_world_position_z - drivers[i].worldPositionZ
+        drivers[i].worldPositionX = packet.m_car_motion_data[i].m_world_position_x
+        drivers[i].worldPositionZ = packet.m_car_motion_data[i].m_world_position_z
     try:
         update_map(map_canvas)
     except Exception as e:
@@ -61,7 +61,7 @@ def update_lap_data(packet):  # Packet 2
     mega_array = packet.m_lap_data
     for index in range(22):
         element = mega_array[index]
-        joueur = LISTE_JOUEURS[index]
+        joueur = drivers[index]
         joueur.position = element.m_car_position
         joueur.lastLapTime = round(element.m_last_lap_time_in_ms, 3)
         joueur.pit = element.m_pit_status
@@ -96,7 +96,7 @@ def warnings(packet):  # Packet 3
         print("Lights out !")
         session.formationLapDone = False
         session.startTime = time.time()
-        for joueur in LISTE_JOUEURS:
+        for joueur in drivers:
             joueur.S200_reached = False
             joueur.warnings = 0
             joueur.lastLapSectors = [0] * 3
@@ -105,12 +105,12 @@ def warnings(packet):  # Packet 3
             joueur.currentSectors = [0] * 3
             joueur.bestLapTime = 0
     elif packet.m_event_string_code[2] == 82:
-        LISTE_JOUEURS[packet.m_event_details.m_vehicle_idx].hasRetired = True
+        drivers[packet.m_event_details.m_vehicle_idx].hasRetired = True
 
 def update_participants(packet):  # Packet 4
     for index in range(22):
         element = packet.m_participants[index]
-        joueur = LISTE_JOUEURS[index]
+        joueur = drivers[index]
         joueur.numero = element.m_race_number
         joueur.teamId = element.m_team_id
         joueur.aiControlled = element.m_ai_controlled
@@ -121,18 +121,18 @@ def update_participants(packet):  # Packet 4
             joueur.name = element.m_name
         session.nb_players = packet.m_num_active_cars
         if joueur.name in ['Player', 'Joueur']:
-            joueur.name = teams_name_dictionary[joueur.teamId] + "#" + str(joueur.numero)
-    update_frame(LISTE_FRAMES, LISTE_JOUEURS, session)
+            joueur.name = teams[joueur.teamId] + "#" + str(joueur.numero)
+    update_frame(frames, drivers, session)
 
 def update_car_setups(packet): # Packet 5
     array = packet.m_car_setups
     for index in range(22):
-        LISTE_JOUEURS[index].setup_array = array[index]
+        drivers[index].setup_array = array[index]
 
 def update_car_telemetry(packet):  # Packet 6
     for index in range(22):
         element = packet.m_car_telemetry_data[index]
-        joueur = LISTE_JOUEURS[index]
+        joueur = drivers[index]
         joueur.drs = element.m_drs
         joueur.tyres_temp_inner = element.m_tyres_inner_temperature
         joueur.tyres_temp_surface = element.m_tyres_surface_temperature
@@ -140,12 +140,12 @@ def update_car_telemetry(packet):  # Packet 6
         if joueur.speed >= 200 and not joueur.S200_reached:
             print(f"{joueur.position} {joueur.name}  = {time.time() - session.startTime}")
             joueur.S200_reached = True
-    update_frame(LISTE_FRAMES, LISTE_JOUEURS, session)
+    update_frame(frames, drivers, session)
 
 def update_car_status(packet):  # Packet 7
     for index in range(22):
         element = packet.m_car_status_data[index]
-        joueur = LISTE_JOUEURS[index]
+        joueur = drivers[index]
         joueur.fuelMix = element.m_fuel_mix
         joueur.fuelRemainingLaps = element.m_fuel_remaining_laps
         joueur.tyresAgeLaps = element.m_tyres_age_laps
@@ -153,12 +153,12 @@ def update_car_status(packet):  # Packet 7
             joueur.tyres = element.m_visual_tyre_compound
         joueur.ERS_mode = element.m_ers_deploy_mode
         joueur.ERS_pourcentage = round(element.m_ers_store_energy / 40_000)
-    update_frame(LISTE_FRAMES, LISTE_JOUEURS, session)
+    update_frame(frames, drivers, session)
 
 def update_car_damage(packet):  # Packet 10
     for index in range(22):
         element = packet.m_car_damage_data[index]
-        joueur = LISTE_JOUEURS[index]
+        joueur = drivers[index]
         joueur.tyre_wear = '[' + ', '.join('%.2f'%truc for truc in element.m_tyres_wear) + ']'
         joueur.FrontLeftWingDamage = element.m_front_left_wing_damage
         joueur.FrontRightWingDamage = element.m_front_right_wing_damage
@@ -166,7 +166,7 @@ def update_car_damage(packet):  # Packet 10
         joueur.floorDamage = element.m_floor_damage
         joueur.diffuserDamage = element.m_diffuser_damage
         joueur.sidepodDamage = element.m_sidepod_damage
-    update_frame(LISTE_FRAMES, LISTE_JOUEURS, session)
+    update_frame(frames, drivers, session)
 
 def nothing(packet):# Packet 8, 9, 11, 12, 13
     pass
@@ -193,48 +193,48 @@ def create_map(map_canvas):
                     cmi +=1
     session.segments.insert(0, map_canvas.create_line(L1+L0, width=3))
     for i in range(20):
-        joueur = LISTE_JOUEURS[i]
+        joueur = drivers[i]
         if session.Seance == 18 and i!=0:
-            joueur.oval = map_canvas.create_oval(-1000 / d + x_const - WIDTH_POINTS,
-                                                -1000 / d + z_const - WIDTH_POINTS,
-                                                -1000 / d + x_const + WIDTH_POINTS,
-                                                -1000 / d + z_const + WIDTH_POINTS, outline="")
+            joueur.oval = map_canvas.create_oval(-1000 / d + x_const - width_points,
+                                                -1000 / d + z_const - width_points,
+                                                -1000 / d + x_const + width_points,
+                                                -1000 / d + z_const + width_points, outline="")
         else:
-            joueur.oval = map_canvas.create_oval(joueur.worldPositionX / d + x_const - WIDTH_POINTS,
-                                                joueur.worldPositionZ / d + z_const - WIDTH_POINTS,
-                                                joueur.worldPositionX / d + x_const + WIDTH_POINTS,
-                                                joueur.worldPositionZ / d + z_const + WIDTH_POINTS, outline="")
+            joueur.oval = map_canvas.create_oval(joueur.worldPositionX / d + x_const - width_points,
+                                                joueur.worldPositionZ / d + z_const - width_points,
+                                                joueur.worldPositionX / d + x_const + width_points,
+                                                joueur.worldPositionZ / d + z_const + width_points, outline="")
             
             joueur.etiquette = map_canvas.create_text(joueur.worldPositionX / d + x_const + 25,
                                                     joueur.worldPositionZ / d + z_const - 25,
                                                     text=joueur.name, font=("Cousine", 13))
-            map_canvas.moveto(joueur.oval, joueur.worldPositionX / d + x_const - WIDTH_POINTS,
-                                joueur.worldPositionZ / d + z_const - WIDTH_POINTS)
+            map_canvas.moveto(joueur.oval, joueur.worldPositionX / d + x_const - width_points,
+                                joueur.worldPositionZ / d + z_const - width_points)
 
 def delete_map(map_canvas):
     for element in session.segments:
         map_canvas.delete(element)
     session.segments = []
-    for joueur in LISTE_JOUEURS:
+    for joueur in drivers:
         map_canvas.delete(joueur.oval)
         map_canvas.delete(joueur.etiquette)
         joueur.oval = None
 
 def update_map(map_canvas):
     _, d, x, z = track_dictionary[session.track]
-    for joueur in LISTE_JOUEURS:
+    for joueur in drivers:
         if joueur.position != 0:
             map_canvas.move(joueur.oval, joueur.Xmove / d, joueur.Zmove / d)
             map_canvas.itemconfig(joueur.oval, fill=teams_color_dictionary[joueur.teamId])
             map_canvas.move(joueur.etiquette, joueur.Xmove / d, joueur.Zmove / d)
             map_canvas.itemconfig(joueur.etiquette, fill=teams_color_dictionary[joueur.teamId], text=joueur.name)
     for i in range(len(session.segments)):
-        map_canvas.itemconfig(session.segments[i], fill=color_flag_dict[session.marshalZones[i].m_zone_flag])
+        map_canvas.itemconfig(session.segments[i], fill=flag_colours[session.marshalZones[i].m_zone_flag])
     session.anyYellow = any(item.m_zone_flag==3 for item in session.marshalZones)
         
 def init_20_players():
     for _ in range(22):
-        LISTE_JOUEURS.append(Player())
+        drivers.append(Player())
 
 def UDP_Redirect(dictionnary_settings, listener, PORT):
     win = Toplevel()
@@ -310,7 +310,7 @@ def port_selection(dictionnary_settings, listener, PORT):
 
 def update_title(top_label1, top_label2, screen):
     top_label1.config(text=session.title_display())
-    top_label2.config(text=safetyCarStatusDict[session.safetyCarStatus])
+    top_label2.config(text=safety_car_status[session.safetyCarStatus])
     if session.safetyCarStatus == 4:
         top_label2.config(background="red")
     elif session.safetyCarStatus !=0 or session.anyYellow:
@@ -323,4 +323,4 @@ def update_frame(LISTE_FRAMES : list[Custom_Frame], LISTE_JOUEURS, session):
         LISTE_FRAMES[i].update(LISTE_JOUEURS, session)
 
 def update_frame6():
-    LISTE_FRAMES[6].update(session)
+    frames[6].update(session)
