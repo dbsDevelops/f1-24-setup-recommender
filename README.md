@@ -72,7 +72,7 @@ Open the F1 Game :
     * *server.py* Receives datas from different ports and redirects it to specific IP addresses
 * __*Telemetry.py* : Main application you need to run__
 * *Player.py* & *Session.py* : Classes to represent a player and a session
-* *packet_management.py* : Stores the different packets information into various players and session instances
+* *packet_management.py* : Stores the different packets information into various drivers and session instances
 * *dictionnaries.py* : This is where all the different dictionnaries are stored
 * *Custom_Frame.py* : This is where the main frame is created
 * *parser202x.py* : Parses the data received for the F1 2x game (default for F1 24)
