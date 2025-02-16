@@ -5,10 +5,10 @@ screen = Window(themename="darkly")
 
 import json
 import time
-from dictionnaries import *
+from utils.dictionnaries import *
 import packet_parser.packet_management as pm
 import packet_parser.parser2024 as parser
-from Custom_Frame import Players_Frame, Packet_Reception_Frame, Weather_Forecast_Frame
+from models.Custom_Frame import DriversFrame, DataReceptionFrame, WeatherForecastFrame
 
 
 def init_window():
@@ -25,11 +25,11 @@ def init_window():
     notebook = Notebook(main_frame)
     notebook.pack(expand=True, fill="both")
 
-    pm.frames.append(Players_Frame(notebook, "Main Menu", 0))
-    pm.frames.append(Players_Frame(notebook, "Damage", 1))
-    pm.frames.append(Players_Frame(notebook, "Temperatures", 2))
-    pm.frames.append(Players_Frame(notebook, "Laps", 3))
-    pm.frames.append(Players_Frame(notebook, "ERS & Fuel", 4))
+    pm.frames.append(DriversFrame(notebook, "Main Menu", 0))
+    pm.frames.append(DriversFrame(notebook, "Damage", 1))
+    pm.frames.append(DriversFrame(notebook, "Temperatures", 2))
+    pm.frames.append(DriversFrame(notebook, "Laps", 3))
+    pm.frames.append(DriversFrame(notebook, "ERS & Fuel", 4))
 
     map = Frame(notebook)
     pm.frames.append(map)
@@ -37,8 +37,8 @@ def init_window():
     map_canvas = Canvas(map)
     map_canvas.pack(expand=True, fill='both')
 
-    pm.frames.append(Weather_Forecast_Frame(notebook, "Weather Forecast", 6, 20))
-    pm.frames.append(Packet_Reception_Frame(notebook, "Packet Reception", 7))
+    pm.frames.append(WeatherForecastFrame(notebook, "Weather Forecast", 6, 20))
+    pm.frames.append(DataReceptionFrame(notebook, "Packet Reception", 7))
 
     for i in range(8):
         if i != 5:
@@ -86,7 +86,7 @@ top_label1 = Label(top_frame, text="Course ", font=("Arial", 24))
 top_label2 = Label(top_frame, text="", font=("Arial", 24), width=10)
 
 init_window()
-pm.init_20_players()
+pm.initialize_driver_pool()
 
 running = True
 PORT = [int(dictionnary_settings["port"])]

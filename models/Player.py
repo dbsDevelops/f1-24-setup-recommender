@@ -1,7 +1,7 @@
-from dictionnaries import *
+from utils.dictionnaries import *
 
 
-class Player:
+class Driver:
     def __init__(self):
         self.position: int = 0
         self.tyre_wear = []
@@ -52,8 +52,8 @@ class Player:
     def __str__(self):
         return self.name + str(self.position)
 
-    def printing(self, buttonId, liste_joueurs, session):
-        if buttonId == 0:  # Menu principal
+    def printing(self, button_id, session):
+        if button_id == 0:  # Menu principal
             if session in [5, 6, 7, 8, 9, 13]: # Qualif
                 return (
                     f"P{self.position}, {self.name} Lap :{conversion(self.currentLapTime, 2)} {ERS_dictionary[self.ERS_mode]},"
@@ -64,7 +64,7 @@ class Player:
                        f"Gap :{'%.3f'%(self.delta_to_leader/1000)} {self.ERS_pourcentage}% {ERS_dictionary[self.ERS_mode]} " \
                        f"Warnings = {self.warnings} num = {self.numero} {pit_dictionary[self.pit]} {DRS_dict[self.drs]} "
 
-        elif buttonId == 1:  # Dégâts
+        elif button_id == 1:  # Dégâts
             return (f"P{self.position}, {self.name} "
                     f"usure = {self.tyre_wear}, FW = [{self.FrontLeftWingDamage},  "
                     f"{self.FrontRightWingDamage}] | "
@@ -74,21 +74,21 @@ class Player:
                     f"sidepod = {self.sidepodDamage} | "
                     f"{pit_dictionary[self.pit]}")
 
-        elif buttonId == 2:  # Températures
+        elif button_id == 2:  # Températures
             return (
                 f"P{self.position}  {self.name},  RL : {self.tyres_temp_surface[0]}|{self.tyres_temp_inner[0]}, "
                 f"RR :{self.tyres_temp_surface[1]}|{self.tyres_temp_inner[1]} "
                 f"FL : {self.tyres_temp_surface[2]}|{self.tyres_temp_inner[2]}, "
                 f"FR : {self.tyres_temp_surface[3]}|{self.tyres_temp_inner[3]}, {pit_dictionary[self.pit]} ")
 
-        elif buttonId == 3:  # Laps
+        elif button_id == 3:  # Laps
             return f"P{self.position}, {self.name} "+ \
             f"Current lap : {conversion(self.currentLapTime, 2)} [{', '.join('%.3f'%truc for truc in self.currentSectors)}] " + \
             f"Last lap : {conversion(self.lastLapTime, 2)} [{', '.join('%.3f'%truc for truc in self.lastLapSectors)}]  " + \
             f"Fastest lap : {conversion(self.bestLapTime, 2)} [{', '.join('%.3f'%truc for truc in self.bestLapSectors)}] "  + \
             f"{pit_dictionary[self.pit]}"
 
-        elif buttonId == 4:
+        elif button_id == 4:
             return f"P{self.position}, {self.name} ERS = {self.ERS_pourcentage}% | {ERS_dictionary[self.ERS_mode]}  " \
                    f"Fuel = {round(self.fuelRemainingLaps, 2)} tours | {self.penalties}s | {self.speed_trap}km/h"
 
@@ -105,5 +105,3 @@ class Player:
                 return "blue"
             else:
                 return "green" if self.is_not_on_lap() else "red"
-
-
