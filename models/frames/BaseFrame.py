@@ -1,8 +1,4 @@
 from ttkbootstrap import Frame, Label
-from models.Player import Driver
-from utils.dictionnaries import teams_color_dictionary, packets, actual_tyre_compound, tyres_color_dictionnary
-from models.Session import Session
-
 
 class BaseFrame(Frame): 
     def __init__(self, parent, name, id, number_of_lines):

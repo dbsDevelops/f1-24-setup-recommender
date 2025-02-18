@@ -1,12 +1,12 @@
 from utils.dictionnaries import weather_types
 
 class WeatherForecastSample:
-    def __init__(self, time, weather, tktp, airtp, rainP):
+    def __init__(self, time, weather, track_temperature, air_temperature, rain_percentage):
         self.time = time
         self.weather = weather
-        self.track_temperature = tktp
-        self.air_temperature = airtp
-        self.rain_percentage = rainP
+        self.track_temperature = track_temperature
+        self.air_temperature = air_temperature
+        self.rain_percentage = rain_percentage
         self.weather_forecast_accuracy = -1
 
     def __repr__(self):
