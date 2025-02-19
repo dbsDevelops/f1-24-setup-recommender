@@ -67,7 +67,7 @@ Open the F1 Game :
 ## 📘 Project structure <a id="project-structure"></a>
 * utils :
     * *sender.py* : Sends sample data to a given port and IP address.
-    * draw.py : If you run this file before the beginning of a lap, it will 'draw' the track by saving all of player's car's positions within the given file (that's how the mini-maps are created)
+    * *draw.py* : If you run this file before the beginning of a lap, it will 'draw' the track by saving all of player's car's positions within the given file (that's how the mini-maps are created)
     * *receiver.py* : Stores packets received in a list, and stores the list in a file. 10min of recording ≈ 100 MB of data, so be careful !
     * *server.py* Receives datas from different ports and redirects it to specific IP addresses
 * __*Telemetry.py* : Main application you need to run__
