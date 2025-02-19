@@ -1,4 +1,10 @@
+import os
 import sys
+
+root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+print("Root dir:", root_dir)
+sys.path.append(root_dir)
+
 import time
 from ttkbootstrap import Window
 
@@ -26,6 +32,9 @@ class TelemetryApp:
         self.last_update = time.time()
         self.packet_received = [0] * 15
 
+        # Bind the window close event to the close_window method
+        self.main_window.protocol("WM_DELETE_WINDOW", self.close_window)
+
     def run(self):
         """Main loop handling packet reception and UI updates."""
         while self.running:
@@ -42,6 +51,11 @@ class TelemetryApp:
 
             self.window_manager.refresh_ui()
 
+        self.shutdown()
+    
+    def close_window(self):
+        """Handles window closing event."""
+        self.running = False  # Stop the main loop
         self.shutdown()
 
     def shutdown(self):

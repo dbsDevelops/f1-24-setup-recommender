@@ -1,4 +1,4 @@
-import PacketManager as pm
+import helpers.packets.PacketManager as pm
 
 class PacketHandler:
     def __init__(self, window_manager):
