@@ -3,30 +3,30 @@ import socket
 import pprint
 
 pp = pprint.PrettyPrinter()
+NUMBER_OF_CARS = 22
 
 
 class Listener:
-    def __init__(self, port=20777, adress="127.0.0.1", redirect=0, redirect_port=20777):
+    def __init__(self, port=20777, address="127.0.0.1", redirect=0, redirect_port=20777):
         self.port = port
         self.socket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
         self.socket.bind(('', port))
-        self.socket.setblocking(0)
-        self.address = adress
+        self.socket.setblocking(False)
+        self.address = address
         self.redirect = redirect
         self.redirect_port = redirect_port
 
     def reset(self):
         self.socket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
         self.socket.bind(('', self.port))
-        self.socket.setblocking(0)
+        self.socket.setblocking(False)
 
     def get(self, packet=None):
         if packet is None:
             try:
                 packet = self.socket.recv(2048)
-                if self.redirect == 1:
-                    self.socket.sendto(packet, (self.address, self.redirect_port))
-            except ConnectionResetError: #Thrown when redirecting on a localhost port that is not ready to read the datas
+                if self.redirect: self.socket.sendto(packet, (self.address, self.redirect_port))
+            except ConnectionResetError: #Thrown when redirecting on a localhost port that is not ready to read the data
                 return None
             except:
                 return None
@@ -137,7 +137,7 @@ class CarMotionData(Packet):
         ("m_world_velocity_y", ctypes.c_float),  # Velocity in world space Y
         ("m_world_velocity_z", ctypes.c_float),  # Velocity in world space Z
         ("m_world_forward_dir_x", ctypes.c_int16),  # World space forward X direction
-        # (normalised)a
+        # (normalised)
         ("m_world_forward_dir_y", ctypes.c_int16),
         # World space forward Y direction (normalised)
         ("m_world_forward_dir_z", ctypes.c_int16),
@@ -160,7 +160,7 @@ class CarMotionData(Packet):
 class PacketMotionData(Packet):
     _fields_ = [
         ("m_header", PacketHeader),  # Header
-        ("m_car_motion_data", CarMotionData * 22),  # Data for all cars on track
+        ("m_car_motion_data", CarMotionData * NUMBER_OF_CARS),  # Data for all cars on track
     ]
 
 
@@ -361,7 +361,7 @@ class LapData(Packet):
 class PacketLapData(Packet):
     _fields_ = [
         ("m_header", PacketHeader),  # Header
-        ("m_lap_data", LapData * 22),  # Lap data for all cars on track
+        ("m_lap_data", LapData * NUMBER_OF_CARS),  # Lap data for all cars on track
         ("m_time_trial_pb_car_idx", ctypes.c_uint8),
         ("m_time_trial_rival_car_idx", ctypes.c_int8),
     ]
@@ -535,7 +535,7 @@ class PacketParticipantsData(Packet):
         ("m_num_active_cars", ctypes.c_uint8),
         # Number of active cars in the data – should match number of
         # cars on HUD
-        ("m_participants", ParticipantData * 22),
+        ("m_participants", ParticipantData * NUMBER_OF_CARS),
     ]
 
 
@@ -587,7 +587,7 @@ class CarSetupData(Packet):
 class PacketCarSetupData(Packet):
     _fields_ = [
         ("m_header", PacketHeader),  # Header
-        ("m_car_setups", CarSetupData * 22),
+        ("m_car_setups", CarSetupData * NUMBER_OF_CARS),
         ("m_nextFrontWingValue", ctypes.c_float)
     ]
 
@@ -620,7 +620,7 @@ class CarTelemetryData(Packet):
 class PacketCarTelemetryData(Packet):
     _fields_ = [
         ("m_header", PacketHeader),  # Header
-        ("m_car_telemetry_data", CarTelemetryData * 22),
+        ("m_car_telemetry_data", CarTelemetryData * NUMBER_OF_CARS),
         ("m_mfd_panel_index", ctypes.c_uint8),
         # Index of MFD panel open - 255 = MFD closed
         # Single player, race – 0 = Car setup, 1 = Pits
@@ -688,7 +688,7 @@ class CarStatusData(Packet):
 class PacketCarStatusData(Packet):
     _fields_ = [
         ("m_header", PacketHeader),  # Header
-        ("m_car_status_data", CarStatusData * 22),
+        ("m_car_status_data", CarStatusData * NUMBER_OF_CARS),
     ]
 
 
@@ -723,7 +723,7 @@ class PacketFinalClassificationData(Packet):
     _fields_ = [
         ("m_header", PacketHeader),  # Header
         ("m_num_cars", ctypes.c_uint8),  # Number of cars in the final classification
-        ("m_classification_data", FinalClassificationData * 22),
+        ("m_classification_data", FinalClassificationData * NUMBER_OF_CARS),
     ]
 
 
@@ -751,7 +751,7 @@ class PacketLobbyInfoData(Packet):
         ("m_header", PacketHeader),  # Header
         # Packet specific data
         ("m_num_players", ctypes.c_uint8),  # Number of players in the lobby data
-        ("m_lobby_players", LobbyInfoData * 22),
+        ("m_lobby_players", LobbyInfoData * NUMBER_OF_CARS),
     ]
 
 
@@ -786,7 +786,7 @@ class CarDamageData(Packet):
 class PacketCarDamageData(Packet):
     _fields_ = [
         ("m_header", PacketHeader),  # Header
-        ("m_car_damage_data", CarDamageData * 22),
+        ("m_car_damage_data", CarDamageData * NUMBER_OF_CARS),
     ]
 
 
