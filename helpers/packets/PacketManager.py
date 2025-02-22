@@ -17,12 +17,12 @@ menu_buttons: list = ["Main Menu", "Damage", "Temperatures", "Laps", "Map", "ERS
                               "Packet Reception"]
 
 def update_motion(packet, map_canvas, *args):  # Packet 0
-    for i in range(session.number_of_drivers):
-        if drivers[i].worldPositionX != 0:
-            drivers[i].Xmove = packet.m_car_motion_data[i].m_world_position_x - drivers[i].worldPositionX
-            drivers[i].Zmove = packet.m_car_motion_data[i].m_world_position_z - drivers[i].worldPositionZ
-        drivers[i].worldPositionX = packet.m_car_motion_data[i].m_world_position_x
-        drivers[i].worldPositionZ = packet.m_car_motion_data[i].m_world_position_z
+    for index in range(min(22, len(drivers))):
+        if drivers[index].worldPositionX != 0:
+            drivers[index].Xmove = packet.m_car_motion_data[index].m_world_position_x - drivers[index].worldPositionX
+            drivers[index].Zmove = packet.m_car_motion_data[index].m_world_position_z - drivers[index].worldPositionZ
+        drivers[index].worldPositionX = packet.m_car_motion_data[index].m_world_position_x
+        drivers[index].worldPositionZ = packet.m_car_motion_data[index].m_world_position_z
     try:
         update_map(map_canvas)
     except Exception as e:
@@ -59,7 +59,7 @@ def update_session(packet, top_frame1, top_frame2, screen, map_canvas):  # Packe
 
 def update_lap_data(packet):  # Packet 2
     mega_array = packet.m_lap_data
-    for index in range(22):
+    for index in range(min(22, len(drivers))):
         element = mega_array[index]
         player = drivers[index]
         player.position = element.m_car_position
@@ -108,7 +108,7 @@ def warnings(packet):  # Packet 3
         drivers[packet.m_event_details.m_vehicle_idx].hasRetired = True
 
 def update_participants(packet):  # Packet 4
-    for index in range(22):
+    for index in range(min(22, len(drivers))):
         element = packet.m_participants[index]
         driver = drivers[index]
         driver.numero = element.m_race_number
@@ -126,11 +126,11 @@ def update_participants(packet):  # Packet 4
 
 def update_car_setups(packet): # Packet 5
     array = packet.m_car_setups
-    for index in range(22):
+    for index in range(min(22, len(drivers))):
         drivers[index].setup_array = array[index]
 
 def update_car_telemetry(packet):  # Packet 6
-    for index in range(22):
+    for index in range(min(22, len(drivers))):
         element = packet.m_car_telemetry_data[index]
         driver = drivers[index]
         driver.drs = element.m_drs
@@ -143,7 +143,7 @@ def update_car_telemetry(packet):  # Packet 6
     update_frame(frames, drivers, session)
 
 def update_car_status(packet):  # Packet 7
-    for index in range(22):
+    for index in range(min(22, len(drivers))):
         element = packet.m_car_status_data[index]
         driver = drivers[index]
         driver.fuelMix = element.m_fuel_mix
@@ -156,10 +156,12 @@ def update_car_status(packet):  # Packet 7
     update_frame(frames, drivers, session)
 
 def update_car_damage(packet):  # Packet 10
-    for index in range(22):
+    # Only update as many drivers as we actually have in our drivers list.
+    for index in range(min(22, len(drivers))):
         element = packet.m_car_damage_data[index]
+        print('Driver Index :', index)
         driver = drivers[index]
-        driver.tyre_wear = '[' + ', '.join('%.2f'%truc for truc in element.m_tyres_wear) + ']'
+        driver.tyre_wear = '[' + ', '.join('%.2f' % x for x in element.m_tyres_wear) + ']'
         driver.FrontLeftWingDamage = element.m_front_left_wing_damage
         driver.FrontRightWingDamage = element.m_front_right_wing_damage
         driver.rearWingDamage = element.m_rear_wing_damage
@@ -175,7 +177,7 @@ def create_map(map_canvas):
     cmi = 1
     L0, L1 = [], []
     L = []
-    name, d, x_const, z_const = tracks[session.track]
+    name, d, x_const, z_const = track_ids[session.track]
     with open(f"tracks/{name}_2020_racingline.txt", "r") as file:
         for index, line in enumerate(file):
             if index not in [0, 1]:
@@ -221,7 +223,7 @@ def delete_map(map_canvas):
         driver.oval = None
 
 def update_map(map_canvas):
-    _, d, x, z = tracks[session.track]
+    _, d, x, z = track_ids[session.track]
     for driver in drivers:
         if driver.position != 0:
             map_canvas.move(driver.oval, driver.Xmove / d, driver.Zmove / d)
@@ -318,9 +320,9 @@ def update_title(top_label1, top_label2, screen):
     else:
         top_label2.config(background=screen.cget("background"))
 
-def update_frame(LISTE_FRAMES : list[BaseFrame], drivers, session):
+def update_frame(frames : list[BaseFrame], drivers, session):
     for i in range(5):
-        LISTE_FRAMES[i].update(drivers, session)
+        frames[i].update_drivers(drivers, session)
 
 def update_frame6():
     frames[6].update(session)

@@ -1,5 +1,5 @@
 from models.frames.BaseFrame import BaseFrame
-from utils.dictionnaries import packets
+from utils.dictionnaries import packet_ids
 
 class DataReceptionFrame(BaseFrame):
     def __init__(self, parent, name, id):
@@ -8,4 +8,4 @@ class DataReceptionFrame(BaseFrame):
     def update(self, packet_received):
         for i in range(self.n_lines):
             frame, label = self.liste_frame[i]
-            label.config(text=f"{packets[i]} : {packet_received[i]}/s")
+            label.config(text=f"{packet_ids[i]} : {packet_received[i]}/s")

@@ -15,34 +15,86 @@ class DriversFrame(BaseFrame):
             self.label_tyres.append(label)
         # Insère le label pour les pneus
 
-    def update(self, drivers:list[Driver], session):
-        if session.Seance != 18:
-            for i in range(session.number_of_drivers):
-                player = drivers[i]
-                frame, label = self.liste_frame[player.position-1]
-                label.config(text=player.printing(self.id, drivers, session.Seance), foreground=teams_color_dictionary[player.teamId])
-                self.label_tyres[player.position-1].config(text=actual_tyre_compound[player.tyres], foreground=tyres_color_dictionnary[player.tyres])
-            for i in range(session.number_of_drivers, self.n_lines):
-                label.config(text="")
-                self.label_tyres[i].config(text="")
-        else:
-            player = drivers[0]
-            record = drivers[1]
-            rival = drivers[3]
-
-            frame, label = self.liste_frame[0]
-            label.config(text=player.printing(self.id, drivers, session.Seance), foreground=teams_color_dictionary[player.teamId])
-            self.label_tyres[0].config(text=actual_tyre_compound[player.tyres], foreground=tyres_color_dictionnary[player.tyres])
-
-            frame, label = self.liste_frame[1]
-            label.config(text=record.printing(self.id, drivers, session.Seance), foreground=teams_color_dictionary[record.teamId])
-            self.label_tyres[1].config(text=actual_tyre_compound[record.tyres], foreground=tyres_color_dictionnary[record.tyres])
-
-            frame, label = self.liste_frame[2]
-            label.config(text=rival.printing(self.id, drivers, session.Seance), foreground=teams_color_dictionary[rival.teamId])
-            self.label_tyres[2].config(text=actual_tyre_compound[rival.tyres], foreground=tyres_color_dictionnary[rival.tyres])
-
-            for i in range(3, self.n_lines):
+    def update_drivers(self, drivers: list[Driver], session):
+        if not drivers:
+            for i in range(self.n_lines):
                 frame, label = self.liste_frame[i]
                 label.config(text="")
                 self.label_tyres[i].config(text="")
+            return
+
+        if session.Seance != 18:
+            for index in range(min(22, len(drivers))):
+                player = drivers[index]
+                pos = player.position - 1
+                if pos < 0 or pos >= len(self.liste_frame):
+                    continue
+                frame, label = self.liste_frame[pos]
+                label.config(
+                    text=player.printing(self.id, drivers, session.Seance),
+                    foreground=teams_color_dictionary.get(player.teamId, "black")
+                )
+                self.label_tyres[pos].config(
+                    text=actual_tyre_compound[player.tyres],
+                    foreground=tyres_color_dictionnary.get(player.tyres, "black")
+                )
+            for i in range(session.number_of_drivers, self.n_lines):
+                frame, label = self.liste_frame[i]
+                label.config(text="")
+                self.label_tyres[i].config(text="")
+        else:
+            if len(drivers) >= 4:
+                player = drivers[0]
+                record = drivers[1]
+                rival = drivers[3]
+
+                frame, label = self.liste_frame[0]
+                label.config(
+                    text=player.printing(self.id, drivers, session.Seance),
+                    foreground=teams_color_dictionary.get(player.teamId, "black")
+                )
+                self.label_tyres[0].config(
+                    text=actual_tyre_compound[player.tyres],
+                    foreground=tyres_color_dictionnary.get(player.tyres, "black")
+                )
+
+                frame, label = self.liste_frame[1]
+                label.config(
+                    text=record.printing(self.id, drivers, session.Seance),
+                    foreground=teams_color_dictionary.get(record.teamId, "black")
+                )
+                self.label_tyres[1].config(
+                    text=actual_tyre_compound[record.tyres],
+                    foreground=tyres_color_dictionnary.get(record.tyres, "black")
+                )
+
+                frame, label = self.liste_frame[2]
+                label.config(
+                    text=rival.printing(self.id, drivers, session.Seance),
+                    foreground=teams_color_dictionary.get(rival.teamId, "black")
+                )
+                self.label_tyres[2].config(
+                    text=actual_tyre_compound[rival.tyres],
+                    foreground=tyres_color_dictionnary.get(rival.tyres, "black")
+                )
+
+                for i in range(3, self.n_lines):
+                    frame, label = self.liste_frame[i]
+                    label.config(text="")
+                    self.label_tyres[i].config(text="")
+            else:
+                for i in range(len(drivers)):
+                    player = drivers[i]
+                    frame, label = self.liste_frame[i]
+                    label.config(
+                        text=player.printing(self.id, drivers, session.Seance),
+                        foreground=teams_color_dictionary.get(player.teamId, "black")
+                    )
+                    self.label_tyres[i].config(
+                        text=actual_tyre_compound[player.tyres],
+                        foreground=tyres_color_dictionnary.get(player.tyres, "black")
+                    )
+                for i in range(len(drivers), self.n_lines):
+                    frame, label = self.liste_frame[i]
+                    label.config(text="")
+                    self.label_tyres[i].config(text="")

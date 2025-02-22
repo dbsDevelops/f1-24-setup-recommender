@@ -21,13 +21,13 @@ purple = "#880088"
 gold = "#FFD700"
 grey = "#4B4B4B"
 
-packets = {
+packet_ids = {
     0:"Motion",
     1:"Session",
     2:"Lap Data",
     3:"Event",
     4:"Participants",
-    5:"Car Setup",
+    5:"Car Setups",
     6:"Car Telemetry",
     7:"Car Status",
     8:"Final Classification",
@@ -401,7 +401,7 @@ drivers = {
     159: "Lucas Blakeley",
 }
 
-tracks = { #(track name, highNumber=Small on canvas, x_offset, y_offset)
+track_ids = { #(track name, highNumber=Small on canvas, x_offset, y_offset)
     -1: ("Unknown", 0, 0, 0),
     0: ("Melbourne", 3.5, 300, 300),
     1: ("Paul Ricard", 2.5, 500, 300),
