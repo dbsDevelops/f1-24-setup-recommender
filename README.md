@@ -67,12 +67,12 @@ Open the F1 Game :
 ## 📘 Project structure <a id="project-structure"></a>
 * utils :
     * *sender.py* : Sends sample data to a given port and IP address.
-    * draw.py : If you run this file before the beginning of a lap, it will 'draw' the track by saving all of player's car's positions within the given file (that's how the mini-maps are created)
+    * *draw.py* : If you run this file before the beginning of a lap, it will 'draw' the track by saving all of player's car's positions within the given file (that's how the mini-maps are created)
     * *receiver.py* : Stores packets received in a list, and stores the list in a file. 10min of recording ≈ 100 MB of data, so be careful !
     * *server.py* Receives datas from different ports and redirects it to specific IP addresses
 * __*Telemetry.py* : Main application you need to run__
 * *Player.py* & *Session.py* : Classes to represent a player and a session
-* *packet_management.py* : Stores the different packets information into various players and session instances
+* *packet_management.py* : Stores the different packets information into various drivers and session instances
 * *dictionnaries.py* : This is where all the different dictionnaries are stored
 * *Custom_Frame.py* : This is where the main frame is created
 * *parser202x.py* : Parses the data received for the F1 2x game (default for F1 24)

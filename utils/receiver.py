@@ -4,8 +4,7 @@ import os
 import datetime
 import pandas as pd
 from deserializer import ctypes_to_dict
-from packet_parser.parser2024 import PacketHeader, HEADER_FIELD_TO_PACKET_TYPE
-import ctypes
+from packet_handler.PackerParser import PacketHeader, HEADER_FIELD_TO_PACKET_TYPE
 
 PORT = 20776
 STOP_COMMAND = "stop"
