@@ -11,3 +11,6 @@ venv/
 
 # Ignore data files
 data/
+
+# Ignore Documents
+Documents/
