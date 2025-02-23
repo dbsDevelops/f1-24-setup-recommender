@@ -1,4 +1,4 @@
-from utils.dictionnaries import session_types, conversion, tracks, flag_colours
+from utils.dictionnaries import session_types, conversion, track_ids, flag_colours
 
 class Session:
     def __init__(self):
@@ -38,7 +38,7 @@ class Session:
 
     def title_display(self):
         if self.Seance == 18:
-            string = f"Time Trial : {tracks[self.track][0]}"
+            string = f"Time Trial : {track_ids[self.track][0]}"
         elif self.Seance in [15,16,17]:
             string = f"Session : {session_types[self.Seance]}, Lap : {self.current_lap}/{self.number_of_laps}, " \
                         f"Air : {self.air_temperature}°C / Track : {self.track_temperature}°C"

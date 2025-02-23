@@ -1,4 +1,4 @@
-from packet_handler.PackerParser import Listener
+from helpers.packets.PackerParser import Listener
 track = "losail"
 
 PORT=20777
@@ -15,7 +15,7 @@ while True:
     if a is not None:
         header, packet = a
         car_index = header.m_player_car_index
-        if header.m_packet_id == 2 and packet.m_lap_data[car_index].m_lap_distance<500:
+        if header.m_packetId == 2 and packet.m_lapData[car_index].m_lapDistance<500:
             break
 
 print("démarrage")
@@ -25,15 +25,15 @@ while True:
     if a is not None:
         header, packet = a
         if header.m_packet_id == 0:
-            motion_packet = (packet.m_car_motion_data[car_index].m_world_position_z,
-            packet.m_car_motion_data[car_index].m_world_position_x,
-            packet.m_car_motion_data[car_index].m_world_position_y)
-        elif header.m_packet_id == 2:
-            lap_packet = packet.m_lap_data[car_index].m_lap_distance, packet.m_lap_data[car_index].m_sector
+            motion_packet = (packet.m_carMotionData[car_index].m_worldPositionZ,
+            packet.m_carMotionData[car_index].m_worldPositionX,
+            packet.m_carMotionData[car_index].m_worldPositionY)
+        elif header.m_packetId == 2:
+            lap_packet = packet.m_lapData[car_index].m_lapDistance, packet.m_lapData[car_index].m_sector
             if last_lap_distance>lap_packet[0]:
                 break
             last_lap_distance=lap_packet[0]
-        elif header.m_packet_id == 6:
+        elif header.m_packetId == 6:
             tel_packet = packet.m_car_telemetry_data[car_index].m_drs
         if not (lap_packet is None or motion_packet is None or tel_packet is None):
             a, f = lap_packet

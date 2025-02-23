@@ -41,8 +41,8 @@ class TelemetryApp:
             packet_data = self.listener.receive()
             if packet_data:
                 header, packet = packet_data
-                self.packet_received[header.m_packet_id] += 1
-                self.packet_handler.process_packet(header.m_packet_id, packet)
+                self.packet_received[header.m_packetId] += 1
+                self.packet_handler.process_packet(header.m_packetId, packet)
 
             if time.time() > self.last_update + 1:
                 self.last_update = time.time()
