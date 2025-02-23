@@ -3,6 +3,8 @@ import threading
 import os
 import datetime
 import pandas as pd
+import glob
+
 from deserializer import ctypes_to_dict, flatten_dict
 from helpers.packets.PackerParser import PacketHeader, HEADER_FIELD_TO_PACKET_TYPE
 
@@ -166,6 +168,49 @@ def save_data_to_csv(data, file_path):
     else:
         print(f"No data to save for in {file_path}")
 
+def filter_columns(df):
+    """Only keep m_header_m_sessionTime and m_header_m_frameIdentifier from header columns."""
+    keep = {"m_header_m_sessionTime", "m_header_m_frameIdentifier"}
+    cols = [col for col in df.columns if not col.startswith("m_header_") or col in keep]
+    return df[cols]
+
+def join_session_csvs():
+    """Joins the six CSV files into one general CSV file for this session."""
+    csv_types = ["motion", "session", "lap", "car_setup", "car_telemetry", "time_trial"]
+    df_list = []
+    for t in csv_types:
+        # Find files that match the pattern in this session folder.
+        files = glob.glob(os.path.join(DATA_DIRECTORY, f"{t}_data_*.csv"))
+        for f in files:
+            df = pd.read_csv(f)
+            df = filter_columns(df)
+            # Optionally add a column indicating the packet type:
+            df["packet_type"] = t
+            df_list.append(df)
+    if df_list:
+        general_df = pd.concat(df_list, ignore_index=True, sort=False)
+        general_csv = os.path.join(DATA_DIRECTORY, f"general_data_{CURRENT_TIMESTAMP}.csv")
+        general_df.to_csv(general_csv, index=False)
+        print(f"General CSV saved: {general_csv}")
+        return general_csv
+    else:
+        print("No CSV files to join in the session folder.")
+        return None
+
+def update_master_dataset(new_general_csv):
+    """Updates the master dataset CSV with the new general CSV."""
+    master_csv = "./data/dataset.csv"
+    # Ensure the parent folder for the master CSV exists:
+    os.makedirs("./data", exist_ok=True)
+    new_df = pd.read_csv(new_general_csv)
+    if os.path.exists(master_csv):
+        master_df = pd.read_csv(master_csv)
+        combined_df = pd.concat([master_df, new_df], ignore_index=True, sort=False)
+    else:
+        combined_df = new_df
+    combined_df.to_csv(master_csv, index=False)
+    print(f"Master dataset updated: {master_csv}")
+
 def listen_for_stop_command():
     """Listens for the 'stop' command to end data recording."""
     global STOP_COMMAND
@@ -196,6 +241,11 @@ def main():
     save_data_to_csv(car_setup_packets, generate_file_path("car_setup"))
     save_data_to_csv(car_telemetry_packets, generate_file_path("car_telemetry"))
     save_data_to_csv(time_trial_packets, generate_file_path("time_trial"))
+
+    # Join the six CSV files into one general CSV file for this session.
+    general_csv = join_session_csvs()
+    if general_csv:
+        update_master_dataset(general_csv)
 
 if __name__ == "__main__":
     main()

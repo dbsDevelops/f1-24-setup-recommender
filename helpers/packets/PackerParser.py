@@ -32,7 +32,7 @@ class Listener:
                 return None
 
         header = PacketHeader.from_buffer_copy(packet)
-        return header, HEADER_FIELD_TO_PACKET_TYPE[header.m_packet_id].from_buffer_copy(packet)
+        return header, HEADER_FIELD_TO_PACKET_TYPE[header.m_packetId].from_buffer_copy(packet)
     
     def __str__(self) -> str:
         return str(self.__dict__)

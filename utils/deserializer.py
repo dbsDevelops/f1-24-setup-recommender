@@ -62,7 +62,7 @@ def deserialize_packets(data):
         print(f"Parsed header at offset {offset}: {ctypes_to_dict(header)}")
 
         # Step 3: Get the corresponding packet class
-        packet_type = header.m_packet_id
+        packet_type = header.m_packetId
         if packet_type not in HEADER_FIELD_TO_PACKET_TYPE:
             print(f"Unknown packet type {packet_type} at offset {offset}. Skipping...")
             offset += 3 + ctypes.sizeof(PacketHeader)  # Skip this header and 3 bytes of padding
