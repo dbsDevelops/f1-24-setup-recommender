@@ -3,13 +3,14 @@ import threading
 import os
 import datetime
 import pandas as pd
-from deserializer import ctypes_to_dict
+from deserializer import ctypes_to_dict, flatten_dict
 from helpers.packets.PackerParser import PacketHeader, HEADER_FIELD_TO_PACKET_TYPE
 
 # Use the port where the data is being received
 PORT = 20776
 STOP_COMMAND = "run"
-DATA_DIRECTORY = "./data/raw"
+CURRENT_TIMESTAMP = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+DATA_DIRECTORY = "./data/raw/" + CURRENT_TIMESTAMP
 
 # Lists to store packets for each stream
 motion_packets = []
@@ -50,10 +51,14 @@ def parse_packet(data):
         packet_type = HEADER_FIELD_TO_PACKET_TYPE.get(header.m_packetId)
         if packet_type:
             packet = packet_type.from_buffer_copy(data)
-            return ctypes_to_dict(packet)
+            packet_dict = ctypes_to_dict(packet)
+            # Also extract the packetId from the header and put it at the top level
+            packet_dict["m_packetId"] = ctypes_to_dict(header)["m_packetId"]
+            return packet_dict
     except Exception as e:
         print(f"Error parsing packet: {e}")
     return None
+
 
 def add_unique_key(packet):
     """
@@ -72,32 +77,38 @@ def add_unique_key(packet):
 def process_motion_packet(packet):
     """Processes a motion packet, adding a unique key and storing it in the motion_packets list."""
     packet = add_unique_key(packet)
-    motion_packets.append(packet)
+    flattened_packet = flatten_dict(packet)
+    motion_packets.append(flattened_packet)
 
 def process_session_packet(packet):
     """Processes a session packet, adding a unique key and storing it in the session_packets list."""
     packet = add_unique_key(packet)
-    session_packets.append(packet)
+    flattened_packet = flatten_dict(packet)
+    session_packets.append(flattened_packet)
 
 def process_lap_packet(packet):
     """Processes a lap packet, adding a unique key and storing it in the lap_packets list."""
     packet = add_unique_key(packet)
-    lap_packets.append(packet)
+    flattened_packet = flatten_dict(packet)
+    lap_packets.append(flattened_packet)
 
 def process_car_setup_packet(packet):
     """Processes a car setup packet, adding a unique key and storing it in the car_setup_packets list."""
     packet = add_unique_key(packet)
-    car_setup_packets.append(packet)
+    flattened_packet = flatten_dict(packet)
+    car_setup_packets.append(flattened_packet)
 
 def process_car_telemetry_packet(packet):
     """Processes a car telemetry packet, adding a unique key and storing it in the car_telemetry_packets list."""
     packet = add_unique_key(packet)
-    car_telemetry_packets.append(packet)
+    flattened_packet = flatten_dict(packet)
+    car_telemetry_packets.append(flattened_packet)
 
 def process_time_trial_packet(packet):
     """Processes a time trial packet, adding a unique key and storing it in the time_trial_packets list."""
     packet = add_unique_key(packet)
-    time_trial_packets.append(packet)
+    flattened_packet = flatten_dict(packet)
+    time_trial_packets.append(flattened_packet)
 
 def process_packet(parsed_data):
     """
@@ -113,7 +124,7 @@ def process_packet(parsed_data):
     if parsed_data is None:
         return
 
-    packet_id = parsed_data.get("m_packetId")
+    packet_id = parsed_data["m_header"].get("m_packetId")
     if packet_id == 0:
         process_motion_packet(parsed_data)
     elif packet_id == 1:
@@ -128,22 +139,19 @@ def process_packet(parsed_data):
         process_time_trial_packet(parsed_data)
     # Ignore other packet types if not needed
 
-def receive_packets(udp_socket):
+def receive_packets(udp_socket: socket.socket):
     """Continuously receives packets and processes them until the stop command is received."""
-    columns = []
-    all_data = []
-
     global STOP_COMMAND
     print("Receiving UDP packets. Type 'stop' to end recording.")
     
     while STOP_COMMAND != "stop":
         try:
             data, _ = udp_socket.recvfrom(2048)
+            print("Received data:", data)
             parsed_data = parse_packet(data)
+            print("Parsed data:", parsed_data)
             if parsed_data:
-                if not columns:
-                    columns = list(parsed_data.keys())
-                all_data.append(parsed_data)
+                process_packet(parsed_data)
         except BlockingIOError:
             pass
     
@@ -166,7 +174,13 @@ def listen_for_stop_command():
 
 def main():
     """Main execution function."""
+    # Ensure the data directory exists before storing the data
+    if not os.path.exists(DATA_DIRECTORY):
+        os.makedirs(DATA_DIRECTORY)
+
+    # Initialize the UDP socket
     udp_socket = initialize_socket()
+
     # Start receiver and command-listener threads
     receiver_thread = threading.Thread(target=receive_packets, args=(udp_socket,))
     input_thread = threading.Thread(target=listen_for_stop_command)
