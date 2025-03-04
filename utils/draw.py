@@ -34,7 +34,7 @@ while True:
                 break
             last_lap_distance=lap_packet[0]
         elif header.m_packetId == 6:
-            tel_packet = packet.m_car_telemetry_data[car_index].m_drs
+            tel_packet = packet.m_carTelemetryData[car_index].m_drs
         if not (lap_packet is None or motion_packet is None or tel_packet is None):
             a, f = lap_packet
             b,c,d = motion_packet
