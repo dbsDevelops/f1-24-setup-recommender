@@ -159,11 +159,33 @@ def sanitize_and_merge(input_csv, output_csv):
     df_final.to_csv(output_csv, index=False)
     print(f"Sanitized merged dataset saved to: {output_csv}")
 
+def join_sanitized_csvs(folder, output_master):
+    """
+    Scans the given folder for sanitized CSV files (with names matching a given pattern),
+    concatenates them, and writes a master dataset CSV.
+    """
+    pattern = os.path.join(folder, "sanitized_dataset_*.csv")
+    files = glob.glob(pattern)
+    if not files:
+        print(f"No sanitized CSV files found in folder: {folder}")
+        return
+    df_list = []
+    for f in files:
+        print(f"Loading sanitized file: {f}")
+        df = pd.read_csv(f)
+        df_list.append(df)
+    master_df = pd.concat(df_list, ignore_index=True, sort=False)
+    master_df = master_df.reset_index(drop=True)
+    master_df['lapNumber'] = master_df.index + 1
+    master_df = master_df.drop(columns=["m_header_sessionTime", "m_header_frameIdentifier"])
+    master_df.to_csv(output_master, index=False)
+    print(f"Master sanitized dataset saved to: {output_master}")
+
 # --- Main Execution ---
 
 def main():
     # Adjust input_csv to point to your general CSV file from a session.
-    timestamp = "2025-02-23_20-56-22"
+    timestamp = "2025-03-05_16-39-58"
     input_csv = f"./data/raw/{timestamp}/general_data_{timestamp}.csv"  # Update as needed
     output_csv = f"./data/processed/sanitized_dataset_{timestamp}.csv"
     
@@ -171,6 +193,7 @@ def main():
     os.makedirs(os.path.dirname(output_csv), exist_ok=True)
     
     sanitize_and_merge(input_csv, output_csv)
+    join_sanitized_csvs("./data/processed", "./data/processed/master_sanitized_dataset.csv")
 
 if __name__ == "__main__":
     main()
