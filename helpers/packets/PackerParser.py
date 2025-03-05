@@ -132,7 +132,7 @@ class CarMotionData(Packet):
     _fields_ = [
         ("m_worldPositionX", ctypes.c_float),  # World space X position
         ("m_worldPositionY", ctypes.c_float),  # World space Y position
-        ("m_worldPosiitionZ", ctypes.c_float),  # World space Z position
+        ("m_worldPositionZ", ctypes.c_float),  # World space Z position
         ("m_worldVelocityX", ctypes.c_float),  # Velocity in world space X
         ("m_worldVelocityY", ctypes.c_float),  # Velocity in world space Y
         ("m_worldVelocityZ", ctypes.c_float),  # Velocity in world space Z

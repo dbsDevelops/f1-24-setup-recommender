@@ -806,5 +806,5 @@ def file_len(fname):
 def string_code(packet):
     string = ""
     for i in range(4):
-        string += packet.m_event_string_code[i]
+        string += packet.m_eventStringCode[i]
     return string
