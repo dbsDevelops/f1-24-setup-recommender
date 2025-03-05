@@ -12,5 +12,8 @@ venv/
 # Ignore data files
 data/
 
+# Ignore plot files
+analysis/pca-tsne-plots/
+
 # Ignore Documents
 Documents/
