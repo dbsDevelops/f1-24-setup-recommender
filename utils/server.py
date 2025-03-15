@@ -19,8 +19,8 @@ def get(my_socket):
         print(e)
 
 
-L = [create_socket(k) for k in [20773,20775,20776,20777]]
+udp_sockets = [create_socket(port_number) for port_number in [20773,20775,20776,20777]]
 
 while True:
-    for machin in L:
-        get(machin)
+    for udp_socket in udp_sockets:
+        get(udp_socket)

@@ -1,20 +1,18 @@
 import sys
 import os
 import ctypes
+import pickle
 
 # Add the parent directory to the path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from parser2024 import PacketHeader, HEADER_FIELD_TO_PACKET_TYPE
-import pprint
-import csv
+from helpers.packets.PackerParser import PacketHeader, HEADER_FIELD_TO_PACKET_TYPE
 
-pp = pprint.PrettyPrinter()
-
-
-
-# Helper function to convert ctypes to a readable dictionary
 def ctypes_to_dict(ctypes_obj):
+    """
+    Convert a ctypes object to a dictionary.
+    This function recursively converts nested ctypes structures and arrays.
+    """
     if isinstance(ctypes_obj, ctypes.Array):
         return [ctypes_to_dict(item) for item in ctypes_obj]
     elif isinstance(ctypes_obj, ctypes.Structure):
@@ -37,6 +35,10 @@ def find_next_header(data, start_offset, header_bytes=b'\xe8\x07\x18'):
 
 # Function to deserialize multiple packets
 def deserialize_packets(data):
+    """
+    Deserialize multiple packets from a byte stream.
+    The function iterates over the data stream, parsing each packet and storing it in a list.
+    """
     offset = 16  # Start with an initial offset
     packets = []  # Store parsed packets
     HEADER_BYTES = b'\xe8\x07\x18'  # Expected bytes for a valid header
@@ -60,7 +62,7 @@ def deserialize_packets(data):
         print(f"Parsed header at offset {offset}: {ctypes_to_dict(header)}")
 
         # Step 3: Get the corresponding packet class
-        packet_type = header.m_packet_id
+        packet_type = header.m_packetId
         if packet_type not in HEADER_FIELD_TO_PACKET_TYPE:
             print(f"Unknown packet type {packet_type} at offset {offset}. Skipping...")
             offset += 3 + ctypes.sizeof(PacketHeader)  # Skip this header and 3 bytes of padding
@@ -83,36 +85,35 @@ def deserialize_packets(data):
 
     return packets
 
-def save_to_csv(packets, csv_file):
+def flatten_dict(source_dict, parent_key="", sep="_"):
     """
-    Save the deserialized packets to a CSV file.
-    Each row corresponds to a packet.
+    Flattens a nested dictionary, combining keys into a single level using `sep`.
+
+    Example:
+      {"m_header": {"m_packetFormat": 2024}} 
+      => {"m_header_m_packetFormat": 2024}
+
+    If we have lists, we also index them: 
+      {"m_carTelemetryData": [{"m_speed": 280}, {"m_speed": 281}]}
+      => {
+           "m_carTelemetryData_0_m_speed": 280,
+           "m_carTelemetryData_1_m_speed": 281
+         }
     """
-    if not packets:
-        print("No packets to save.")
-        return
-
-    # Get all unique keys across packets
-    keys = set()
-    for packet in packets:
-        keys.update(packet.keys())
-    keys = sorted(keys)
-
-    # Write packets to the CSV file
-    with open(csv_file, "w", newline="") as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=keys)
-        writer.writeheader()
-        for packet in packets:
-            writer.writerow(packet)
-
-# Example usage with raw binary data
-with open("./data/raw/data_2025-01-26 19:51:52.729769.pickle", "rb") as raw_file:
-    raw_data = raw_file.read()
-    packets = deserialize_packets(raw_data)
-    
-    # for packet in packets:
-    #     pp.pprint(packet)
-    #     print("\n")
-    
-    save_to_csv(packets, "./data/processed/packets_2025-01-26 19:51:52.729769.csv")
-    
+    items = []
+    for key, value in source_dict.items():
+        new_key = f"{parent_key}{sep}{key}" if parent_key else key
+        if isinstance(value, dict):
+            # Flatten sub-dict
+            items.extend(flatten_dict(value, new_key, sep).items())
+        elif isinstance(value, list):
+            # Flatten each element in the list
+            for i, elem in enumerate(value):
+                elem_key = f"{new_key}{sep}{i}"
+                if isinstance(elem, dict):
+                    items.extend(flatten_dict(elem, elem_key, sep).items())
+                else:
+                    items.append((elem_key, elem))
+        else:
+            items.append((new_key, value))
+    return dict(items)
