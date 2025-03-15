@@ -18,5 +18,3 @@ Documents/
 
 # Ignore PCA plots
 analysis/pca-tsne-plots
-
-data/processed/packets_2025-01-26 16:43:19.450016.csv
