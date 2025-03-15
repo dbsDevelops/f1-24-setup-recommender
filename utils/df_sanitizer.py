@@ -19,14 +19,17 @@ import numpy as np
 
 # --- Configuration ---
 
+# Circuit name
+CIRCUIT = "bahrein"
+
 # Known start/finish coordinates (X, Y only)
-SF_X = 306.8407897949219   # in metres
-SF_Y = -76.51145935058594  # in metres
+SF_X = -394.5699768066406   # in metres
+SF_Y = 91.22926330566406  # in metres
 
 # Distance threshold to decide if the car is at the start/finish line (in metres)
 THRESHOLD = 10.0  
 # Minimum time gap (in seconds) between lap candidates
-TIME_GAP = 5.0
+TIME_GAP = 86.0
 # Maximum allowed difference (in seconds) to consider a lap or setup record as corresponding
 MERGE_TOLERANCE = 0.5
 
@@ -185,15 +188,15 @@ def join_sanitized_csvs(folder, output_master):
 
 def main():
     # Adjust input_csv to point to your general CSV file from a session.
-    timestamp = "2025-03-05_16-39-58"
-    input_csv = f"./data/raw/{timestamp}/general_data_{timestamp}.csv"  # Update as needed
-    output_csv = f"./data/processed/sanitized_dataset_{timestamp}.csv"
+    timestamp = "2025-03-15_16-26-47"
+    input_csv = f"./data/raw/{CIRCUIT}/{timestamp}/general_data_{timestamp}.csv"  # Update as needed
+    output_csv = f"./data/processed/{CIRCUIT}/sanitized_dataset_{timestamp}.csv"
     
     # Ensure the output directory exists.
     os.makedirs(os.path.dirname(output_csv), exist_ok=True)
     
     sanitize_and_merge(input_csv, output_csv)
-    join_sanitized_csvs("./data/processed", "./data/processed/master_sanitized_dataset.csv")
+    join_sanitized_csvs(f"./data/processed/{CIRCUIT}", f"./data/processed/{CIRCUIT}/{CIRCUIT}_master_sanitized_dataset.csv")
 
 if __name__ == "__main__":
     main()
