@@ -18,7 +18,7 @@ from sklearn.preprocessing import StandardScaler
 
 # --- Configuration ---
 INPUT_CSV = "./data/processed/master_sanitized_dataset.csv"  # Adjust path if needed
-OUTPUT_PLOT = "./analysis/pca_tsne_plot.png"
+OUTPUT_PLOT = "./analysis/pca-tsne-plots/pca_tsne_plot.png"
 N_PCA_COMPONENTS = 5  # We can adjust this number based on the explained variance ratio
 TSNE_PERPLEXITY = 30
 TSNE_RANDOM_STATE = 42
