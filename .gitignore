@@ -5,6 +5,7 @@ test.txt
 utils/datas*
 utils/calculateur.py
 pitstoploss.png
+.DS_Store
 
 # Ignore Python Virtual Environment
 venv/
@@ -14,3 +15,6 @@ data/
 
 # Ignore Documents
 Documents/
+
+# Ignore PCA plots
+analysis/pca-tsne-plots

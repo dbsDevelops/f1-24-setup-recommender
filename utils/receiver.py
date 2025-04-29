@@ -9,10 +9,11 @@ from deserializer import ctypes_to_dict, flatten_dict
 from helpers.packets.PackerParser import PacketHeader, HEADER_FIELD_TO_PACKET_TYPE
 
 # Use the port where the data is being received
+CIRCUIT = "monaco"
 PORT = 20776
 STOP_COMMAND = "run"
 CURRENT_TIMESTAMP = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-DATA_DIRECTORY = "./data/raw/" + CURRENT_TIMESTAMP
+DATA_DIRECTORY = f"./data/raw/{CIRCUIT}/" + CURRENT_TIMESTAMP
 
 # Lists to store packets for each stream
 motion_packets = []
@@ -149,9 +150,9 @@ def receive_packets(udp_socket: socket.socket):
     while STOP_COMMAND != "stop":
         try:
             data, _ = udp_socket.recvfrom(2048)
-            print("Received data:", data)
+            # print("Received data:", data)
             parsed_data = parse_packet(data)
-            print("Parsed data:", parsed_data)
+            # print("Parsed data:", parsed_data)
             if parsed_data:
                 process_packet(parsed_data)
         except BlockingIOError:
@@ -196,6 +197,11 @@ def join_session_csvs():
     else:
         print("No CSV files to join in the session folder.")
         return None
+    
+def save_general_csv(df, file_path):
+    """Saves the general CSV file to the specified path."""
+    df.to_csv(file_path, index=False)
+    print(f"General CSV saved: {file_path}")
 
 def update_master_dataset(new_general_csv):
     """Updates the master dataset CSV with the new general CSV."""
@@ -243,9 +249,9 @@ def main():
     save_data_to_csv(time_trial_packets, generate_file_path("time_trial"))
 
     # Join the six CSV files into one general CSV file for this session.
-    general_csv = join_session_csvs()
-    if general_csv:
-        update_master_dataset(general_csv)
+    join_session_csvs()
+    # if general_csv:
+    #     update_master_dataset(general_csv)
 
 if __name__ == "__main__":
     main()
