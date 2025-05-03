@@ -39,10 +39,15 @@ class Driver:
         self.currentLapTime = 0
         self.setup_array = []
         self.oval = None
+        self.oval = None
         self.Xmove = 0
         self.Zmove = 0
         self.etiquette = ""
         self.aiControlled = -1
+        self.hasRetired = False
+        self.speed_trap = 0
+        self.delta_to_leader = 0
+        self.currentLapInvalid = 1
         self.hasRetired = False
         self.speed_trap = 0
         self.delta_to_leader = 0
@@ -55,6 +60,7 @@ class Driver:
         if button_id == 0:  # Menu principal
             if session in [5, 6, 7, 8, 9, 13]: # Qualif
                 return (
+                    f"P{self.position}, {self.name} Lap :{conversion(self.currentLapTime, 2)} {ERS_dictionary[self.ERS_mode]},"
                     f"P{self.position}, {self.name} Lap :{conversion(self.currentLapTime, 2)} {ERS_dictionary[self.ERS_mode]},"
                     f" num = {self.numero} Last lap : {conversion(self.lastLapTime, 2)}"
                     f" Fastest lap : {conversion(self.bestLapTime, 2)} {pit_dictionary[self.pit]}")
@@ -75,6 +81,7 @@ class Driver:
 
         elif button_id == 2:  # Températures
             return (
+                f"P{self.position}  {self.name},  RL : {self.tyres_temp_surface[0]}|{self.tyres_temp_inner[0]}, "
                 f"P{self.position}  {self.name},  RL : {self.tyres_temp_surface[0]}|{self.tyres_temp_inner[0]}, "
                 f"RR :{self.tyres_temp_surface[1]}|{self.tyres_temp_inner[1]} "
                 f"FL : {self.tyres_temp_surface[2]}|{self.tyres_temp_inner[2]}, "

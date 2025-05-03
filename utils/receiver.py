@@ -1,9 +1,16 @@
 import socket
+<<<<<<< HEAD
 import threading
 import os
 import datetime
 import pandas as pd
 import glob
+=======
+import pickle
+import threading
+import os
+import datetime
+>>>>>>> aebcf88fb19c2a0e378770ceed3bcc5d44a00ac6
 
 from deserializer import ctypes_to_dict, flatten_dict
 from helpers.packets.PackerParser import PacketHeader, HEADER_FIELD_TO_PACKET_TYPE
@@ -11,6 +18,7 @@ from helpers.packets.PackerParser import PacketHeader, HEADER_FIELD_TO_PACKET_TY
 # Use the port where the data is being received
 CIRCUIT = "monaco"
 PORT = 20776
+<<<<<<< HEAD
 EXECUTION_COMMAND = "run"
 CURRENT_TIMESTAMP = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 DATA_DIRECTORY = f"./data/raw/{CIRCUIT}/" + CURRENT_TIMESTAMP
@@ -168,6 +176,44 @@ def save_data_to_csv(data, file_path):
         print(f"Saved {len(df)} records to {file_path}")
     else:
         print(f"No data to save for in {file_path}")
+=======
+string = ""
+date = datetime.datetime.now()
+
+socket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
+socket.bind(('', PORT))
+socket.setblocking(False)
+
+PATH = f"data_{date}.pickle"
+
+if os.path.isfile(PATH):
+    print(f"WARNING : The file {PATH} already exists, it will be overwritten if you continue.")
+    chaine = input("Continue ? [y|N]")
+    if chaine in ["y", "Y"]:
+        print(f"The file {PATH} will be overwritten.")
+    else:
+        print(f"Please change the PATH variable if you don't want the {PATH} file to be overwritten, and re-run the program.")
+        socket.close()
+        exit(0)
+
+file = open(PATH, 'wb')
+file.close()
+
+def main():
+    L=[]
+    while string!="stop":
+        try:
+            L.append(socket.recv(2048))
+        except BlockingIOError:
+            pass
+    print(f"\nRecording finished : Storing {len(L)} packets in {PATH}, this may take a few time, please wait")
+    file = open(PATH, 'wb')
+    pickle.dump(L, file)
+    file.close()
+    print(f"\nDatas stored in {PATH} with success !")
+    socket.close()
+    exit(0)
+>>>>>>> aebcf88fb19c2a0e378770ceed3bcc5d44a00ac6
 
 def filter_columns(df):
     """Only keep m_header_m_sessionTime and m_header_m_frameIdentifier from header columns."""
@@ -175,6 +221,7 @@ def filter_columns(df):
     cols = [col for col in df.columns if not col.startswith("m_header_") or col in keep]
     return df[cols]
 
+<<<<<<< HEAD
 def join_session_csvs():
     """Joins the six CSV files into one general CSV file for this session."""
     csv_types = ["motion", "session", "lap", "car_setup", "car_telemetry", "time_trial"]
@@ -255,3 +302,14 @@ def main():
 
 if __name__ == "__main__":
     main()
+=======
+def inp():
+    global string
+    while string!="stop":
+        string = input("Enter 'stop' to stop the data recording")
+
+t1=threading.Thread(target=main)
+t2=threading.Thread(target=inp)
+t1.start()
+t2.start()
+>>>>>>> aebcf88fb19c2a0e378770ceed3bcc5d44a00ac6

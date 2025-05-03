@@ -1,7 +1,11 @@
-from helpers.packets.PackerParser import Listener
+from helpers.packets.packet_parser import Listener
 track = "losail"
 
 PORT=20777
+file=open(f"../tracks/{track}_2020_racingline.txt", "a")
+file.write(f'"Track file for {track}","2020-07-01 19:31:18",0.000,4,1,v3" \n')
+file.write(f'"dist","pos_z","pos_x","pos_y","drs","sector" \n')
+
 file=open(f"../tracks/{track}_2020_racingline.txt", "a")
 file.write(f'"Track file for {track}","2020-07-01 19:31:18",0.000,4,1,v3" \n')
 file.write(f'"dist","pos_z","pos_x","pos_y","drs","sector" \n')
@@ -10,6 +14,7 @@ listener = Listener(port = PORT)
 lap_packet, motion_packet, tel_packet = None, None, None
 last_lap_distance = 0
 
+# Wait for the first lap data packet to get the car index
 while True:
     a = listener.get()
     if a is not None:
@@ -20,6 +25,7 @@ while True:
 
 print("démarrage")
 
+# Wait for the first lap data packet to get the car index
 while True:
     a = listener.get()
     if a is not None:
@@ -41,5 +47,5 @@ while True:
             e = tel_packet
             file.write(f"{a},{c},{b},{d},{e},{f}\n")
             lap_packet, motion_packet, tel_packet = None, None, None
-
+            file.flush()
 listener.close()
