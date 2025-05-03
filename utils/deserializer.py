@@ -1,12 +1,11 @@
 import sys
 import os
 import ctypes
-import pickle
 
 # Add the parent directory to the path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from helpers.packets.PackerParser import PacketHeader, HEADER_FIELD_TO_PACKET_TYPE
+from helpers.packets.packet_parser import PacketHeader, HEADER_FIELD_TO_PACKET_TYPE
 
 def ctypes_to_dict(ctypes_obj):
     """

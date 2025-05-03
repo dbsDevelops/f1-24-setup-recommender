@@ -1,6 +1,5 @@
 from utils.dictionnaries import *
 
-
 class Driver:
     def __init__(self):
         self.position: int = 0

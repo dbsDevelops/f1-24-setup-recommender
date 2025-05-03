@@ -1,5 +1,4 @@
-import socket
-import helpers.packets.PackerParser as parser
+import helpers.packets.packet_parser as parser
 
 class UDPListener:
     def __init__(self, port, redirect, ip_address, redirect_port):

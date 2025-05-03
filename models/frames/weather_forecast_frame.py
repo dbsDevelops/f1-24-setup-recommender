@@ -1,5 +1,5 @@
-from models.frames.BaseFrame import BaseFrame
-from models.Session import Session
+from models.frames.base_frame import BaseFrame
+from models.session import Session
 
 class WeatherForecastFrame(BaseFrame):
     def __init__(self, parent, name, id, n_lines):

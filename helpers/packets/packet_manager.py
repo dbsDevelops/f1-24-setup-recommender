@@ -1,5 +1,5 @@
-from models.Session import Session
-from models.Player import Driver
+from models.session import Session
+from models.driver import Driver
 from utils.dictionnaries import *
 import json
 import time

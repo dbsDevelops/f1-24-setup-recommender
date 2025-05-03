@@ -11,7 +11,7 @@ from helpers.packets.PackerParser import PacketHeader, HEADER_FIELD_TO_PACKET_TY
 # Use the port where the data is being received
 CIRCUIT = "monaco"
 PORT = 20776
-STOP_COMMAND = "run"
+EXECUTION_COMMAND = "run"
 CURRENT_TIMESTAMP = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 DATA_DIRECTORY = f"./data/raw/{CIRCUIT}/" + CURRENT_TIMESTAMP
 
@@ -144,10 +144,10 @@ def process_packet(parsed_data):
 
 def receive_packets(udp_socket: socket.socket):
     """Continuously receives packets and processes them until the stop command is received."""
-    global STOP_COMMAND
+    global EXECUTION_COMMAND
     print("Receiving UDP packets. Type 'stop' to end recording.")
     
-    while STOP_COMMAND != "stop":
+    while EXECUTION_COMMAND != "stop":
         try:
             data, _ = udp_socket.recvfrom(2048)
             # print("Received data:", data)
@@ -219,9 +219,9 @@ def update_master_dataset(new_general_csv):
 
 def listen_for_stop_command():
     """Listens for the 'stop' command to end data recording."""
-    global STOP_COMMAND
-    while STOP_COMMAND != "stop":
-        STOP_COMMAND = input("Enter 'stop' to stop the data recording: ")
+    global EXECUTION_COMMAND
+    while EXECUTION_COMMAND != "stop":
+        EXECUTION_COMMAND = input("Enter 'stop' to stop the data recording: ")
 
 def main():
     """Main execution function."""
