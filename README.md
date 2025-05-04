@@ -25,7 +25,6 @@ This project consists of a recommendation system of EA SPORTS F1 24 car setups f
 - ✅ Weather forecast for upcoming sessions, including track and air temperature
 - ✅ Option to choose the port for receiving data
 - ✅ Option to redirect received data to another IP address and port (to share data with a friend or another application)
-- ✅ Compatibility with older parsers for previous EA F1 games (F1 22 & F1 23)
 
 
 ## 🔧 Usage <a id="usage"></a>
@@ -74,13 +73,18 @@ Open the F1 Game :
 
 - **`helpers/`**: Provides utility functions and packet management logic.
   - `packets/`: Contains packet parsing and management modules.
+    - `packet_handler.py`: Processes packets depending on their packetID.
     - `packet_parser.py`: Defines packet structures and parsing logic.
     - `packet_manager.py`: Handles packet-specific updates and processing.
 
 - **`models/`**: Defines core data models for the application.
+  - `frames/`: Contains UI frame models.
+    - `base_frame.py`: Defines a base UI frame with labels.
+    - `data_reception_frame.py`: Displays packet reception rates in frames. 
+    - `drivers_frame.py`: Displays driver data with position and tyres.
+    - `weather_forecast_frame.py`: Displays weather forecast data in frames.
   - `driver.py`: Represents driver-related data.
   - `session.py`: Represents session-related data.
-  - `frames/`: Contains UI frame models.
   - `weather_forecast_sample.py`: Represents weather forecast data.
 
 - **`network/`**: Manages network communication.
@@ -96,7 +100,7 @@ Open the F1 Game :
   - `receiver.py`: Handles packet reception and processing.
   - `deserializer.py`: Deserializes incoming data packets.
   - `sanitize_all_circuits.py`: Cleans and processes circuit data.
-  
+
 ## ✏️ To-do list <a id="to-do-list"></a>
 * Implement analysis logic
 
