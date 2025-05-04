@@ -1,8 +1,8 @@
 from ttkbootstrap import Notebook, Frame, Canvas, Menu, Label
-import helpers.packets.PacketManager as pm
-from models.frames.DriversFrame import DriversFrame
-from models.frames.DataReceptionFrame import DataReceptionFrame
-from models.frames.WeatherForecastFrame import WeatherForecastFrame
+import helpers.packets.packet_manager as pm
+from models.frames.drivers_frame import DriversFrame
+from models.frames.data_reception_frame import DataReceptionFrame
+from models.frames.weather_forecast_frame import WeatherForecastFrame
 
 MAIN_MENU = 0
 DAMAGE = 1
@@ -19,7 +19,7 @@ class WindowManager:
         self.top_frame = Frame(main_window)
         self.main_frame = Frame(main_window)
         self.map_canvas = None
-        self.top_label1 = Label(self.top_frame, text="Course ", font=("Arial", 24))
+        self.top_label1 = Label(self.top_frame, text="Circuit ", font=("Arial", 24))
         self.top_label2 = Label(self.top_frame, text="", font=("Arial", 24), width=10)
 
         self._init_ui()

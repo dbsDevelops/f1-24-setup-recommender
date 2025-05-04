@@ -11,7 +11,7 @@ from ttkbootstrap import Window
 from config.settings_loader import load_settings
 from ui.window_manager import WindowManager
 from network.udp_listener import UDPListener
-from helpers.packets.PacketHandler import PacketHandler
+from helpers.packets.packet_handler import PacketHandler
 
 
 class TelemetryApp:

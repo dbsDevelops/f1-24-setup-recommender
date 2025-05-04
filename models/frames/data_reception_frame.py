@@ -1,4 +1,4 @@
-from models.frames.BaseFrame import BaseFrame
+from models.frames.base_frame import BaseFrame
 from utils.dictionnaries import packet_ids
 
 class DataReceptionFrame(BaseFrame):

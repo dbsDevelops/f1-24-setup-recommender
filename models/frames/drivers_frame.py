@@ -1,6 +1,6 @@
 from ttkbootstrap import Label
-from models.frames.BaseFrame import BaseFrame
-from models.Player import Driver
+from models.frames.base_frame import BaseFrame
+from models.driver import Driver
 from utils.dictionnaries import teams_color_dictionary, actual_tyre_compound, tyres_color_dictionnary
 
 class DriversFrame(BaseFrame):

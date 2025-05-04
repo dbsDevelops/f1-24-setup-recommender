@@ -5,7 +5,7 @@ import json
 import time
 from ttkbootstrap import Toplevel, LEFT, Entry, IntVar, Label
 from tkinter import Message, Checkbutton, Button
-from models.frames.BaseFrame import BaseFrame
+from models.frames.base_frame import BaseFrame
 import traceback
 
 drivers: list[Driver] = []
