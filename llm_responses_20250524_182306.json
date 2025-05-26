@@ -1,0 +1,338 @@
+[
+  {
+    "model": "llama3",
+    "temperature": 0.6,
+    "top_p": 0.7,
+    "repetition_penalty": 1.1,
+    "response": "Aquí está el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 75\nDifferential Off Throttle: 60\nEngine Braking: 50\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.10\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 12\nFront Ride Height: 30\nRear Ride Height: 80\nBrake Pressure: 95\nFront Brake Bias: 65\nFront Tyre Pressure: 24.5 psi\nRear Tyre Pressure: 23.5 psi\n\nEste reglaje se basa en la configuración general para un circuito rápido y técnico como Monza, con un enfoque en la aerodinámica y el agarre en curvas rápidas."
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.6,
+    "top_p": 0.7,
+    "repetition_penalty": 1.2,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 30\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 50\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.30\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 10\nFront Ride Height: 30\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 24.5 psi\nRear Tyre Pressure: 22.5 psi"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.6,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "A continuación, te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 20\nDifferential On Throttle: 50\nDifferential Off Throttle: 30\nEngine Braking: 40\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.10\nFront Suspension: 20\nRear Suspension: 25\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 12\nFront Ride Height: 30\nRear Ride Height: 80\nBrake Pressure: 90\nFront Brake Bias: 60\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.6,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "A continuación, te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 30\nRear Wing: 20\nDifferential On Throttle: 70\nDifferential Off Throttle: 40\nEngine Braking: 60\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.20\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 12\nFront Ride Height: 28\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 24.5 psi\nRear Tyre Pressure: 23.5 psi\n\nEste reglaje se basa en la configuración sugerida por el piloto profesional y tiene en cuenta las condiciones del circuito de Monza, que es un tramo rápido y técnico con curvas rápidas y rectas largas."
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.6,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "Aquí está el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 20\nEngine Braking: 40\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 15\nRear Suspension: 12\nFront Anti-Roll Bars: 8\nRear Anti-Roll Bars: 5\nFront Ride Height: 25\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 24.5 psi\nRear Tyre Pressure: 23.5 psi\n\nEste reglaje se basa en considerar que el circuito de Monza es un circuito rápido con curvas rápidas y rectas largas, por lo que se prioriza la aerodinámica y el agarre en las curvas. Se ha elegido una configuración moderada para los alerones delanteros y traseros, y se ha ajustado la carga aerodinámica para encontrar un equilibrio entre agarre y resistencia en rectas.\n\nLa configuración del diferencial se ha ajustado para mejorar la tracción en salida de curva y la rotación en la entrada de curva. Se ha elegido una suspensión moderada para encontrar un equilibrio entre estabilidad y agarre. Se ha suavizado la barra anti-rolls trasera para mejorar la tracción a la salida de curva.\n\nSe ha ajustado la altura del coche (ride height) para mejorar la aerodinámica y el centro de gravedad, y se han elegido presiones de neumáticos moderadas para encontrar un equilibrio entre agarre y desgaste. Se ha priorizado la tracción en rectas y curvas con una configuración de frenos moderada.\n\nEspero que este reglaje base te sea útil. Recuerda que todo en el setup es un compromiso, así que no dudes en ajustar y probar diferentes configuraciones para encontrar el mejor equilibrio para tu coche."
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.6,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "A continuación, te presento un reglaje base para el circuito de Monza:\n\n* Front Wing: 30\n* Rear Wing: 25\n* Differential On Throttle: 60\n* Differential Off Throttle: 40\n* Engine Braking: 20\n* Front Camber: -2.80\n* Rear Camber: -1.90\n* Front Toe: 0.30\n* Rear Toe: 0.20\n* Front Suspension: 15\n* Rear Suspension: 25\n* Front Anti-Roll Bars: 10\n* Rear Anti-Roll Bars: 12\n* Front Ride Height: 35\n* Rear Ride Height: 70\n* Brake Pressure: 90\n* Front Brake Bias: 65\n* Front Tyre Pressure: 26.5 psi\n* Rear Tyre Pressure: 24.5 psi\n\nEste reglaje se basa en las lecciones del piloto profesional y ajusta la aerodinámica, el diferencial, la suspensión, las barras estabilizadoras, la altura del coche y los frenos para adaptarse a las condiciones de Monza."
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.7,
+    "top_p": 0.7,
+    "repetition_penalty": 1.1,
+    "response": "Aquí te dejo el reglaje base para el circuito de Monza:\n\nFront Wing: 30\nRear Wing: 25\nDifferential On Throttle: 70\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 10\nRear Anti-Roll Bars: 15\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 24.5 psi\nRear Tyre Pressure: 23.5 psi"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.7,
+    "top_p": 0.7,
+    "repetition_penalty": 1.2,
+    "response": "A continuación, te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 50\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.10\nFront Suspension: 15\nRear Suspension: 18\nFront Anti-Roll Bars: 12\nRear Anti-Roll Bars: 14\nFront Ride Height: 25\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5 psi\nRear Tyre Pressure: 24.5 psi\n\nEste reglaje se basa en la configuración de Julien Schein para un circuito con curvas rápidas y rectas largas, como Monza. Se ha optimizado para tener un buen equilibrio entre agarre y tracción, especialmente en las curvas rápidas del circuito italiano."
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "Aquí te dejo el reglaje base para el circuito de Monza:\n\nFront Wing: 30\nRear Wing: 20\nDifferential On Throttle: 70\nDifferential Off Throttle: 40\nEngine Braking: 50\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 20\nRear Suspension: 25\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 12\nFront Ride Height: 35\nRear Ride Height: 70\nBrake Pressure: 90\nFront Brake Bias: 60\nFront Tyre Pressure: 24.5\nRear Tyre Pressure: 23.0"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "A continuación, te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 20\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 30\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.10\nFront Suspension: 14\nRear Suspension: 17\nFront Anti-Roll Bars: 7\nRear Anti-Roll Bars: 11\nFront Ride Height: 25\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 24.5 psi\nRear Tyre Pressure: 23.5 psi"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "Aquí está el reglaje base para el circuito de Monza:\n\nFront Wing: 30\nRear Wing: 25\nDifferential On Throttle: 70\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 17\nRear Suspension: 15\nFront Anti-Roll Bars: 13\nRear Anti-Roll Bars: 11\nFront Ride Height: 20\nRear Ride Height: 70\nBrake Pressure: 90\nFront Brake Bias: 60\nFront Tyre Pressure: 25.5 psi\nRear Tyre Pressure: 23.5 psi\n\nEste reglaje se basa en la consideración de que Monza es un circuito rápido y con muchas curvas rápidas, por lo que se necesita una buena aerodinámica y agarre. La carga aerodinámica es moderada para mantener el equilibrio entre agarre en curva y resistencia en recta. Se ha priorizado la tracción en salida de curva con el diferencial on-throttle y se ha suavizado la suspensión para facilitar la transferencia de peso en curvas rápidas."
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 40\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 20\nEngine Braking: 70\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.40\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 12\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 24.5 psi\nRear Tyre Pressure: 22.5 psi\n\nEste reglaje se basa en la combinación de lecciones aprendidas del piloto profesional y las condiciones específicas del circuito de Monza. Se busca un compromiso entre agarre y estabilidad, especialmente en curvas rápidas como la famous Curva Grande."
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.8,
+    "top_p": 0.7,
+    "repetition_penalty": 1.1,
+    "response": "A continuación, te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 30\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 50\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.30\nFront Suspension: 15\nRear Suspension: 18\nFront Anti-Roll Bars: 10\nRear Anti-Roll Bars: 12\nFront Ride Height: 25\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.0 psi\nRear Tyre Pressure: 24.5 psi"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.8,
+    "top_p": 0.7,
+    "repetition_penalty": 1.2,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 70\nDifferential Off Throttle: 40\nEngine Braking: 60\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.10\nFront Suspension: 21\nRear Suspension: 14\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 11\nFront Ride Height: 30\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 25.5 psi\nRear Tyre Pressure: 23.5 psi"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.8,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 18\nRear Suspension: 15\nFront Anti-Roll Bars: 8\nRear Anti-Roll Bars: 5\nFront Ride Height: 25\nRear Ride Height: 65\nBrake Pressure: 95\nFront Brake Bias: 62\nFront Tyre Pressure: 26.0 psi\nRear Tyre Pressure: 24.0 psi\n\nEste reglaje tiene en cuenta las lecciones del piloto profesional y ajusta los parámetros para obtener un buen equilibrio entre agarre, estabilidad y tracción en el circuito de Monza."
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.8,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\n* Front Wing: 25\n* Rear Wing: 30\n* Differential On Throttle: 70\n* Differential Off Throttle: 50\n* Engine Braking: 40\n* Front Camber: -2.80\n* Rear Camber: -1.90\n* Front Toe: 0.20\n* Rear Toe: 0.00\n* Front Suspension: 15\n* Rear Suspension: 25\n* Front Anti-Roll Bars: 10\n* Rear Anti-Roll Bars: 12\n* Front Ride Height: 35\n* Rear Ride Height: 70\n* Brake Pressure: 95\n* Front Brake Bias: 60\n* Front Tyre Pressure: 26.5 psi\n* Rear Tyre Pressure: 24.5 psi"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.8,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "A continuación te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 70\nDifferential Off Throttle: 40\nEngine Braking: 50\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.20\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 10\nRear Anti-Roll Bars: 5\nFront Ride Height: 30\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.8,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "Aquí te dejo el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 35\nDifferential On Throttle: 75\nDifferential Off Throttle: 30\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.20\nFront Suspension: 14\nRear Suspension: 18\nFront Anti-Roll Bars: 10\nRear Anti-Roll Bars: 15\nFront Ride Height: 25\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5 psi\nRear Tyre Pressure: 23.5 psi\n\nEste reglaje intenta encontrar un equilibrio entre agarre y estabilidad en las curvas rápidas de Monza, mientras también toma en cuenta la configuración de ala para compensar la pérdida de agarre en las rectas. La suspensión está configurada para ser suave en mojado y firme en seco."
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.9,
+    "top_p": 0.7,
+    "repetition_penalty": 1.1,
+    "response": "A continuación, te presento un reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.20\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 10\nRear Anti-Roll Bars: 12\nFront Ride Height: 25\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5 psi\nRear Tyre Pressure: 24.5 psi"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.9,
+    "top_p": 0.7,
+    "repetition_penalty": 1.2,
+    "response": "Aquí te dejo el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 20\nDifferential On Throttle: 40\nDifferential Off Throttle: 60\nEngine Braking: 30\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.20\nFront Suspension: 15\nRear Suspension: 12\nFront Anti-Roll Bars: 10\nRear Anti-Roll Bars: 8\nFront Ride Height: 25\nRear Ride Height: 80\nBrake Pressure: 95\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.9,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "A continuación, te proporciono un reglaje base para el circuito de Monza:\n\nFront Wing: 35\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 70\nFront Camber: -2.8\nRear Camber: -1.9\nFront Toe: 0.3\nRear Toe: 0.2\nFront Suspension: 20\nRear Suspension: 25\nFront Anti-Roll Bars: 10\nRear Anti-Roll Bars: 15\nFront Ride Height: 30\nRear Ride Height: 60\nBrake Pressure: 95\nFront Brake Bias: 62\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.9,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "Aquí te presento un reglaje base para el circuito de Monza:\n\nFront Wing: 30\nRear Wing: 25\nDifferential On Throttle: 70\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 18\nFront Ride Height: 28\nRear Ride Height: 60\nBrake Pressure: 95\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.9,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "Aquí te dejo el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 70\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.90\nRear Camber: -1.80\nFront Toe: 0.20\nRear Toe: 0.10\nFront Suspension: 14\nRear Suspension: 18\nFront Anti-Roll Bars: 6\nRear Anti-Roll Bars: 9\nFront Ride Height: 25\nRear Ride Height: 60\nBrake Pressure: 85\nFront Brake Bias: 62\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.0\n\nEste reglaje busca encontrar un equilibrio entre agarre y tracción en el circuito de Monza, que es conocido por ser rápido y no tener curvas extremadamente rápidas o lentas. La configuración aerodinámica apunta a una carga moderada para aprovechar la velocidad en las rectas y encontrar agarre en las curvas más rápidas. El diferencial on-throttle intenta mejorar la tracción al salir de las curvas, mientras que el off-throttle busca mejorar la rotación al entrar en ellas. La suspensión es relativamente dura para mantener estabilidad en seco, pero no tan firme como para perder agarre en mojado."
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.9,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "A continuación, te presento el reglaje base para el circuito de Monza:\n\n* Front Wing: 20\n* Rear Wing: 25\n* Differential On Throttle: 70\n* Differential Off Throttle: 40\n* Engine Braking: 60\n* Front Camber: -2.80\n* Rear Camber: -1.90\n* Front Toe: 0.30\n* Rear Toe: 0.10\n* Front Suspension: 25\n* Rear Suspension: 35\n* Front Anti-Roll Bars: 15\n* Rear Anti-Roll Bars: 12\n* Front Ride Height: 25\n* Rear Ride Height: 80\n* Brake Pressure: 90\n* Front Brake Bias: 65\n* Front Tyre Pressure: 24.5 psi\n* Rear Tyre Pressure: 23.0 psi"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.6,
+    "top_p": 0.7,
+    "repetition_penalty": 1.1,
+    "response": " Front Wing: 30, Rear Wing: 40, Differential On Throttle: 70, Differential Off Throttle: 65, Engine Braking: 60, Front Camber: -2.5, Rear Camber: -1.2, Front Toe: 0.3, Rear Toe: 0.2, Front Suspension: 21, Rear Suspension: 20, Front Anti-Roll Bars: 10, Rear Anti-Roll Bars: 15, Front Ride Height: 20, Rear Ride Height: 60, Brake Pressure: 90, Front Brake Bias: 60, Front Tyre Pressure: 27.5, Rear Tyre Pressure: 23.5"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.6,
+    "top_p": 0.7,
+    "repetition_penalty": 1.2,
+    "response": " Front Wing: 30\n   Rear Wing: 40\n   Differential On Throttle: 65\n   Differential Off Throttle: 70\n   Engine Braking: 20\n   Front Camber: -3.1\n   Rear Camber: -1.8\n   Front Toe: 0.2\n   Rear Toe: 0.3\n   Front Suspension: 25\n   Rear Suspension: 35\n   Front Anti-Roll Bars: 16\n   Rear Anti-Roll Bars: 18\n   Front Ride Height: 25\n   Rear Ride Height: 90\n   Brake Pressure: 90\n   Front Brake Bias: 60\n   Front Tyre Pressure: 27.5\n   Rear Tyre Pressure: 23.5"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.6,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": " Front Wing: 30\n   Rear Wing: 40\n   Differential On Throttle: 65\n   Differential Off Throttle: 70\n   Engine Braking: 50\n   Front Camber: -2.9\n   Rear Camber: -1.8\n   Front Toe: 0.3\n   Rear Toe: 0.1\n   Front Suspension: 26\n   Rear Suspension: 17\n   Front Anti-Roll Bars: 15\n   Rear Anti-Roll Bars: 16\n   Front Ride Height: 30\n   Rear Ride Height: 80\n   Brake Pressure: 95\n   Front Brake Bias: 65\n   Front Tyre Pressure: 27.5\n   Rear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.6,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": " Front Wing: 30\n   Rear Wing: 40\n   Differential On Throttle: 65\n   Differential Off Throttle: 70\n   Engine Braking: 20\n   Front Camber: -2.5\n   Rear Camber: -1.8\n   Front Toe: 0.3\n   Rear Toe: 0.2\n   Front Suspension: 20\n   Rear Suspension: 25\n   Front Anti-Roll Bars: 15\n   Rear Anti-Roll Bars: 14\n   Front Ride Height: 30\n   Rear Ride Height: 90\n   Brake Pressure: 85\n   Front Brake Bias: 60\n   Front Tyre Pressure: 27.5\n   Rear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.6,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": " Front Wing: 30\n   Rear Wing: 40\n   Differential On Throttle: 70\n   Differential Off Throttle: 65\n   Engine Braking: 50\n   Front Camber: -3.1\n   Rear Camber: -2.0\n   Front Toe: 0.4\n   Rear Toe: 0.3\n   Front Suspension: 19\n   Rear Suspension: 26\n   Front Anti-Roll Bars: 15\n   Rear Anti-Roll Bars: 17\n   Front Ride Height: 25\n   Rear Ride Height: 80\n   Brake Pressure: 95\n   Front Brake Bias: 60\n   Front Tyre Pressure: 25.0\n   Rear Tyre Pressure: 24.0"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.6,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": " Front Wing: 30\n   Rear Wing: 40\n   Differential On Throttle: 65\n   Differential Off Throttle: 70\n   Engine Braking: 20\n   Front Camber: -3.1\n   Rear Camber: -1.8\n   Front Toe: 0.2\n   Rear Toe: 0.3\n   Front Suspension: 15\n   Rear Suspension: 25\n   Front Anti-Roll Bars: 15\n   Rear Anti-Roll Bars: 16\n   Front Ride Height: 25\n   Rear Ride Height: 80\n   Brake Pressure: 90\n   Front Brake Bias: 60\n   Front Tyre Pressure: 24.5\n   Rear Tyre Pressure: 23.5"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.7,
+    "top_p": 0.7,
+    "repetition_penalty": 1.1,
+    "response": " Front Wing: 30\n   Rear Wing: 40\n   Differential On Throttle: 65\n   Differential Off Throttle: 70\n   Engine Braking: 40\n   Front Camber: -2.8\n   Rear Camber: -1.3\n   Front Toe: 0.2\n   Rear Toe: 0.1\n   Front Suspension: 25\n   Rear Suspension: 36\n   Front Anti-Roll Bars: 15\n   Rear Anti-Roll Bars: 18\n   Front Ride Height: 25\n   Rear Ride Height: 90\n   Brake Pressure: 95\n   Front Brake Bias: 65\n   Front Tyre Pressure: 24.5\n   Rear Tyre Pressure: 23.5"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.7,
+    "top_p": 0.7,
+    "repetition_penalty": 1.2,
+    "response": " Front Wing: 30, Rear Wing: 40, Differential On Throttle: 70, Differential Off Throttle: 50, Engine Braking: 60, Front Camber: -2.9, Rear Camber: -1.2, Front Toe: 0.3, Rear Toe: 0.2, Front Suspension: 25, Rear Suspension: 20, Front Anti-Roll Bars: 10, Rear Anti-Roll Bars: 15, Front Ride Height: 25, Rear Ride Height: 70, Brake Pressure: 90, Front Brake Bias: 60, Front Tyre Pressure: 25.0, Rear Tyre Pressure: 23.5"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": " Front Wing: 30\n   Rear Wing: 40\n   Differential On Throttle: 65\n   Differential Off Throttle: 70\n   Engine Braking: 20\n   Front Camber: -3.40\n   Rear Camber: -1.90\n   Front Toe: 0.30\n   Rear Toe: 0.10\n   Front Suspension: 25\n   Rear Suspension: 30\n   Front Anti-Roll Bars: 16\n   Rear Anti-Roll Bars: 14\n   Front Ride Height: 25\n   Rear Ride Height: 90\n   Brake Pressure: 85\n   Front Brake Bias: 60\n   Front Tyre Pressure: 27.5\n   Rear Tyre Pressure: 23.5"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": " Front Wing: 30\n   Rear Wing: 40\n   Differential On Throttle: 70\n   Differential Off Throttle: 65\n   Engine Braking: 40\n   Front Camber: -2.8\n   Rear Camber: -1.3\n   Front Toe: 0.3\n   Rear Toe: 0.2\n   Front Suspension: 10\n   Rear Suspension: 30\n   Front Anti-Roll Bars: 15\n   Rear Anti-Roll Bars: 15\n   Front Ride Height: 30\n   Rear Ride Height: 90\n   Brake Pressure: 85\n   Front Brake Bias: 60\n   Front Tyre Pressure: 27.5\n   Rear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": " Front Wing: 30\n   Rear Wing: 40\n   Differential On Throttle: 65\n   Differential Off Throttle: 70\n   Engine Braking: 20\n   Front Camber: -3.1\n   Rear Camber: -1.9\n   Front Toe: 0.3\n   Rear Toe: 0.2\n   Front Suspension: 15\n   Rear Suspension: 25\n   Front Anti-Roll Bars: 15\n   Rear Anti-Roll Bars: 16\n   Front Ride Height: 25\n   Rear Ride Height: 90\n   Brake Pressure: 85\n   Front Brake Bias: 60\n   Front Tyre Pressure: 27.5\n   Rear Tyre Pressure: 23.5"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": " Front Wing: 30, Rear Wing: 40, Differential On Throttle: 70, Differential Off Throttle: 60, Engine Braking: 50, Front Camber: -2.8, Rear Camber: -1.5, Front Toe: 0.3, Rear Toe: 0.2, Front Suspension: 25, Rear Suspension: 21, Front Anti-Roll Bars: 11, Rear Anti-Roll Bars: 16, Front Ride Height: 20, Rear Ride Height: 90, Brake Pressure: 90, Front Brake Bias: 55, Front Tyre Pressure: 27.5, Rear Tyre Pressure: 23.5"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.8,
+    "top_p": 0.7,
+    "repetition_penalty": 1.1,
+    "response": " Front Wing: 30\n   Rear Wing: 40\n   Differential On Throttle: 65\n   Differential Off Throttle: 85\n   Engine Braking: 20\n   Front Camber: -2.5\n   Rear Camber: -1.7\n   Front Toe: 0.3\n   Rear Toe: 0.2\n   Front Suspension: 16\n   Rear Suspension: 25\n   Front Anti-Roll Bars: 14\n   Rear Anti-Roll Bars: 18\n   Front Ride Height: 20\n   Rear Ride Height: 90\n   Brake Pressure: 85\n   Front Brake Bias: 65\n   Front Tyre Pressure: 27.5\n   Rear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.8,
+    "top_p": 0.7,
+    "repetition_penalty": 1.2,
+    "response": " Front Wing: 30\n   Rear Wing: 40\n   Differential On Throttle: 65\n   Differential Off Throttle: 70\n   Engine Braking: 20\n   Front Camber: -3.4\n   Rear Camber: -1.9\n   Front Toe: 0.3\n   Rear Toe: 0.2\n   Front Suspension: 15\n   Rear Suspension: 25\n   Front Anti-Roll Bars: 12\n   Rear Anti-Roll Bars: 14\n   Front Ride Height: 30\n   Rear Ride Height: 60\n   Brake Pressure: 95\n   Front Brake Bias: 65\n   Front Tyre Pressure: 27.5\n   Rear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.8,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": " Front Wing: 30, Rear Wing: 40, Differential On Throttle: 70, Differential Off Throttle: 65, Engine Braking: 50, Front Camber: -2.5, Rear Camber: -1.8, Front Toe: 0.3, Rear Toe: 0.2, Front Suspension: 15, Rear Suspension: 25, Front Anti-Roll Bars: 11, Rear Anti-Roll Bars: 16, Front Ride Height: 20, Rear Ride Height: 90, Brake Pressure: 85, Front Brake Bias: 60, Front Tyre Pressure: 27.5, Rear Tyre Pressure: 23.5"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.8,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": " Front Wing: 25\n   Rear Wing: 30\n   Differential On Throttle: 60\n   Differential Off Throttle: 45\n   Engine Braking: 60\n   Front Camber: -2.9\n   Rear Camber: -1.3\n   Front Toe: 0.3\n   Rear Toe: 0.1\n   Front Suspension: 18\n   Rear Suspension: 24\n   Front Anti-Roll Bars: 15\n   Rear Anti-Roll Bars: 12\n   Front Ride Height: 20\n   Rear Ride Height: 90\n   Brake Pressure: 88\n   Front Brake Bias: 65\n   Front Tyre Pressure: 27.5\n   Rear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.8,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": " Front Wing: 25\n   Rear Wing: 35\n   Differential On Throttle: 70\n   Differential Off Throttle: 60\n   Engine Braking: 40\n   Front Camber: -3.1\n   Rear Camber: -1.7\n   Front Toe: 0.25\n   Rear Toe: 0.25\n   Front Suspension: 15\n   Rear Suspension: 26\n   Front Anti-Roll Bars: 10\n   Rear Anti-Roll Bars: 16\n   Front Ride Height: 30\n   Rear Ride Height: 90\n   Brake Pressure: 85\n   Front Brake Bias: 60\n   Front Tyre Pressure: 24.7\n   Rear Tyre Pressure: 22.8"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.8,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": " Front Wing: 30\n   Rear Wing: 40\n   Differential On Throttle: 60\n   Differential Off Throttle: 85\n   Engine Braking: 70\n   Front Camber: -2.9\n   Rear Camber: -1.3\n   Front Toe: 0.4\n   Rear Toe: 0.1\n   Front Suspension: 16\n   Rear Suspension: 25\n   Front Anti-Roll Bars: 10\n   Rear Anti-Roll Bars: 13\n   Front Ride Height: 25\n   Rear Ride Height: 85\n   Brake Pressure: 90\n   Front Brake Bias: 65\n   Front Tyre Pressure: 24.5\n   Rear Tyre Pressure: 23.5"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.9,
+    "top_p": 0.7,
+    "repetition_penalty": 1.1,
+    "response": " Front Wing: 30\n   Rear Wing: 40\n   Differential On Throttle: 75\n   Differential Off Throttle: 60\n   Engine Braking: 80\n   Front Camber: -2.5\n   Rear Camber: -1.5\n   Front Toe: 0.3\n   Rear Toe: 0.2\n   Front Suspension: 20\n   Rear Suspension: 25\n   Front Anti-Roll Bars: 10\n   Rear Anti-Roll Bars: 16\n   Front Ride Height: 30\n   Rear Ride Height: 90\n   Brake Pressure: 85\n   Front Brake Bias: 60\n   Front Tyre Pressure: 25.5\n   Rear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.9,
+    "top_p": 0.7,
+    "repetition_penalty": 1.2,
+    "response": " Front Wing: 30, Rear Wing: 40, Differential On Throttle: 50, Differential Off Throttle: 60, Engine Braking: 20, Front Camber: -3.1, Rear Camber: -1.7, Front Toe: 0.2, Rear Toe: 0.3, Front Suspension: 25, Rear Suspension: 35, Front Anti-Roll Bars: 16, Rear Anti-Roll Bars: 14, Front Ride Height: 25, Rear Ride Height: 70, Brake Pressure: 85, Front Brake Bias: 60, Front Tyre Pressure: 25.0, Rear Tyre Pressure: 23.0"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.9,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": " Front Wing: 30\n   Rear Wing: 40\n   Differential On Throttle: 75\n   Differential Off Throttle: 80\n   Engine Braking: 60\n   Front Camber: -2.5\n   Rear Camber: -1.3\n   Front Toe: 0.3\n   Rear Toe: 0.1\n   Front Suspension: 21\n   Rear Suspension: 15\n   Front Anti-Roll Bars: 16\n   Rear Anti-Roll Bars: 14\n   Front Ride Height: 30\n   Rear Ride Height: 80\n   Brake Pressure: 95\n   Front Brake Bias: 65\n   Front Tyre Pressure: 25.0\n   Rear Tyre Pressure: 24.0"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.9,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": " Front Wing: 30\n   Rear Wing: 40\n   Differential On Throttle: 60\n   Differential Off Throttle: 50\n   Engine Braking: 20\n   Front Camber: -2.9 (rounded to nearest multiple of 0.1)\n   Rear Camber: -1.7 (rounded to nearest multiple of 0.1)\n   Front Toe: 0.35 (rounded to nearest multiple of 0.1)\n   Rear Toe: 0.2 (rounded to nearest multiple of 0.1)\n   Front Suspension: 26\n   Rear Suspension: 25\n   Front Anti-Roll Bars: 11\n   Rear Anti-Roll Bars: 13\n   Front Ride Height: 25\n   Rear Ride Height: 80\n   Brake Pressure: 95\n   Front Brake Bias: 65\n   Front Tyre Pressure: 24.5 (rounded to nearest decimal)\n   Rear Tyre Pressure: 23.5 (rounded to nearest decimal)"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.9,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": " Front Wing: 30, Rear Wing: 40, Differential On Throttle: 70, Differential Off Throttle: 85, Engine Braking: 20, Front Camber: -2.5, Rear Camber: -1.9, Front Toe: 0.2, Rear Toe: 0.3, Front Suspension: 25, Rear Suspension: 20, Front Anti-Roll Bars: 15, Rear Anti-Roll Bars: 16, Front Ride Height: 20, Rear Ride Height: 90, Brake Pressure: 85, Front Brake Bias: 60, Front Tyre Pressure: 27.5, Rear Tyre Pressure: 23.5"
+  },
+  {
+    "model": "mistral:7b-instruct",
+    "temperature": 0.9,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": " Front Wing: 30\n  Rear Wing: 40\n  Differential On Throttle: 65\n  Differential Off Throttle: 80\n  Engine Braking: 50\n  Front Camber: -2.9\n  Rear Camber: -1.7\n  Front Toe: 0.2\n  Rear Toe: 0.3\n  Front Suspension: 25\n  Rear Suspension: 20\n  Front Anti-Roll Bars: 15\n  Rear Anti-Roll Bars: 16\n  Front Ride Height: 20\n  Rear Ride Height: 70\n  Brake Pressure: 90\n  Front Brake Bias: 55\n  Front Tyre Pressure: 23.5\n  Rear Tyre Pressure: 24.5"
+  }
+]

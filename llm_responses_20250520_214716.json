@@ -1,0 +1,170 @@
+[
+  {
+    "model": "llama3",
+    "temperature": 0.1,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "Basándome en las lecciones del piloto profesional y las condiciones específicas de Monza, aquí te presento un reglaje base para el circuito:\n\n* Front Wing: 25\n* Rear Wing: 30\n* Differential On Throttle: 60\n* Differential Off Throttle: 40\n* Engine Braking: 20\n* Front Camber: -2.80\n* Rear Camber: -1.90\n* Front Toe: 0.30\n* Rear Toe: 0.20\n* Front Suspension: 15\n* Rear Suspension: 25\n* Front Anti-Roll Bars: 10\n* Rear Anti-Roll Bars: 12\n* Front Ride Height: 25\n* Rear Ride Height: 60\n* Brake Pressure: 90\n* Front Brake Bias: 65\n* Front Tyre Pressure: 26.5 psi\n* Rear Tyre Pressure: 24.5 psi\n\nEste reglaje busca encontrar un equilibrio entre agarre y estabilidad en las curvas rápidas de Monza, mientras se minimiza la resistencia en las rectas. La carga aerodinámica es moderada para aprovechar el efecto del asfalto seco, pero no excesiva para evitar problemas de frenado en las curvas lentas. El diferencial on-throttle está configurado para mejorar la tracción en salida de curva, mientras que off-throttle se ajusta para facilitar la rotación en la entrada de curva. La suspensión delantera es moderadamente dura para mantener estabilidad en seco, y la trasera es ligeramente suave para mejorar el agarre en mojado."
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.1,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "Basándome en las lecciones del piloto profesional y las condiciones específicas de Monza, aquí te presento un reglaje base para el circuito:\n\n* Front Wing: 30\n* Rear Wing: 25\n* Differential On Throttle: 60\n* Differential Off Throttle: 40\n* Engine Braking: 20\n* Front Camber: -2.80\n* Rear Camber: -1.90\n* Front Toe: 0.30\n* Rear Toe: 0.20\n* Front Suspension: 25\n* Rear Suspension: 35\n* Front Anti-Roll Bars: 15\n* Rear Anti-Roll Bars: 10\n* Front Ride Height: 30\n* Rear Ride Height: 60\n* Brake Pressure: 90\n* Front Brake Bias: 65\n* Front Tyre Pressure: 25.5 psi\n* Rear Tyre Pressure: 23.5 psi\n\nEste reglaje busca encontrar un equilibrio entre agarre y estabilidad en las curvas rápidas de Monza, mientras se minimiza la resistencia en las rectas. La carga aerodinámica es moderada para aprovechar el efecto del asfalto seco, pero no excesiva para evitar problemas de frenado en las curvas lentas. El diferencial on-throttle está configurado para mejorar la tracción en salida de curva, mientras que off-throttle se ajusta para facilitar la rotación en la entrada de curva. La suspensión delantera es moderadamente dura para mantener estabilidad en seco, y la trasera es ligeramente blanda para mejorar el agarre en mojado."
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.1,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "Basándome en las lecciones del piloto profesional y las condiciones de F1 24, aquí te presento un reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 12\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5 psi\nRear Tyre Pressure: 24.5 psi\n\nEste reglaje busca encontrar un equilibrio entre agarre y estabilidad en las curvas rápidas de Monza, mientras se minimiza la resistencia en las rectas. La carga aerodinámica es moderada para aprovechar el efecto del asfalto seco, pero no excesiva para evitar problemas de frenado en las curvas lentas."
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.1,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "A continuación, te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 12\nRear Anti-Roll Bars: 8\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5 psi\nRear Tyre Pressure: 24.5 psi\n\nEste reglaje se basa en la configuración general para un circuito rápido y sin lluvia, con un énfasis en la aerodinámica y el agarre en curvas rápidas."
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.2,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "Basándome en las lecciones del piloto profesional y considerando las condiciones de Monza, Fórmula 1 24, aquí te presento un reglaje base:\n\nFront Wing: 30\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 12\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.2,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "Basándome en las lecciones del piloto profesional y las condiciones de F1 24, aquí te presento un reglaje base para el circuito de Monza:\n\nFront Wing: 20\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 30\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.20\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 10\nRear Anti-Roll Bars: 12\nFront Ride Height: 25\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 55\nFront Tyre Pressure: 26.5 psi\nRear Tyre Pressure: 24.5 psi\n\nEste reglaje busca encontrar un equilibrio entre agarre y estabilidad en las curvas rápidas de Monza, mientras se minimiza la resistencia en las rectas. La carga aerodinámica es moderada para aprovechar el efecto del asfalto seco, pero no excesiva para evitar problemas de frenado en las curvas más lentas."
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "Basándome en las lecciones del piloto profesional y las condiciones específicas de Monza, aquí te presento un reglaje base:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 20\nEngine Braking: 40\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 12\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5 psi\nRear Tyre Pressure: 24.5 psi\n\nEste reglaje busca encontrar un equilibrio entre agarre y estabilidad en las curvas rápidas de Monza, mientras se minimiza la resistencia en las rectas. La carga aerodinámica es moderada para aprovechar el efecto de suavizado en las curvas, pero no excesiva para evitar problemas de frenado en las rectas. El diferencial on-throttle está configurado para mejorar la tracción en salida de curva, mientras que off-throttle se ajusta para facilitar la rotación en la entrada de curva. La suspensión delantera es moderadamente dura para mantener estabilidad en seco, mientras que la trasera es ligeramente más blanda para mejorar el agarre en mojado."
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "A continuación, te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 30\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 12\nRear Anti-Roll Bars: 18\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5 psi\nRear Tyre Pressure: 24.5 psi\n\nEste reglaje se basa en la configuración general para un circuito rápido y sin lluvia, con un énfasis en la estabilidad y el agarre en curvas rápidas."
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.3,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 35\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 30\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.10\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 12\nFront Ride Height: 30\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 24.5 psi\nRear Tyre Pressure: 23.5 psi\n\nEste reglaje se basa en la configuración general para un circuito rápido y sin lluvia, con un énfasis en la aerodinámica y el agarre en curvas rápidas."
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.3,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "A continuación, te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 18\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5 psi\nRear Tyre Pressure: 24.5 psi\n\nEste reglaje se basa en considerar las condiciones de Monza, un circuito rápido y recto con curvas rápidas y poca asistencia de frenos. Se ha priorizado la aerodinámica para mejorar el agarre en curvas y reducir la resistencia en rectas. La configuración del diferencial se ha ajustado para mejorar la tracción en salida de curva y rotación en entrada de curva. La suspensión se ha suavizado ligeramente para facilitar transferencia de peso y encontrar tracción adicional en condiciones mojadas."
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.3,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "Aquí está el reglaje base para el circuito de Monza:\n\nFront Wing: 30\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 14\nRear Suspension: 18\nFront Anti-Roll Bars: 12\nRear Anti-Roll Bars: 15\nFront Ride Height: 25\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 24.5 psi\nRear Tyre Pressure: 23.5 psi\n\nEste reglaje se basa en la configuración recomendada para un circuito rápido y llano como Monza, con un enfoque en la aerodinámica y el agarre en curvas rápidas."
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.3,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "Basándome en las lecciones del piloto y las condiciones de F1 24, aquí te presento un reglaje base para el circuito de Monza:\n\n* Front Wing: 25\n* Rear Wing: 30\n* Differential On Throttle: 60\n* Differential Off Throttle: 40\n* Engine Braking: 70\n* Front Camber: -2.80\n* Rear Camber: -1.90\n* Front Toe: 0.20\n* Rear Toe: 0.10\n* Front Suspension: 15\n* Rear Suspension: 25\n* Front Anti-Roll Bars: 5\n* Rear Anti-Roll Bars: 3\n* Front Ride Height: 30\n* Rear Ride Height: 60\n* Brake Pressure: 90\n* Front Brake Bias: 65\n* Front Tyre Pressure: 26.0 psi\n* Rear Tyre Pressure: 24.5 psi\n\nEste reglaje busca encontrar un equilibrio entre agarre y estabilidad en las curvas rápidas de Monza, mientras también se toma en cuenta la pérdida de agarre del asfalto en condiciones de lluvia."
+  },
+  {
+    "model": "qwen3",
+    "temperature": 0.1,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "<think>\nOkay, I need to create a base setup for Monza based on the given lessons and F1 24 parameters. Let me start by recalling the key points from Julien Schein's interview.\n\nFirst, Monza is a high-speed circuit with long straights and fast corners. The main challenges are maintaining speed on straights and handling the high-speed corners. The user mentioned that in dry conditions, the setup should balance aerodynamics and mechanical grip. Since Monza is usually dry, I should focus on that.\n\nAerodynamics: Higher downforce (higher wing angles) gives more grip in corners but reduces straight-line speed. Since Monza has long straights, maybe I should set the wings to a moderate level. But the user also mentioned that in dry conditions, the setup should prioritize straight-line speed. Wait, but the lessons say that in dry, you might want to reduce downforce to save speed on straights. However, the user's advice says that in dry, you can adjust the suspension to be softer for better traction. Wait, the user's note says that in dry, harder suspension is better for stability. Wait, the user's instruction says that in dry, harder suspension is better for stability. So maybe the front and rear suspension should be set to higher numbers (harder). But the user also mentioned that in dry, you can raise the ride height to lower the center of gravity. Wait, no, the user said that in dry, lower ride height is better for aerodynamics and stability. So ride height should be as low as possible, maybe 10-20.\n\nDifferential: On-throttle low improves traction out of corners, which is good for Monza's fast corners. So set differential on throttle to a lower value, like 10-20. Off-throttle low improves rotation into corners, so set that to a lower value as well. Wait, the user said that off-th"
+  },
+  {
+    "model": "qwen3",
+    "temperature": 0.1,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "<think>\nOkay, I need to create a base setup for Monza based on the given lessons and F1 24 parameters. Let me start by recalling the key points from Julien Schein's interview.\n\nFirst, Monza is a high-speed circuit with long straights and fast corners. The main challenges are maintaining speed on straights and handling the high-speed corners. The user mentioned that in dry conditions, the setup should balance aerodynamics and mechanical grip. Since Monza is usually dry, I should focus on that.\n\nAerodynamics: Higher downforce (higher wing angles) gives more grip in corners but reduces straight-line speed. Since Monza has long straights, maybe I should set the wings to a moderate level. But the user also mentioned that in dry conditions, the setup should prioritize speed. Wait, the lessons say that in dry, you want to balance. Maybe set front and rear wings to around 30-35? Let me check the ranges. Front and rear wings are 1-50. Maybe 35 for front and 30 for rear? Wait, the user said in dry, higher downforce is better for grip, but since Monza is fast, maybe lower downforce for speed. Hmm, conflicting. Wait, the lessons say in dry, you want to balance. Maybe set front and rear wings to 35 each? Or maybe front higher for more grip in corners. Let me think. Monza has long straights, so lower downforce for speed. But the corners are fast, so some downforce is needed. Maybe front wing 35, rear 30? Not sure yet.\n\nDifferential: On-throttle low improves traction out of corners. Since Monza has fast corners, maybe set on-throttle to 10-20%? Wait, the user said on-throttle low is good for traction. So maybe set on-throttle to 1"
+  },
+  {
+    "model": "qwen3",
+    "temperature": 0.1,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "<think>\nOkay, I need to create a base setup for Monza based on the given lessons and F1 24 parameters. Let me start by recalling the key points from Julien Schein's interview. \n\nMonza is a high-speed circuit with long straights and fast corners. The main challenges are maintaining speed on straights and handling the high-speed corners. The user mentioned that in dry conditions, the setup should balance aerodynamics and mechanical grip. \n\nFirst, aerodynamics. The user said higher downforce (higher wing angles) gives more grip in corners but more drag on straights. Since Monza has long straights, I should aim for lower downforce to reduce drag. But the user also mentioned that in the rain, higher downforce is needed. However, the current conditions are not specified, but the user might be referring to a dry setup. Wait, the user didn't specify the weather, but the initial instructions mention considering conditions, so maybe I should assume dry conditions unless told otherwise. Wait, the user's instruction says \"Ten en cuenta estas condiciones basadas en F1 24\" but doesn't specify the weather. Hmm, maybe I should assume dry conditions as the default. \n\nWait, the user's initial message says \"Ten en cuenta estas condiciones basadas en F1 24\" but the actual conditions are not given. Wait, looking back, the user provided the lessons and then the parameters. The user might be asking for a general base setup, but the answer should be for Monza, which is a dry track. So I need to set up for dry conditions. \n\nSo for aerodynamics, lower front and rear wings to reduce drag. But the user's lessons say that in dry, lower downforce is better for straights. So Front Wing and Rear Wing should be set to lower values. Let's say Front Wing 10, Rear Wing 10. Wait, but maybe"
+  },
+  {
+    "model": "qwen3",
+    "temperature": 0.1,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "<think>\nOkay, let's tackle this F1 setup for Monza. First, I need to remember the key points from Julien Schein's lessons. Monza is a high-speed circuit with long straights and fast corners, so the setup should prioritize aerodynamics for straight-line speed but also manage cornering grip.\n\nStarting with the wings. Since Monza has long straights, I should set the front and rear wings to a moderate level. Maybe 25 for front and 20 for rear? Wait, but the user mentioned that in the rain, higher downforce is needed. But the question doesn't specify rain, so maybe standard. But Monza is usually dry, so maybe lower downforce for speed. Wait, but the user said to consider the lessons, which mention that in dry, lower downforce for speed. So front wing 25, rear 20? Or maybe even lower? Let me check the ranges. Front Wing is 1-50, so 25 is mid. Maybe 25 front and 20 rear for balance.\n\nDifferential settings. On-throttle should be lower to improve traction on exit, so maybe 30%? Off-throttle should be lower for better rotation on entry, so 30% as well? Wait, the user said on-throttle low improves traction, off-throttle low improves rotation. So both 30%? But the range is 10-100 in steps of 5. So 30% for both.\n\nEngine braking. Since Monza has long straights, maybe not too much. But in corners, it can help. Maybe 20%? Or 30%? The user said it's not always useful if brakes are already maxed. So maybe 30% to help in corners.\n\nCamber. For Monza, which has fast corners, more negative camber for grip."
+  },
+  {
+    "model": "qwen3",
+    "temperature": 0.2,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "<think>\nOkay, I need to create a base setup for Monza based on the given lessons and F1 24 parameters. Let me start by recalling the key points from Julien Schein's interview. \n\nMonza is a high-speed circuit with long straights and medium to high-speed corners. The main challenges are maintaining speed on straights and managing cornering efficiency. \n\nFirst, aerodynamics. Since Monza has long straights, I should balance downforce. Higher front and rear wings would help with cornering but reduce straight-line speed. But the user mentioned that in dry conditions, higher downforce is better. Wait, the lesson says in the rain, increase downforce. But Monza is usually dry. So maybe set wings to a moderate level. Let's go with front wing 30 and rear wing 35. That's a good balance between downforce and speed.\n\nNext, differential. On-throttle low improves traction out of corners, which is good for high-speed exits. So set differential on throttle to 10. Off-throttle low helps with entry, so set that to 10 as well. Wait, the user said on-throttle low is better for exit, so maybe 10 is okay. \n\nEngine braking. The lesson says it's not always useful if brakes are already at the limit. But in Monza, maybe use it for some corners to help rotation. Set engine braking to 30%? Wait, the range is 0-100 in steps of 10. Maybe 30 is a good middle ground.\n\nCamber. More negative camber for fast corners, but it's not recommended for races. Since Monza is a race, maybe set front camber to -3.00 (since the range is -3.50 to -2.50) and rear camber to -1.50 (since the range is -"
+  },
+  {
+    "model": "qwen3",
+    "temperature": 0.2,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "<think>\nOkay, let's tackle this F1 setup for Monza. First, I need to remember the key points from Julien Schein's lessons. Monza is a high-speed circuit with long straights and fast corners, so the setup should prioritize aerodynamics for top speed and stability on the straights. But since it's a long track, maybe the corners aren't as tight as other circuits, so I need to balance between downforce and straight-line speed.\n\nStarting with the wings. Monza is a high-speed track, so lower downforce might be better to reduce drag. But the user mentioned that in the rain, higher downforce is needed. However, the question doesn't specify rain, so I'll assume dry conditions. So Front Wing and Rear Wing should be set to lower values. Maybe Front Wing 10 and Rear Wing 10? Wait, but the user said to use values within the game's valid ranges. Let me check the ranges again. Front and Rear Wings are 1-50. So maybe 10 for both? Wait, but maybe a bit higher for stability? Hmm, maybe Front Wing 15 and Rear Wing 15? Not sure yet.\n\nNext, the differential. On-throttle low improves traction on exit, which is good for Monza's long straights. So Differential On Throttle should be low, like 10 or 20. Off-throttle low helps with entry, so maybe 10 as well. Wait, the user said On-throttle low is better for exit, so maybe set On Throttle to 10 and Off Throttle to 10? But the user mentioned that Off-throttle low improves rotation in entry, which is good for Monza's fast corners. So maybe both at 10?\n\nEngine Braking: Not always useful if the brakes are already at their limit. But in Monza, maybe using engine braking can"
+  },
+  {
+    "model": "qwen3",
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "<think>\nOkay, I need to create a base setup for Monza based on the given lessons and F1 24 parameters. Let me start by recalling the key points from Julien Schein's interview.\n\nFirst, Monza is a high-speed circuit with long straights and fast corners. The main challenges are maintaining speed on straights and handling the high-speed corners. The user mentioned that in dry conditions, the setup should balance aerodynamics and mechanical grip. Since Monza is usually dry, I should focus on that.\n\nAerodynamics: Higher downforce (front and rear wings) would help with cornering but reduce straight-line speed. But since Monza has long straights, maybe I should set the wings to a moderate level. However, the user mentioned that in dry conditions, higher downforce is better for grip. Wait, the lesson says that in dry, you can use higher downforce. Wait, no, the lesson says that in dry, you can use higher downforce but in rain, you need more. Wait, the user's lesson says that in dry, you can use higher downforce, but in rain, you need to increase it. Wait, the lesson says: \"En condiciones de lluvia, se recomienda aumentar la carga para compensar la pérdida de agarre del asfalto.\" So for dry, maybe lower downforce? Wait, no, the lesson says that in dry, you can use higher downforce. Wait, the first point under Aerodynamics says: \"A mayor carga aerodinámica (ángulos más altos de ala), mayor agarre en curvas pero mayor resistencia en rectas.\" So higher downforce is better for corners but worse for straights. Since Monza has long straights, maybe we need to balance. But the user is asking for a base setup, so maybe a medium setting. Let me check the parameters. Front and rear wings"
+  },
+  {
+    "model": "qwen3",
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "<think>\nOkay, let's tackle this F1 setup for Monza. First, I need to remember the key points from Julien Schein's lessons and the specific conditions for Monza. Monza is a high-speed circuit with long straights and medium to high-speed corners. The main focus should be on aerodynamics for straight-line speed and handling in the corners.\n\nStarting with the wings. Since Monza has long straights, I should set the front and rear wings to a medium level. Maybe 20 for front and 25 for rear. That gives enough downforce for corners without too much drag on the straights.\n\nNext, the differential. On-throttle should be lower to improve traction when accelerating out of corners. Maybe 30%? Off-throttle needs to be higher to help with rotation into corners. Let's go with 70% for off-throttle. Wait, the user mentioned on-throttle low improves traction, so maybe 30% is good. Off-throttle high causes understeer, so maybe 70% is okay. Wait, the user said off-throttle high causes understeer, so maybe lower off-throttle? Wait, the lesson says off-throttle low improves rotation, so higher off-throttle would be worse. So maybe set off-throttle to 70%? Wait, the user said \"On-throttle bajo mejora tracción en salida de curva. On-throttle alto genera subviraje. Off-throttle bajo mejora la rotación en la entrada de curva. Off-throttle alto causa subviraje por efecto del freno motor.\" So on-throttle low (30%) is good for traction, and off-throttle high (70%) causes understeer. So maybe set off-throttle to 70%? Wait, but if off-throttle is high, that's bad. So maybe set off-throttle to"
+  },
+  {
+    "model": "qwen3",
+    "temperature": 0.3,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "<think>\nOkay, let's tackle this F1 setup for Monza. First, I need to remember the key points from Julien Schein's lessons. Monza is a high-speed circuit with long straights and medium to high-speed corners. The main focus should be on aerodynamics for straight-line speed and stability, but also balancing cornering performance.\n\nStarting with the wings. Since Monza has long straights, I should set the front and rear wings to a moderate level. Maybe 25 for front and 20 for rear. That gives enough downforce for corners without too much drag on straights.\n\nDifferential settings. On-throttle should be lower to improve traction when accelerating out of corners. Maybe 30% for on-throttle. Off-throttle should be higher to help with rotation into corners, so 70%? Wait, the user mentioned on-throttle low improves traction, so maybe 30% is good. Off-throttle high causes understeer, so maybe 70% is okay. Wait, the advice was off-throttle low improves rotation. Wait, the user said: \"Off-throttle bajo mejora la rotación en la entrada de curva. Off-throttle alto causa subviraje por efecto del freno motor.\" So lower off-throttle (like 30%) would help rotation, but higher off-throttle (like 70%) causes understeer. Wait, maybe I got that mixed up. Let me check again. The user said: \"On-throttle bajo mejora tracción en salida de curva. On-throttle alto genera subviraje. Off-throttle bajo mejora la rotación en la entrada de curva. Off-throttle alto causa subviraje por efecto del freno motor.\" So for on-throttle, lower is better for traction, higher causes understeer. For off-throttle, lower is better for rotation,"
+  },
+  {
+    "model": "qwen3",
+    "temperature": 0.3,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "<think>\nOkay, I need to create a base setup for Monza based on the given lessons and F1 24 parameters. Let me start by recalling the key points from Julien Schein's interview.\n\nFirst, Monza is a high-speed circuit with long straights and fast corners. The main challenges are maintaining speed on straights and having good cornering grip. The user mentioned that in dry conditions, the setup should balance aerodynamics and mechanical grip. \n\nAerodynamics: Higher downforce (higher wing angles) for better cornering but more drag on straights. Since Monza has long straights, maybe we should use medium downforce to balance speed and grip. But the user also said that in dry, higher downforce is better. Wait, the lesson says that in dry, higher downforce is better. Wait, the first point says \"A mayor carga aerodinámica (ángulos más altos de ala), mayor agarre en curvas pero mayor resistencia en rectas.\" So for Monza, which has long straights, we might want to reduce downforce to minimize drag. But the user also mentioned that in dry, higher downforce is better. Hmm, maybe it's a balance. Let me think. Monza is a high-speed track, so lower downforce for speed on straights, but enough for cornering. Maybe set front and rear wings to around 30-35? Let me check the valid ranges: Front Wing 1-50, Rear Wing same. So maybe 35 for both? Or maybe front a bit higher to balance the front grip?\n\nDifferential: On-throttle low improves traction on exit, on-throttle high causes understeer. Since Monza has long straights, maybe set on-throttle to a lower value to help with acceleration out of corners. Off-throttle low improves rotation on entry, so set off-th"
+  },
+  {
+    "model": "qwen3",
+    "temperature": 0.3,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "<think>\nOkay, let's tackle this F1 setup for Monza. First, I need to recall the user's instructions and the lessons from Julien Schein. Monza is a high-speed circuit with long straights and fast corners, so the setup should prioritize aerodynamics for top speed and stability on the straights. But since it's a dry track, I should balance the aerodynamic settings to avoid too much drag.\n\nStarting with the wings: Front and rear wings. Since Monza is fast, higher downforce might be needed for cornering, but the user mentioned that in the rain, you increase downforce. But since it's dry, maybe moderate settings. Let me check the ranges. Front Wing 1-50, Rear Wing same. Maybe set Front Wing to 40 and Rear to 45? Wait, but the user said to consider the lessons. The lesson says that in dry, you might not need as much as in the rain. So maybe Front Wing 35 and Rear 40? Wait, but Monza has long straights, so maybe lower wings to reduce drag. Hmm, conflicting. Let me think again. The user's lesson says that in dry, you can have lower downforce for better straight-line speed. But the circuit has fast corners, so some downforce is needed. Maybe Front Wing 30 and Rear 35? Wait, but the user's example might have different numbers. Let me check the ranges again. Front Wing 1-50, so maybe 35 for front and 40 for rear? Or maybe higher for rear? Not sure. Let me proceed.\n\nDifferential: On-throttle low for better traction on exit, so set to 10-15%? Wait, the lesson says On-throttle low improves traction in exit. So set On Throttle to 10-15. Off-throttle low for entry rotation"
+  },
+  {
+    "model": "qwen3",
+    "temperature": 0.3,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "<think>\nOkay, I need to create a base setup for Monza based on the lessons from Julien Schein and the F1 24 parameters. Let me start by recalling the key points from the interview.\n\nFirst, Monza is a high-speed circuit with long straights and medium to high-speed corners. So, the setup should prioritize aerodynamics for straight-line speed but also balance cornering grip. \n\nAerodynamics: Higher downforce (higher wing angles) would help in corners but reduce straight-line speed. Since Monza has long straights, maybe we should set the wings to a moderate level. But wait, the user mentioned that in the rain, higher downforce is needed. However, the question doesn't specify rain, so maybe default to a balance. Let me check the ranges: Front and Rear Wings are 1-50. Maybe set them to 30 each? That's a middle ground for high-speed tracks.\n\nDifferential: On-throttle low improves traction out of corners, which is good for Monza's long straights. So set On Throttle to 10-15%? Wait, the user said On-throttle low is better for traction. So maybe 10%? But the range is 10-100 in 5% steps. Let me go with 10% for On Throttle. Off-throttle low improves rotation into corners, so set Off Throttle to 10% as well? Wait, the user said Off-throttle low improves rotation, so maybe 10% for Off Throttle. But I need to check the differential settings again. \n\nEngine Braking: Not always useful, but can help in fast corners. Maybe set to 20%? Since it's a high-speed track, maybe not too much. \n\nCamber: More negative camber for fast corners, but higher wear. Since Monza has medium to high"
+  }
+]

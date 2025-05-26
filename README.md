@@ -103,4 +103,3 @@ Open the F1 Game :
 
 ## ✏️ To-do list <a id="to-do-list"></a>
 * Implement analysis logic
-

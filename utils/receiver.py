@@ -9,7 +9,7 @@ from deserializer import ctypes_to_dict, flatten_dict
 from helpers.packets.packet_parser import PacketHeader, HEADER_FIELD_TO_PACKET_TYPE
 
 # Use the port where the data is being received
-CIRCUIT = "monaco"
+CIRCUIT = "monza"
 PORT = 20776
 EXECUTION_COMMAND = "run"
 CURRENT_TIMESTAMP = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")

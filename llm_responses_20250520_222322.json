@@ -1,0 +1,170 @@
+[
+  {
+    "model": "llama3",
+    "temperature": 0.1,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "Aquí está el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 12\nRear Anti-Roll Bars: 18\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.1,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 20\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 30\nEngine Braking: 40\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.20\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 10\nRear Anti-Roll Bars: 12\nFront Ride Height: 25\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.1,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 12\nRear Anti-Roll Bars: 8\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.1,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 30\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 12\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.2,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 20\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 30\nEngine Braking: 40\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.20\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 10\nRear Anti-Roll Bars: 12\nFront Ride Height: 35\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 24.5 psi\nRear Tyre Pressure: 23.5 psi"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.2,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "Aquí está el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 12\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "Aquí está el reglaje base para el circuito de Monza:\n\nFront Wing: 30\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 50\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.30\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 10\nFront Ride Height: 25\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 12\nRear Anti-Roll Bars: 18\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.3,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "Here is the generated setup for Monza:\n\nFront Wing: 30\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 70\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.30\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 10\nFront Ride Height: 30\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.3,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "Front Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 12\nRear Anti-Roll Bars: 18\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.3,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 20\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 30\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.20\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 10\nRear Anti-Roll Bars: 12\nFront Ride Height: 25\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.3,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "Here is the base setup for the Monza circuit:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 70\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 12\nRear Anti-Roll Bars: 18\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "qwen:7b",
+    "temperature": 0.1,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "[ERROR] model 'qwen:7b' not found"
+  },
+  {
+    "model": "qwen:7b",
+    "temperature": 0.1,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "[ERROR] model 'qwen:7b' not found"
+  },
+  {
+    "model": "qwen:7b",
+    "temperature": 0.1,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "[ERROR] model 'qwen:7b' not found"
+  },
+  {
+    "model": "qwen:7b",
+    "temperature": 0.1,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "[ERROR] model 'qwen:7b' not found"
+  },
+  {
+    "model": "qwen:7b",
+    "temperature": 0.2,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "[ERROR] model 'qwen:7b' not found"
+  },
+  {
+    "model": "qwen:7b",
+    "temperature": 0.2,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "[ERROR] model 'qwen:7b' not found"
+  },
+  {
+    "model": "qwen:7b",
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "[ERROR] model 'qwen:7b' not found"
+  },
+  {
+    "model": "qwen:7b",
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "[ERROR] model 'qwen:7b' not found"
+  },
+  {
+    "model": "qwen:7b",
+    "temperature": 0.3,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "[ERROR] model 'qwen:7b' not found"
+  },
+  {
+    "model": "qwen:7b",
+    "temperature": 0.3,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "[ERROR] model 'qwen:7b' not found"
+  },
+  {
+    "model": "qwen:7b",
+    "temperature": 0.3,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "[ERROR] model 'qwen:7b' not found"
+  },
+  {
+    "model": "qwen:7b",
+    "temperature": 0.3,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "[ERROR] model 'qwen:7b' not found"
+  }
+]
