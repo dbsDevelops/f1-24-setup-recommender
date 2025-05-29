@@ -7,7 +7,25 @@ NUMBER_OF_CARS = 22
 
 
 class Listener:
+    """A UDP listener for receiving F1 telemetry data packets.
+    This class listens for packets on a specified port and can redirect them to another address if needed.
+    Attributes:
+
+        port (int): The port to listen on.
+        socket (socket.socket): The UDP socket for receiving packets.
+        address (str): The address to redirect packets to.
+        redirect (int): Whether to redirect packets (0 or 1).
+        redirect_port (int): The port to redirect packets to if redirect is enabled.
+    """
     def __init__(self, port=20777, address="127.0.0.1", redirect=0, redirect_port=20777):
+        """Initializes the UDP listener with the specified port and optional redirection settings.
+        
+        :param int port: The port to listen on. Default is 20777.
+        :param str address: The address to redirect the packets to. Default is 127.0.0.1 (localhost).
+        :param int redirect: Whether to redirect packets (0 or 1). Default is 0 (no redirection).
+        :param int redirect_port: The port to redirect packets to if redirection is enabled. Default is 20777.
+        """
+
         self.port = port
         self.socket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
         self.socket.bind(('', port))
@@ -17,11 +35,17 @@ class Listener:
         self.redirect_port = redirect_port
 
     def reset(self):
+        """Resets the UDP listener by closing the current socket and creating a new one."""
         self.socket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
         self.socket.bind(('', self.port))
         self.socket.setblocking(False)
 
     def get(self, packet=None):
+        """Receives a packet from the UDP socket.
+        If a packet is provided, it will be processed; otherwise, it will attempt to receive a new packet.
+        :param packet: Optional bytes object representing a packet to process.
+        :return: A tuple containing the packet header and the packet data, or None if no packet is received.
+        """
         if packet is None:
             try:
                 packet = self.socket.recv(2048)
@@ -32,7 +56,7 @@ class Listener:
                 return None
 
         header = PacketHeader.from_buffer_copy(packet)
-        return header, HEADER_FIELD_TO_PACKET_TYPE[header.m_packetId].from_buffer_copy(packet)
+        return header, packet_header_to_class_map[header.m_packetId].from_buffer_copy(packet)
     
     def __str__(self) -> str:
         return str(self.__dict__)
@@ -912,7 +936,7 @@ class PacketTimeTrialData(Packet):
         ("m_rivalDataSet", TimeTrialDataSet)
     ]
 
-HEADER_FIELD_TO_PACKET_TYPE = {
+packet_header_to_class_map = {
     0: PacketMotionData,
     1: PacketSessionData,
     2: PacketLapData,

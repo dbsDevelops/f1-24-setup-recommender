@@ -1,6 +1,13 @@
 import socket
 
 def create_socket(port):
+    """
+    Creates a UDP socket bound to the specified port.
+    The socket is set to non-blocking mode to allow for asynchronous operations.
+    
+    :param port: The port number to bind the socket to.
+    :return: A UDP socket object.
+    """
     my_socket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
     my_socket.bind(('', port))
     my_socket.setblocking(False)

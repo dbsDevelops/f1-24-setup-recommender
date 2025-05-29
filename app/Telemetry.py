@@ -15,7 +15,24 @@ from helpers.packets.packet_handler import PacketHandler
 
 
 class TelemetryApp:
+    """
+    Main application class for the telemetry system.
+    Initializes the main window, network listener, and packet handler.
+    Handles the main loop for receiving packets and updating the UI.
+
+    Attributes:
+
+        settings (dict): Application settings loaded from configuration.
+        main_window (Window): The main application window.
+        window_manager (WindowManager): Manages the UI components and updates.
+        packet_handler (PacketHandler): Handles incoming packets and processes them.
+        listener (UDPListener): Listens for incoming UDP packets.
+        running (bool): Flag to control the main loop execution.
+        last_update (float): Timestamp of the last UI update.
+        packet_received (list): List to count received packets by type.
+    """
     def __init__(self):
+        """Initialize the telemetry application."""
         self.settings = load_settings()
         self.main_window = Window(themename="darkly")
         self.window_manager = WindowManager(self.main_window)
@@ -67,3 +84,4 @@ class TelemetryApp:
 if __name__ == "__main__":
     app = TelemetryApp()
     app.run()
+    

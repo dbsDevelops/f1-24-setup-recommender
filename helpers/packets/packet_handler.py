@@ -1,6 +1,16 @@
 import helpers.packets.packet_manager as pm
 
 class PacketHandler:
+    """
+    Handles incoming packets and processes them based on their ID.
+    Maps packet IDs to corresponding functions for processing.
+
+    Attributes:
+
+        window_manager (WindowManager): Manages the UI components and updates.
+        map_canvas (MapCanvas): The canvas for displaying the map.
+        function_hashmap (dict): Maps packet IDs to functions and their arguments.
+    """
     def __init__(self, window_manager):
         self.window_manager = window_manager
         self.map_canvas = window_manager.map_canvas

@@ -6,7 +6,7 @@ import pandas as pd
 import glob
 
 from deserializer import ctypes_to_dict, flatten_dict
-from helpers.packets.packet_parser import PacketHeader, HEADER_FIELD_TO_PACKET_TYPE
+from helpers.packets.packet_parser import PacketHeader, packet_header_to_class_map
 
 # Use the port where the data is being received
 CIRCUIT = "monza"
@@ -31,12 +31,21 @@ def initialize_socket():
     return udp_socket
 
 def generate_file_path(packet_type):
-    """Generates a timestamped file path for storing recorded data."""
+    """
+    Generates a timestamped file path for storing recorded data.
+    The file path is based on the packet type and the current timestamp.
+
+    :param packet_type: The type of packet (e.g., "motion", "session", etc.)
+    """
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     return f"{DATA_DIRECTORY}/{packet_type}_data_{timestamp}.csv"
 
 def confirm_overwrite(file_path):
-    """Asks for confirmation if the file already exists."""
+    """
+    Asks for confirmation if the file already exists.
+    
+    :param file_path: The path to the file to be saved.
+    """
     if os.path.isfile(file_path):
         print(f"WARNING: The file {file_path} already exists and will be overwritten if you continue.")
         user_choice = input("Continue? [y|N]: ")
@@ -48,10 +57,12 @@ def parse_packet(data):
     """
     Deserializes a UDP packet and converts it to a dictionary.
     The PacketHeader is used to determine the packet type.
+
+    :param data: The raw byte data of the packet.
     """
     try:
         header = PacketHeader.from_buffer_copy(data)
-        packet_type = HEADER_FIELD_TO_PACKET_TYPE.get(header.m_packetId)
+        packet_type = packet_header_to_class_map.get(header.m_packetId)
         if packet_type:
             packet = packet_type.from_buffer_copy(data)
             packet_dict = ctypes_to_dict(packet)
@@ -67,6 +78,8 @@ def add_unique_key(packet):
     """
     Adds a unique key to the packet dictionary composed of m_sessionTime and m_frameIdentifier.
     This key will help during the join/merge process later.
+
+    :param packet: The packet dictionary to which the unique key will be added.
     """
     try:
         session_time = packet.get("m_sessionTime")
@@ -78,37 +91,61 @@ def add_unique_key(packet):
     return packet
 
 def process_motion_packet(packet):
-    """Processes a motion packet, adding a unique key and storing it in the motion_packets list."""
+    """
+    Processes a motion packet, adding a unique key and storing it in the motion_packets list.
+    
+    :param packet: The motion packet dictionary to be processed.
+    """
     packet = add_unique_key(packet)
     flattened_packet = flatten_dict(packet)
     motion_packets.append(flattened_packet)
 
 def process_session_packet(packet):
-    """Processes a session packet, adding a unique key and storing it in the session_packets list."""
+    """
+    Processes a session packet, adding a unique key and storing it in the session_packets list.
+    
+    :param packet: The session packet dictionary to be processed.
+    """
     packet = add_unique_key(packet)
     flattened_packet = flatten_dict(packet)
     session_packets.append(flattened_packet)
 
 def process_lap_packet(packet):
-    """Processes a lap packet, adding a unique key and storing it in the lap_packets list."""
+    """
+    Processes a lap packet, adding a unique key and storing it in the lap_packets list.
+    
+    :param packet: The lap packet dictionary to be processed.
+    """
     packet = add_unique_key(packet)
     flattened_packet = flatten_dict(packet)
     lap_packets.append(flattened_packet)
 
 def process_car_setup_packet(packet):
-    """Processes a car setup packet, adding a unique key and storing it in the car_setup_packets list."""
+    """
+    Processes a car setup packet, adding a unique key and storing it in the car_setup_packets list.
+    
+    :param packet: The car setup packet dictionary to be processed.
+    """
     packet = add_unique_key(packet)
     flattened_packet = flatten_dict(packet)
     car_setup_packets.append(flattened_packet)
 
 def process_car_telemetry_packet(packet):
-    """Processes a car telemetry packet, adding a unique key and storing it in the car_telemetry_packets list."""
+    """
+    Processes a car telemetry packet, adding a unique key and storing it in the car_telemetry_packets list.
+    
+    :param packet: The car telemetry packet dictionary to be processed.
+    """
     packet = add_unique_key(packet)
     flattened_packet = flatten_dict(packet)
     car_telemetry_packets.append(flattened_packet)
 
 def process_time_trial_packet(packet):
-    """Processes a time trial packet, adding a unique key and storing it in the time_trial_packets list."""
+    """
+    Processes a time trial packet, adding a unique key and storing it in the time_trial_packets list.
+    
+    :param packet: The time trial packet dictionary to be processed.
+    """
     packet = add_unique_key(packet)
     flattened_packet = flatten_dict(packet)
     time_trial_packets.append(flattened_packet)
@@ -116,13 +153,15 @@ def process_time_trial_packet(packet):
 def process_packet(parsed_data):
     """
     Routes the parsed packet to the correct processing function based on its packet ID.
-    The IDs are defined in the UDP spec for F1 24:
+    The IDs are defined in the UDP spec for EA F1 24:
       - Motion Data      : 0
       - Session Data     : 1
       - Lap Data         : 2
       - Car Setup Data   : 5
       - Car Telemetry Data: 6
       - Time Trial Data  : 14
+
+    :param parsed_data: The parsed packet data as a dictionary.
     """
     if parsed_data is None:
         return
@@ -143,7 +182,11 @@ def process_packet(parsed_data):
     # Ignore other packet types if not needed
 
 def receive_packets(udp_socket: socket.socket):
-    """Continuously receives packets and processes them until the stop command is received."""
+    """
+    Continuously receives packets and processes them until the stop command is received.
+    
+    :param socket.socket udp_socket: The UDP socket to listen for incoming packets.
+    """
     global EXECUTION_COMMAND
     print("Receiving UDP packets. Type 'stop' to end recording.")
     
@@ -161,7 +204,12 @@ def receive_packets(udp_socket: socket.socket):
     udp_socket.close()
 
 def save_data_to_csv(data, file_path):
-    """Saves the list of packet dictionaries to a CSV file."""
+    """
+    Saves the list of packet dictionaries to a CSV file.
+    
+    :param data: The list of packet dictionaries to be saved.
+    :param file_path: The path where the CSV file will be saved.
+    """
     if data:
         df = pd.DataFrame(data)
         df.to_csv(file_path, index=False)
@@ -170,13 +218,26 @@ def save_data_to_csv(data, file_path):
         print(f"No data to save for in {file_path}")
 
 def filter_columns(df):
-    """Only keep m_header_m_sessionTime and m_header_m_frameIdentifier from header columns."""
+    """
+    Only keep m_header_m_sessionTime and m_header_m_frameIdentifier from header columns.
+    
+    :param df: The DataFrame containing the packet data.
+    :return: A DataFrame with filtered columns.
+    """
     keep = {"m_header_m_sessionTime", "m_header_m_frameIdentifier"}
     cols = [col for col in df.columns if not col.startswith("m_header_") or col in keep]
     return df[cols]
 
 def join_session_csvs():
-    """Joins the six CSV files into one general CSV file for this session."""
+    """
+    Joins the six CSV files into one general CSV file for this session.
+    This function searches for CSV files in the DATA_DIRECTORY that match the expected patterns
+    for each packet type and concatenates them into a single DataFrame.
+    The resulting DataFrame is then saved as a general CSV file.
+    If no CSV files are found, it prints a message and returns None.
+
+    :return: The path to the general CSV file or None if no files were found.
+    """
     csv_types = ["motion", "session", "lap", "car_setup", "car_telemetry", "time_trial"]
     df_list = []
     for t in csv_types:
@@ -199,12 +260,21 @@ def join_session_csvs():
         return None
     
 def save_general_csv(df, file_path):
-    """Saves the general CSV file to the specified path."""
+    """
+    Saves the general CSV file to the specified path.
+    
+    :param df: The DataFrame containing the general data to be saved.
+    :param file_path: The path where the general CSV file will be saved.
+    """
     df.to_csv(file_path, index=False)
     print(f"General CSV saved: {file_path}")
 
 def update_master_dataset(new_general_csv):
-    """Updates the master dataset CSV with the new general CSV."""
+    """
+    Updates the master dataset CSV with the new general CSV.
+    
+    :param new_general_csv: The path to the new general CSV file to be added to the master dataset.
+    """
     master_csv = "./data/dataset.csv"
     # Ensure the parent folder for the master CSV exists:
     os.makedirs("./data", exist_ok=True)

@@ -1,6 +1,16 @@
 from utils.dictionnaries import weather_types
 
 class WeatherForecastSample:
+    """
+    Class to store weather forecast sample data.
+    Attributes:
+        time (int): Time in minutes since the start of the session.
+        weather (int): Weather condition identifier.
+        track_temperature (float): Track temperature in degrees Celsius.
+        air_temperature (float): Air temperature in degrees Celsius.
+        rain_percentage (float): Percentage chance of rain.
+        weather_forecast_accuracy (int): Accuracy of the weather forecast.
+    """
     def __init__(self, time, weather, track_temperature, air_temperature, rain_percentage):
         self.time = time
         self.weather = weather

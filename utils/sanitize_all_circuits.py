@@ -10,6 +10,9 @@ def sanitize_all_circuits(base_raw_path: str, base_processed_path: str):
     sanetiza los tiempos de vuelta y los reglajes, y genera:
     - Un archivo CSV por circuito con los datos limpios.
     - Un archivo CSV global combinando todos los circuitos.
+
+    :param str base_raw_path: Ruta base donde se encuentran los datos en crudo.
+    :param str base_processed_path: Ruta base donde se guardarán los datos procesados.
     """
     os.makedirs(base_processed_path, exist_ok=True)
     circuit_laps: List[pd.DataFrame] = []
@@ -34,6 +37,11 @@ def sanitize_sessions_for_circuit(circuit_dir: Path, circuit_name: str) -> pd.Da
     """
     Procesa todos los subdirectorios de una carpeta de circuito específica,
     uniendo todos los datasets sanetizados de sus sesiones.
+    Devuelve un DataFrame con los datos limpios de todas las sesiones del circuito.
+    Si no hay datos válidos, devuelve None.
+
+    :param Path circuit_dir: Ruta del directorio del circuito.
+    :param str circuit_name: Nombre del circuito.
     """
     all_session_dfs = []
 
@@ -59,6 +67,10 @@ def sanitize_single_session(lap_file: Path, setup_file: Path, circuit_name: str)
     """
     Sanetiza los datos de una sola sesión: vincula los tiempos de vuelta con el 
     reglaje más reciente anterior. Devuelve un DataFrame limpio.
+    
+    :param Path lap_file: Ruta al archivo CSV de tiempos de vuelta.
+    :param Path setup_file: Ruta al archivo CSV de reglajes del coche.
+    :param str circuit_name: Nombre del circuito.
     """
     lap_data = pd.read_csv(lap_file)
     setup_data = pd.read_csv(setup_file)

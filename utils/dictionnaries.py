@@ -1,9 +1,44 @@
 import datetime
 
 def rgbtohex(r,g,b):
+    """
+    This function takes three integer values representing the red, green, and blue components of a color,
+    and converts them to a hexadecimal string in the format '#RRGGBB'.
+    The values for r, g, and b should be in the range of 0 to 255.
+    The hexadecimal string is formatted such that each component is represented by two hexadecimal digits,
+    with leading zeros if necessary.
+    Example:
+    >>> rgbtohex(255, 0, 0)
+    '#ff0000'
+    >>> rgbtohex(0, 255, 0)
+    '#00ff00'
+    >>> rgbtohex(0, 0, 255)
+    '#0000ff'
+
+    :param r: Red component (0-255)
+    :param g: Green component (0-255)
+    :param b: Blue component (0-255)
+    :return: Hexadecimal color string in the format '#RRGGBB'
+    """
     return f'#{r:02x}{g:02x}{b:02x}'
 
-def valid_ip_address(address):
+def valid_ip_address(address: str) -> bool:
+    """
+    This function checks if a given string is a valid IPv4 address.
+    A valid IPv4 address consists of four octets separated by dots, where each octet is a number between 0 and 255.
+    Example: 
+    >>> valid_ip_address(0.0.0.0)
+    True
+    >>> valid_ip_address(255.255.255.255)
+    True
+    >>> valid_ip_address(256.256.256.256)
+    False
+    >>> valid_ip_address(-1.-1.-1.-1)
+    False
+
+    :param address: A string representing an IPv4 address.
+    :return: True if the address is a valid IPv4 address, False otherwise.
+    """
     octets = address.split(".")
     flag = len(octets)==4
     for octet in octets:
