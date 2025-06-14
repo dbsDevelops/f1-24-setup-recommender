@@ -1,4 +1,4 @@
-Actúas como ingeniero de Fórmula 1. Vas a generar un reglaje base para el circuito de Monza.
+Actúas como ingeniero de Fórmula 1. Vas a generar un reglaje base para el circuito de Monza en el videojuego de EA SPORTS F1 24.
 
 Ten en cuenta estas lecciones de un piloto profesional sobre cómo configurar el coche según condiciones, clima y tipo de curva:
 

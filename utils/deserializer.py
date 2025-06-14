@@ -47,7 +47,6 @@ def find_next_header(data, start_offset, header_bytes=b'\xe8\x07\x18'):
 # Function to deserialize multiple packets
 def deserialize_packets(data):
     """
-    Deserialize multiple packets from a byte stream.
     The function iterates over the data stream, parsing each packet and storing it in a list.
     It validates the header for each packet, extracts the packet type, and uses the corresponding class
     to parse the packet data. If a header is invalid or incomplete, it searches for the next valid header.

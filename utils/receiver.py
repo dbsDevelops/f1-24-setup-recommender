@@ -7,6 +7,7 @@ import glob
 
 from deserializer import ctypes_to_dict, flatten_dict
 from helpers.packets.packet_parser import PacketHeader, packet_header_to_class_map
+from models.packet_type import PacketType
 
 # Use the port where the data is being received
 CIRCUIT = "monza"
@@ -14,6 +15,7 @@ PORT = 20776
 EXECUTION_COMMAND = "run"
 CURRENT_TIMESTAMP = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 DATA_DIRECTORY = f"./data/raw/{CIRCUIT}/" + CURRENT_TIMESTAMP
+BUFFER_SIZE = 2048
 
 # Lists to store packets for each stream
 motion_packets = []
@@ -39,19 +41,6 @@ def generate_file_path(packet_type):
     """
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     return f"{DATA_DIRECTORY}/{packet_type}_data_{timestamp}.csv"
-
-def confirm_overwrite(file_path):
-    """
-    Asks for confirmation if the file already exists.
-    
-    :param file_path: The path to the file to be saved.
-    """
-    if os.path.isfile(file_path):
-        print(f"WARNING: The file {file_path} already exists and will be overwritten if you continue.")
-        user_choice = input("Continue? [y|N]: ")
-        if user_choice.lower() != "y":
-            print("Change the file path to prevent overwriting and restart the program.")
-            exit(0)
 
 def parse_packet(data):
     """
@@ -167,17 +156,17 @@ def process_packet(parsed_data):
         return
 
     packet_id = parsed_data["m_header"].get("m_packetId")
-    if packet_id == 0:
+    if packet_id == PacketType.MOTION_DATA.value:
         process_motion_packet(parsed_data)
-    elif packet_id == 1:
+    elif packet_id == PacketType.SESSION_DATA.value:
         process_session_packet(parsed_data)
-    elif packet_id == 2:
+    elif packet_id == PacketType.LAP_DATA.value:
         process_lap_packet(parsed_data)
-    elif packet_id == 5:
+    elif packet_id == PacketType.CAR_SETUP_DATA.value:
         process_car_setup_packet(parsed_data)
-    elif packet_id == 6:
+    elif packet_id == PacketType.CAR_TELEMETRY_DATA.value:
         process_car_telemetry_packet(parsed_data)
-    elif packet_id == 14:
+    elif packet_id == PacketType.TIME_TRIAL_DATA.value:
         process_time_trial_packet(parsed_data)
     # Ignore other packet types if not needed
 
@@ -192,7 +181,7 @@ def receive_packets(udp_socket: socket.socket):
     
     while EXECUTION_COMMAND != "stop":
         try:
-            data, _ = udp_socket.recvfrom(2048)
+            data, _ = udp_socket.recvfrom(BUFFER_SIZE)
             # print("Received data:", data)
             parsed_data = parse_packet(data)
             # print("Parsed data:", parsed_data)
