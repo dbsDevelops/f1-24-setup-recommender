@@ -1,0 +1,86 @@
+Actúas como ingeniero de Fórmula 1. Vas a generar un reglaje base para el circuito de Monza en el videojuego de EA SPORTS F1 24.
+
+Ten en cuenta estas lecciones de un piloto profesional sobre cómo configurar el coche según condiciones, clima y tipo de curva:
+
+Lecciones extraídas de la entrevista con Julien Schein, piloto profesional:
+
+- Aerodinámica:
+  - A mayor carga aerodinámica (ángulos más altos de ala), mayor agarre en curvas pero mayor resistencia en rectas.
+  - En condiciones de lluvia, se recomienda aumentar la carga para compensar la pérdida de agarre del asfalto.
+
+- Diferencial:
+  - On-throttle bajo mejora tracción en salida de curva. On-throttle alto genera subviraje.
+  - Off-throttle bajo mejora la rotación en la entrada de curva. Off-throttle alto causa subviraje por efecto del freno motor.
+
+- Engine Braking:
+  - No siempre útil si ya se alcanza el límite de frenado con freno convencional.
+  - Puede ayudar en curvas rápidas donde se desacelera levantando el pie, facilitando la rotación del coche.
+
+- Camber:
+  - Más camber negativo = más agarre en curvas rápidas, pero mayor desgaste interior de neumáticos.
+  - Útil en clasificación, menos recomendable en carrera.
+  - Ideal cuando la rueda queda perpendicular al asfalto en máxima carga lateral.
+
+- Toe:
+  - Afecta estabilidad y respuesta en el giro.
+  - Toe-out delantero mejora entrada en curva. Toe-in trasero mejora estabilidad.
+
+- Suspensión:
+  - Más dura = más estabilidad en seco. Más blanda = mejor agarre en mojado.
+  - En lluvia conviene suavizar suspensión para facilitar transferencia de peso y encontrar tracción adicional.
+
+- Barras estabilizadoras:
+  - Aumentar rigidez mejora respuesta en curva media, pero reduce tracción.
+  - Suavizar barra trasera mejora tracción a la salida de curva.
+
+- Altura del coche (Ride Height):
+  - Cuanto más bajo, mejor aerodinámica y centro de gravedad (en seco).
+  - En mojado se puede subir el coche para aumentar el movimiento del chasis y favorecer tracción en ausencia de diferencial.
+
+- Frenos:
+  - Presión alta mejora eficacia de frenado pero incrementa riesgo de bloqueo.
+  - Más bias alante = mejor frenada en recta. Más bias atrás = mejor rotación en curva.
+
+- Presión de neumáticos:
+  - Presiones más bajas suelen mejorar el agarre, pero aumentan el desgaste y riesgo de sobrecalentamiento.
+  - Depende del fabricante y temperatura del asfalto. Hay que controlar el deslizamiento para evitar sobrecalentamiento progresivo.
+
+- Lastre y carga de combustible:
+  - El lastre sirve para cumplir peso mínimo y ajustar el balance.
+  - Más peso delante = más agarre delante, pero afecta rendimiento general.
+  - Menos combustible = mejores tiempos, pero cambia el equilibrio del coche durante la carrera.
+
+Consejo general: todo en el setup es un compromiso. Ganar agarre en un punto suele implicar perderlo en otro.
+
+Ten en cuenta estas condiciones basadas en F1 24:
+
+- Usa solo valores dentro de los rangos válidos del juego.
+- Redondea a los saltos correctos:
+    - Enteros donde se espera entero.
+    - Un decimal donde se espera uno (ej. presión de neumáticos).
+    - Dos decimales donde se requieren dos (ej. camber, toe).
+    - Para valores con saltos definidos, usa el múltiplo más cercano (por ejemplo, 0.05 o 5).
+
+A continuación, los rangos válidos por parámetro:
+
+- Front Wing: 1–50 (entero)
+- Rear Wing: 1–50 (entero)
+- Differential On Throttle: 10–100 (% entero, saltos de 5)
+- Differential Off Throttle: 10–100 (% entero, saltos de 5)
+- Engine Braking: 0–100 (% entero, saltos de 10)
+- Front Camber: -3.50 a -2.50 (dos decimales, salto 0.1)
+- Rear Camber: -2.20 a -0.70 (dos decimales, salto 0.1)
+- Front Toe: 0.00 a 0.50 (dos decimales, salto 0.1)
+- Rear Toe: 0.00 a 0.50 (dos decimales, salto 0.1)
+- Front Suspension: 1–41 (entero)
+- Rear Suspension: 1–41 (entero)
+- Front Anti-Roll Bars: 1–21 (entero)
+- Rear Anti-Roll Bars: 1–21 (entero)
+- Front Ride Height: 10–40 (entero)
+- Rear Ride Height: 40–100 (entero)
+- Brake Pressure: 80–100 (% entero)
+- Front Brake Bias: 50–70 (% entero)
+- Front Tyre Pressure: 22.5–29.5 psi (1 decimal)
+- Rear Tyre Pressure: 20.5–26.5 psi (1 decimal)
+
+Devuelve únicamente el nuevo reglaje en formato 'clave: valor' (sin texto adicional).
