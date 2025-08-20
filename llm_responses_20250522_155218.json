@@ -1,0 +1,422 @@
+[
+  {
+    "model": "llama3",
+    "temperature": 0.1,
+    "top_p": 0.7,
+    "repetition_penalty": 1.1,
+    "response": "Aquí está el reglaje base para el circuito de Monza:\n\nFront Wing: 30\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 12\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.1,
+    "top_p": 0.7,
+    "repetition_penalty": 1.2,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 12\nRear Anti-Roll Bars: 18\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.1,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "Aquí está el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 12\nRear Anti-Roll Bars: 18\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.1,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 12\nRear Anti-Roll Bars: 18\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.1,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "Aquí está el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 7\nRear Anti-Roll Bars: 11\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.1,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "Aquí está el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 12\nRear Anti-Roll Bars: 18\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.2,
+    "top_p": 0.7,
+    "repetition_penalty": 1.1,
+    "response": "Here is the base setup for the Monza circuit:\n\nFront Wing: 30\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 12\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.2,
+    "top_p": 0.7,
+    "repetition_penalty": 1.2,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 20\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 30\nEngine Braking: 40\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.20\nFront Suspension: 15\nRear Suspension: 10\nFront Anti-Roll Bars: 5\nRear Anti-Roll Bars: 3\nFront Ride Height: 25\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.0 psi\nRear Tyre Pressure: 24.0 psi"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.2,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "Aquí está el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 12\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.2,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 30\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 12\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 50\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.10\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 7\nRear Anti-Roll Bars: 11\nFront Ride Height: 30\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 50\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.20\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 10\nRear Anti-Roll Bars: 12\nFront Ride Height: 25\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.3,
+    "top_p": 0.7,
+    "repetition_penalty": 1.1,
+    "response": "Aquí está el reglaje base para el circuito de Monza:\n\nFront Wing: 20\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 30\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.20\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 10\nRear Anti-Roll Bars: 5\nFront Ride Height: 25\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.0 psi\nRear Tyre Pressure: 24.5 psi"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.3,
+    "top_p": 0.7,
+    "repetition_penalty": 1.2,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 50\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.20\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 10\nRear Anti-Roll Bars: 12\nFront Ride Height: 25\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.3,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 30\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 50\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.30\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 10\nFront Ride Height: 25\nRear Ride Height: 60\nBrake Pressure: 95\nFront Brake Bias: 62\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.3,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "Front Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 12\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 24.5\nRear Tyre Pressure: 23.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.3,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 30\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 50\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.30\nFront Suspension: 25\nRear Suspension: 15\nFront Anti-Roll Bars: 10\nRear Anti-Roll Bars: 5\nFront Ride Height: 35\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.0 psi\nRear Tyre Pressure: 24.5 psi"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.3,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 12\nRear Anti-Roll Bars: 8\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5 psi\nRear Tyre Pressure: 24.5 psi"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.4,
+    "top_p": 0.7,
+    "repetition_penalty": 1.1,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 50\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.10\nFront Suspension: 24\nRear Suspension: 32\nFront Anti-Roll Bars: 14\nRear Anti-Roll Bars: 17\nFront Ride Height: 25\nRear Ride Height: 70\nBrake Pressure: 90\nFront Brake Bias: 60\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.4,
+    "top_p": 0.7,
+    "repetition_penalty": 1.2,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 30\nRear Wing: 20\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 50\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.20\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 12\nFront Ride Height: 25\nRear Ride Height: 70\nBrake Pressure: 90\nFront Brake Bias: 60\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.4,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 20\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 30\nEngine Braking: 40\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.20\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 12\nFront Ride Height: 30\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.4,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 20\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 30\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.20\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 10\nRear Anti-Roll Bars: 12\nFront Ride Height: 35\nRear Ride Height: 60\nBrake Pressure: 95\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.4,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "Here is the base setup for the Monza circuit:\n\nFront Wing: 25\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 20\nEngine Braking: 40\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.10\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 12\nRear Anti-Roll Bars: 8\nFront Ride Height: 30\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.4,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 60\nDifferential Off Throttle: 30\nEngine Braking: 50\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.10\nRear Toe: 0.20\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 12\nRear Anti-Roll Bars: 18\nFront Ride Height: 30\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.5,
+    "top_p": 0.7,
+    "repetition_penalty": 1.1,
+    "response": "Aquí está el reglaje base para el circuito de Monza:\n\nFront Wing: 30\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 20\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.10\nFront Suspension: 25\nRear Suspension: 15\nFront Anti-Roll Bars: 14\nRear Anti-Roll Bars: 8\nFront Ride Height: 20\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.5,
+    "top_p": 0.7,
+    "repetition_penalty": 1.2,
+    "response": "Front Wing: 30\nRear Wing: 25\nDifferential On Throttle: 70\nDifferential Off Throttle: 40\nEngine Braking: 60\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.10\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 12\nFront Ride Height: 30\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 55\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.5,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "Aquí te presento el reglaje base para el circuito de Monza:\n\nFront Wing: 20\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 30\nEngine Braking: 40\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.10\nFront Suspension: 15\nRear Suspension: 25\nFront Anti-Roll Bars: 12\nRear Anti-Roll Bars: 8\nFront Ride Height: 30\nRear Ride Height: 60\nBrake Pressure: 95\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.5,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "Aquí está el reglaje base para el circuito de Monza:\n\nFront Wing: 20\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 30\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.20\nFront Suspension: 15\nRear Suspension: 18\nFront Anti-Roll Bars: 7\nRear Anti-Roll Bars: 10\nFront Ride Height: 25\nRear Ride Height: 70\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.5,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "Aquí está el reglaje base para el circuito de Monza:\n\nFront Wing: 20\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 30\nEngine Braking: 40\nFront Camber: -2.90\nRear Camber: -1.80\nFront Toe: 0.20\nRear Toe: 0.10\nFront Suspension: 15\nRear Suspension: 18\nFront Anti-Roll Bars: 12\nRear Anti-Roll Bars: 14\nFront Ride Height: 25\nRear Ride Height: 60\nBrake Pressure: 90\nFront Brake Bias: 65\nFront Tyre Pressure: 24.5 psi\nRear Tyre Pressure: 23.5 psi"
+  },
+  {
+    "model": "llama3",
+    "temperature": 0.5,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "Aquí está el reglaje base para el circuito de Monza:\n\nFront Wing: 30\nRear Wing: 25\nDifferential On Throttle: 60\nDifferential Off Throttle: 40\nEngine Braking: 50\nFront Camber: -2.80\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.30\nFront Suspension: 25\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 10\nFront Ride Height: 30\nRear Ride Height: 70\nBrake Pressure: 90\nFront Brake Bias: 60\nFront Tyre Pressure: 26.5\nRear Tyre Pressure: 24.5"
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.1,
+    "top_p": 0.7,
+    "repetition_penalty": 1.1,
+    "response": "Okay, I will generate a new set up for the Monza circuit based on the lections extracted from the interview with Julien Schein and the given conditions:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.70\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.30\nFront Suspension: 30\nRear Suspension: 35\nFront Anti-Roll Bars: 16\nRear Anti-Roll Bars: 18\nFront Ride Height: 30\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 25.5 psi\nRear Tyre Pressure: 23.5 psi\n\nPlease note that these values are just suggestions and may need to be adjusted based on the specific conditions of the race and the driver's preferences."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.1,
+    "top_p": 0.7,
+    "repetition_penalty": 1.2,
+    "response": "Okay, I will generate a new set up for the Monza circuit based on the lecciones extraídas from Julien Schein's interview and the given conditions:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.70\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.30\nFront Suspension: 28\nRear Suspension: 32\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 17\nFront Ride Height: 25\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 25.5 psi\nRear Tyre Pressure: 23.5 psi\n\nPlease note that these values are just suggestions and may need to be adjusted based on the specific conditions of the race and the driver's preferences."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.1,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "Okay, I will generate a new set of regulations based on the interview with Julien Schein and the given conditions:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.50\nRear Camber: -1.70\nFront Toe: 0.25\nRear Toe: 0.25\nFront Suspension: 30\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 18\nFront Ride Height: 25\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 27.5\nRear Tyre Pressure: 24.5\n\nPlease note that these values are just suggestions and may need to be adjusted based on the specific conditions of the race and the driver's preferences."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.1,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "Okay, I will generate a new set up for the Monza circuit based on the lecciones extraídas from Julien Schein's interview and the given conditions:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.70\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.30\nFront Suspension: 28\nRear Suspension: 32\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 17\nFront Ride Height: 30\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 25.5\nRear Tyre Pressure: 23.5\n\nPlease note that these values are just suggestions and may need to be adjusted based on the specific conditions of the race and the driver's preferences."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.1,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "Okay, I will generate a new set of regulations based on the interview with Julien Schein and the given conditions:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.50\nRear Camber: -1.70\nFront Toe: 0.25\nRear Toe: 0.25\nFront Suspension: 30\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 18\nFront Ride Height: 25\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 25.5 psi\nRear Tyre Pressure: 23 psi\n\nPlease note that these values are just suggestions and may need to be adjusted based on the specific race conditions and the driver's preferences."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.1,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "Okay, I will generate a new set of regulations based on the interview with Julien Schein and the given conditions:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.50\nRear Camber: -1.70\nFront Toe: 0.25\nRear Toe: 0.25\nFront Suspension: 30\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 18\nFront Ride Height: 25\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 25.5 psi\nRear Tyre Pressure: 23 psi\n\nPlease note that these values are just suggestions and may need to be adjusted based on the specific needs of your F1 car and the conditions of the race."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.2,
+    "top_p": 0.7,
+    "repetition_penalty": 1.1,
+    "response": "Okay, I will generate a new set of regulations based on the interview with Julien Schein and the given conditions:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.50\nRear Camber: -1.70\nFront Toe: 0.25\nRear Toe: 0.25\nFront Suspension: 30\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 18\nFront Ride Height: 25\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 27.5 psi\nRear Tyre Pressure: 24.5 psi\n\nPlease note that these values are based on the given conditions and may not be suitable for all circuits or driving styles."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.2,
+    "top_p": 0.7,
+    "repetition_penalty": 1.2,
+    "response": "Okay, I will generate a new set up for the Monza circuit based on the lections extracted from the interview with Julien Schein, a professional race driver. Please provide me with the values for each parameter within the valid range provided:\n\nFront Wing: ___________\nRear Wing: ___________\nDifferential On Throttle: ___________%\nDifferential Off Throttle: ___________%\nEngine Braking: ___________%\nFront Camber: ___________ (decimal)\nRear Camber: ___________ (decimal)\nFront Toe: ___________ (decimal)\nRear Toe: ___________ (decimal)\nFront Suspension: ___________\nRear Suspension: ___________\nFront Anti-Roll Bars: ___________ (entero)\nRear Anti-Roll Bars: ___________ (entero)\nFront Ride Height: ___________ (entero)\nRear Ride Height: ___________ (entero)\nBrake Pressure: ___________ (% entero)\nFront Brake Bias: ___________ (% entero)\nFront Tyre Pressure: ___________ (psi decimal)\nRear Tyre Pressure: ___________ (psi decimal)\n\nPlease provide the values for each parameter, and I will generate the new set up for the Monza circuit."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.2,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "Okay, I will generate a new set up for the Monza circuit based on the lecciones extraídas from Julien Schein's interview and the given conditions:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.70\nRear Camber: -1.90\nFront Toe: 0.25\nRear Toe: 0.25\nFront Suspension: 30\nRear Suspension: 30\nFront Anti-Roll Bars: 16\nRear Anti-Roll Bars: 16\nFront Ride Height: 30\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 25.5 psi\nRear Tyre Pressure: 23.5 psi\n\nPlease note that these values are just suggestions and may need to be adjusted based on the specific conditions of the race and the driver's preferences."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.2,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "Okay, I will generate a new set up for the Monza circuit based on the lecciones extraídas from Julien Schein's interview and the given conditions:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.70\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.30\nFront Suspension: 28\nRear Suspension: 32\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 17\nFront Ride Height: 30\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 25.5\nRear Tyre Pressure: 23.5\n\nPlease note that these values are just suggestions and may need to be adjusted based on the specific conditions of the race and the driver's preferences."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "Okay, I will generate a new set up for the Monza circuit based on the lecciones extraídas from Julien Schein's interview and the given conditions:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.70\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.30\nFront Suspension: 31\nRear Suspension: 31\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 17\nFront Ride Height: 30\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 25.5\nRear Tyre Pressure: 23.5\n\nPlease note that these values are just suggestions and may need to be adjusted based on the specific conditions of the race and the driver's preferences."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "Okay, I will generate a new set of regulations based on the interview with Julien Schein and the given conditions:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.50\nRear Camber: -1.70\nFront Toe: 0.25\nRear Toe: 0.25\nFront Suspension: 30\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 18\nFront Ride Height: 25\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 27.5\nRear Tyre Pressure: 24.5\n\nPlease note that these values are just suggestions and may need to be adjusted based on the specific conditions of the race and the driver's preferences."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.3,
+    "top_p": 0.7,
+    "repetition_penalty": 1.1,
+    "response": "Okay, I will generate a new set up for the Monza circuit based on the lecciones extraídas from Julien Schein's interview and the given conditions:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 60\nEngine Braking: 40\nFront Camber: -2.70\nRear Camber: -1.90\nFront Toe: 0.25\nRear Toe: 0.35\nFront Suspension: 30\nRear Suspension: 35\nFront Anti-Roll Bars: 16\nRear Anti-Roll Bars: 18\nFront Ride Height: 30\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 25.5\nRear Tyre Pressure: 23.5\n\nPlease note that these values are just suggestions and may not be the best setup for your specific car and driving style. It's important to test and adjust the setup to find the optimal balance of performance and handling for your needs."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.3,
+    "top_p": 0.7,
+    "repetition_penalty": 1.2,
+    "response": "Okay, I will generate a new set up for the Monza circuit based on the leagues and conditions you provided:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.50\nRear Camber: -1.70\nFront Toe: 0.25\nRear Toe: 0.25\nFront Suspension: 30\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 17\nFront Ride Height: 30\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 25.5 psi\nRear Tyre Pressure: 23.5 psi\n\nPlease note that these values are just suggestions and may need to be adjusted based on the specific car and driver preferences, as well as the changing conditions of the race."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.3,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "Okay, I will generate a new set of regulations based on the interview with Julien Schein and the given conditions:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 60\nEngine Braking: 40\nFront Camber: -2.70\nRear Camber: -1.90\nFront Toe: 0.25\nRear Toe: 0.30\nFront Suspension: 30\nRear Suspension: 35\nFront Anti-Roll Bars: 16\nRear Anti-Roll Bars: 18\nFront Ride Height: 25\nRear Ride Height: 30\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 27.5\nRear Tyre Pressure: 24.5\n\nNote: These values are based on the given conditions and the interview with Julien Schein, but they may not be the optimal values for a specific circuit or driving style."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.3,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "Okay, I will generate a new set up for the Monza circuit based on the lecciones extraídas from Julien Schein's interview and the given conditions:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.70\nRear Camber: -1.90\nFront Toe: 0.25\nRear Toe: 0.25\nFront Suspension: 30\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 18\nFront Ride Height: 30\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 26.5 psi\nRear Tyre Pressure: 24.5 psi\n\nPlease note that these values are just suggestions and may need to be adjusted based on the specific conditions of the race and the driver's preferences."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.3,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "Okay, I will generate a new setup for the Monza circuit based on the leagues you provided and the conditions you specified:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.70\nRear Camber: -1.90\nFront Toe: 0.25\nRear Toe: 0.25\nFront Suspension: 30\nRear Suspension: 30\nFront Anti-Roll Bars: 14\nRear Anti-Roll Bars: 14\nFront Ride Height: 30\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 25.5 psi\nRear Tyre Pressure: 23.5 psi\n\nNote that these values are based on the ranges provided in the leagues, and I have rounded them to the nearest decimal where possible. Also, keep in mind that this is just a single setup for the Monza circuit, and you may need to adjust these values based on the specific conditions of the race and your driving style."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.3,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "Okay, I will generate a new set up for the Monza circuit based on the lections from Julien Schein and the given conditions:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.70\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.30\nFront Suspension: 30\nRear Suspension: 35\nFront Anti-Roll Bars: 16\nRear Anti-Roll Bars: 18\nFront Ride Height: 30\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 25.5\nRear Tyre Pressure: 23.5\n\nPlease note that these values are just suggestions and may need to be adjusted based on the specific conditions of the race and the driver's preferences."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.4,
+    "top_p": 0.7,
+    "repetition_penalty": 1.1,
+    "response": "Okay, I will generate a new set up for the Monza circuit based on the lecciones extraídas from Julien Schein's interview and the given conditions:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.70\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.30\nFront Suspension: 28\nRear Suspension: 32\nFront Anti-Roll Bars: 16\nRear Anti-Roll Bars: 18\nFront Ride Height: 30\nRear Ride Height: 45\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 25.5\nRear Tyre Pressure: 23.5\n\nPlease note that these values are based on the given conditions and may not be suitable for all circuits or driving styles. It's important to test and adjust the set up accordingly to achieve the best results."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.4,
+    "top_p": 0.7,
+    "repetition_penalty": 1.2,
+    "response": "Okay, I will generate a new set up for the Monza circuit based on the lecciones extraídas from Julien Schein's interview and the conditions provided:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.70\nRear Camber: -1.90\nFront Toe: 0.25\nRear Toe: 0.25\nFront Suspension: 31\nRear Suspension: 31\nFront Anti-Roll Bars: 16\nRear Anti-Roll Bars: 16\nFront Ride Height: 30\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 25.5\nRear Tyre Pressure: 23.5\n\nPlease note that these values are based on the assumptions and conditions provided in the question, and may not be optimal or suitable for all situations or circuits."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.4,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "Okay, I will generate a new set up for the Monza circuit based on the lections extracted from the interview with Julien Schein and the given conditions:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.70\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.30\nFront Suspension: 28\nRear Suspension: 32\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 18\nFront Ride Height: 30\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 25.5\nRear Tyre Pressure: 23.5\n\nPlease note that these values are just suggestions and may need to be adjusted based on the specific conditions of the race and the driver's preferences."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.4,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "Okay, I will generate a new set up for the Monza circuit based on the lections extracted from Julien Schein's interview and the given conditions:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.70\nRear Camber: -1.90\nFront Toe: 0.25\nRear Toe: 0.30\nFront Suspension: 28\nRear Suspension: 32\nFront Anti-Roll Bars: 16\nRear Anti-Roll Bars: 18\nFront Ride Height: 30\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 27.5\nRear Tyre Pressure: 25.5\n\nPlease note that these values are just suggestions and may need to be adjusted based on the specific conditions of the race and the driver's preferences."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.4,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "Okay, I will generate a new setup for the Monza circuit based on the leagues and conditions you provided:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.50\nRear Camber: -1.70\nFront Toe: 0.25\nRear Toe: 0.25\nFront Suspension: 30\nRear Suspension: 35\nFront Anti-Roll Bars: 16\nRear Anti-Roll Bars: 18\nFront Ride Height: 25\nRear Ride Height: 30\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 27.5 psi\nRear Tyre Pressure: 24.5 psi\n\nPlease note that these values are just suggestions and may need to be adjusted based on the specific conditions of the race and the driver's preferences."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.4,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "Okay, I will generate a new set of regulations based on the interview with Julien Schein and the given conditions:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.20\nRear Camber: -0.70\nFront Toe: 0.25\nRear Toe: 0.25\nFront Suspension: 31\nRear Suspension: 31\nFront Anti-Roll Bars: 16\nRear Anti-Roll Bars: 16\nFront Ride Height: 28\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 25.5\nRear Tyre Pressure: 23.5\n\nPlease note that these values are based on the given conditions and do not reflect any real-world racing setup or performance."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.5,
+    "top_p": 0.7,
+    "repetition_penalty": 1.1,
+    "response": "Okay, I will generate a new set of regulations based on the interview with Julien Schein and the given conditions. Here is the new regulation set:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 60\nEngine Braking: 40\nFront Camber: -2.70\nRear Camber: -1.90\nFront Toe: 0.30\nRear Toe: 0.50\nFront Suspension: 31\nRear Suspension: 36\nFront Anti-Roll Bars: 14\nRear Anti-Roll Bars: 17\nFront Ride Height: 28\nRear Ride Height: 32\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 25.5\nRear Tyre Pressure: 23.5\n\nNote that these values are based on the given conditions and the interview with Julien Schein, but they may not be the optimal values for a specific race or driver."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.5,
+    "top_p": 0.7,
+    "repetition_penalty": 1.2,
+    "response": "Okay, I will generate a new set up for the Monza circuit based on the leagues and conditions you provided. Here is the new setup:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 75\nDifferential Off Throttle: 60\nEngine Braking: 40\nFront Camber: -2.70\nRear Camber: -1.90\nFront Toe: 0.25\nRear Toe: 0.35\nFront Suspension: 30\nRear Suspension: 35\nFront Anti-Roll Bars: 16\nRear Anti-Roll Bars: 18\nFront Ride Height: 30\nRear Ride Height: 40\nBrake Pressure: 90\nFront Brake Bias: 60\nFront Tyre Pressure: 25.5 psi\nRear Tyre Pressure: 23.5 psi\n\nPlease let me know if you want to adjust any of these settings or if you want me to generate a different set up for the Monza circuit."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.5,
+    "top_p": 0.8,
+    "repetition_penalty": 1.1,
+    "response": "Okay, I will generate a new set up for the Monza circuit based on the interview with Julien Schein and the given conditions:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.70\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.30\nFront Suspension: 35\nRear Suspension: 35\nFront Anti-Roll Bars: 16\nRear Anti-Roll Bars: 18\nFront Ride Height: 30\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 25.5\nRear Tyre Pressure: 23.5\n\nPlease note that these values are based on the given conditions and may not be suitable for all situations or circuits. Additionally, the setup is a compromise between different factors, so finding the perfect balance may require some trial and error."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.5,
+    "top_p": 0.8,
+    "repetition_penalty": 1.2,
+    "response": "Okay, I will generate a new set up for the Monza circuit based on the lecciones extraídas from Julien Schein's interview and the given conditions:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.70\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.10\nFront Suspension: 31\nRear Suspension: 31\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 17\nFront Ride Height: 30\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 25.5\nRear Tyre Pressure: 23.5\n\nPlease note that these values are based on the given conditions and may not be optimal for every situation or driver. The setup is a compromise between different factors, and small changes can have a big impact on the car's performance."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.5,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "response": "Okay, I will generate a new set of regulations based on the interview with Julien Schein and the given conditions:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.20\nRear Camber: -1.80\nFront Toe: 0.20\nRear Toe: 0.30\nFront Suspension: 30\nRear Suspension: 35\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 17\nFront Ride Height: 30\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 25.5\nRear Tyre Pressure: 23.5\n\nPlease note that these are just suggestions based on the given conditions and interview, and you may want to adjust them according to your own preferences and racing style."
+  },
+  {
+    "model": "llama2",
+    "temperature": 0.5,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2,
+    "response": "Okay, I will generate a new set of regulations based on the interview with Julien Schein and the given conditions. Here is the new regulation set:\n\nFront Wing: 20\nRear Wing: 30\nDifferential On Throttle: 50\nDifferential Off Throttle: 50\nEngine Braking: 20\nFront Camber: -2.70\nRear Camber: -1.90\nFront Toe: 0.20\nRear Toe: 0.30\nFront Suspension: 28\nRear Suspension: 32\nFront Anti-Roll Bars: 15\nRear Anti-Roll Bars: 18\nFront Ride Height: 30\nRear Ride Height: 40\nBrake Pressure: 85\nFront Brake Bias: 60\nFront Tyre Pressure: 27.5\nRear Tyre Pressure: 24.5\n\nPlease note that these values are just suggestions and may need to be adjusted based on the specific conditions of the race and the driver's preferences."
+  }
+]
