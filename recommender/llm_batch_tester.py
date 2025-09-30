@@ -20,7 +20,7 @@ max_tokens = 2000
 
 # Archivo de salida
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-output_file = f"llm_responses_{timestamp}.json"
+output_file = f"./recommender/llm_responses/llm_responses_{timestamp}.json"
 results = []
 
 def clean_qwen_output(output):
