@@ -14,3 +14,17 @@ The purpose of this project is to implement a recommender system for car setups 
 - Chatbot with an LLM to respond to the user's queries. 
 
 ## ⚙️ Usage <a id="usage"></a>
+
+### Run Main Application
+To run the main application, first you will need to setup the Python virtual environment.
+
+```bash
+python3 -m venv venv
+source ./venv/bin/activate
+```
+
+Once the environment is up and ready, run the app/Telemetry.py Python script. A window will open when doing so. 
+
+```bash
+python3 app/Telemetry.py 
+```
